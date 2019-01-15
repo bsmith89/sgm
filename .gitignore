@@ -1,0 +1,7 @@
+test.*
+*.log
+data/
+raw/
+.venv/
+.snakemake/
+__pycache__

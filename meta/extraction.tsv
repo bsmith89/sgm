@@ -1,0 +1,68 @@
+extraction_id	sample_id	weight	hydrated_weight	volume	spike_id	spike_volume	dna_concentration	comments
+EXT-0031	UT-0132			0.2	SPK-02	10.0	275.16	
+EXT-0032	UM-0016			0.2	SPK-02	10.0	44.08	
+EXT-0037	UM-0030			0.2	SPK-02	10.0	105.03	
+EXT-0040	UM-0025			0.2	SPK-02	10.0	210.13	
+EXT-0045	UT-0099			0.2	SPK-02	10.0	19.26	
+EXT-0046	UM-0022			0.2	SPK-02	10.0	9.41	
+EXT-0071	UT-0123			0.2	SPK-02	10.0	14.93	
+EXT-0081	UT-0119			0.2	SPK-02	10.0	34.85	
+EXT-0086	UT-0136			0.2	SPK-02	10.0	9.58	
+EXT-0088	UM-0046			0.2	SPK-02	10.0	13.96	
+EXT-0094	UT-0141			0.2	SPK-02	10.0	16.75	
+EXT-0098	UM-0040			0.2	SPK-02	10.0	6.08	
+EXT-0100	UT-0118			0.2	SPK-02	10.0	6.35	
+EXT-0107	UT-0113			0.2	SPK-02	10.0	80.63	
+EXT-0108	UT-0121			0.2	SPK-02	10.0	37.76	for design balance, swapped UM-0033 for UT-0121 at EXT-218
+EXT-0129	UT-0110			0.2	SPK-02	10.0	27.57	
+EXT-0134	UM-0044			0.2	SPK-02	10.0	26.78	
+EXT-0155	UT-0142			0.2	SPK-02	10.0	59.52	
+EXT-0165	UT-0103			0.2	SPK-02	10.0	27.9	
+EXT-0169	UT-0135			0.2	SPK-02	10.0	28.87	
+EXT-0176	UM-0034			0.2	SPK-02	10.0	3.18	
+EXT-0181	UM-0011			0.2	SPK-02	10.0	12.19	
+EXT-0190	UM-0006			0.2	SPK-02	10.0	38.23	
+EXT-0192	UT-0125			0.2	SPK-02	10.0	51.09	
+EXT-0198	UM-0045			0.36	SPK-02	10.0	5.15	
+EXT-0204	UT-0134			0.54	SPK-02	10.0	48.31	
+EXT-0210	UT-0139			0.21	SPK-02	10.0	1.59	
+EXT-0219	UM-0019			1.2	SPK-02	10.0	57.16	
+EXT-0226	UT-0144			0.33	SPK-02	10.0	29.65	
+EXT-0227	UT-0104			0.31	SPK-02	10.0	253.83	
+EXT-0237	UT-0122			0.43	SPK-02	10.0	11.74	
+EXT-0238	UT-0116			0.3	SPK-02	10.0	341.71	
+EXT-0243	UT-0100			1.23	SPK-02	10.0	281.98	
+EXT-0246	UT-0108			0.88	SPK-02	10.0	198.54	
+EXT-0255	UT-0127			0.64	SPK-02	10.0	102.81	
+EXT-0256	UT-0130			0.64	SPK-02	10.0	85.77	
+EXT-0271	UM-0021			0.47	SPK-02	10.0	19.11	
+EXT-0275	UM-0012			0.36	SPK-02	10.0	2.86	
+EXT-0285	UM-0031			0.44	SPK-02	10.0	4.37	
+EXT-0296	UM-0047			1.6	SPK-02	10.0	45.35	
+EXT-0397	UM-0015	0.037	0.073		SPK-02	10.0	26.97	split from EXT-0128 and spiked before DNA extraction
+EXT-0401	UM-0035	0.209	0.279		SPK-02	10.0	220.48	split from EXT-0160 and spiked before DNA extraction
+EXT-0405	UM-0028	0.027	0.053		SPK-02	10.0	5.65	split from EXT-0263 and spiked before DNA extraction
+EXT-0406	UM-0009	0.033	0.046		SPK-02	10.0	12.02	split from EXT-0287 and spiked before DNA extraction
+EXT-0417	UM-0024	0.023	0.032				32.23	split from EXT-0038 and not spiked before DNA extraction
+EXT-0418	UM-0020	0.016	0.026				22.2	split from EXT-0082 and not spiked before DNA extraction
+EXT-0419	UM-0010	0.009	0.021				9.28	split from EXT-0106 and not spiked before DNA extraction
+EXT-0420	UM-0042	0.008	0.015				34.2	split from EXT-0116 and not spiked before DNA extraction
+EXT-0421	UM-0015	0.01	0.02				5.75	split from EXT-0128 and not spiked before DNA extraction
+EXT-0422	UM-0037	0.01	0.022				1.54	split from EXT-0150 and not spiked before DNA extraction
+EXT-0423	UM-0043	0.022	0.032				60.1	split from EXT-0152 and not spiked before DNA extraction
+EXT-0424	UM-0003	0.005	0.013				8.01	split from EXT-0154 and not spiked before DNA extraction
+EXT-0425	UM-0035	0.03	0.04				24.94	split from EXT-0160 and not spiked before DNA extraction
+EXT-0426	UM-0007	0.005	0.012				4.16	split from EXT-0163 and not spiked before DNA extraction
+EXT-0427	UM-0023	0.005	0.011				14.84	split from EXT-0209 and not spiked before DNA extraction
+EXT-0428	UM-0026	0.007	0.017				14.76	split from EXT-0222 and not spiked before DNA extraction
+EXT-0429	UM-0028	0.01	0.019				3.94	split from EXT-0263 and not spiked before DNA extraction
+EXT-0430	UM-0009	0.02	0.028				11.39	split from EXT-0287 and not spiked before DNA extraction
+EXT-0431	UM-0027	0.015	0.031				4.63	split from EXT-0290 and not spiked before DNA extraction
+EXT-0432	UM-0032	0.008	0.014				5.48	split from EXT-0292 and not spiked before DNA extraction
+EXT-0433	Glenn-0043	0.021	0.034				23.04	split from EXT-0340 and not spiked before DNA extraction
+EXT-0434	Glenn-0034	0.007	0.025				1.55	split from EXT-0343 and not spiked before DNA extraction
+EXT-0435	Glenn-0093	0.004	0.016				2.28	split from EXT-0350 and not spiked before DNA extraction
+EXT-0436	Glenn-0030	0.005	0.019				2.3	split from EXT-0365 and not spiked before DNA extraction
+EXT-0437	Glenn-0014	0.006	0.014				2.33	split from EXT-0369 and not spiked before DNA extraction
+EXT-0438	Glenn-0044	0.018	0.033				6.25	split from EXT-0378 and not spiked before DNA extraction
+EXT-0439	Glenn-0017	0.016	0.03				10.15	split from EXT-0385 and not spiked before DNA extraction
