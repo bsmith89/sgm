@@ -70,11 +70,15 @@ Primary among these:
     metagenomic libraries as documents,
     the genomes as latent topics
 -   [Sparse Overcomplete Latent Variable Decomposition of Counts Data](https://paris.cs.illinois.edu/pubs/final_nips2007.pdf)
-     Not sure how this is different from the other one
+    Not sure how this is different from the other one
 
 Some other stuff worth checking out:
 
 -   https://scikit-learn.org/stable/modules/classes.html#module-sklearn.decomposition
+-   "Hierarchical topic models and the nested chinese restaurant process"
+-   [Exploiting topic modeling to boost metagenomic reads binning][lda-binning]
+
+[lda-binning]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4402587/pdf/1471-2105-16-S5-S2.pdf
 
 ## Notes on computationally efficient decompositions
 
@@ -94,3 +98,12 @@ sparse matrix representation, and subsequently a CSR or CSC format.
 Using a sparse matrix is only really worthwhile, however, if the algorithm I'm using
 can take advantage.
 One example of such an algorithm is `sklearn.decomposition.TruncatedSVD`.
+
+## What about co-abundance informed assembly?
+
+It seems to me that the recovery of genomes from De Bruijn graphs
+could be improved if we included co-abundance information.
+
+[See][db-strains]: A de Bruijn Graph Approach to the Quantification
+of Closely-Related Genomes in a Microbial Community
+[db-strain]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3375647/pdf/cmb.2012.0058.pdf
