@@ -26,7 +26,10 @@ be an improvement.
 What discrete things might we be counting?
 
 -   I think it might be a good idea to use kmer counts, which would forgo assembly,
-    although this might result in too much data.
+    although this might result in too much data. (2019-01-15: the other
+    problem here is that with only ~100 samples, the number of latent
+    components (genomes) is much greater than N, so we have an identifiability
+    problem.)
 -   Another possibility would be assembly, gene calling, and read mapping to get
     counts, which would centralize
 -   Yet another possibility is counting whole contigs
