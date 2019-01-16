@@ -25,23 +25,28 @@ def rows(merged_tallies):
         yield kmer, {lib: tally for _, lib, tally in kmer_group[1]}
 
 if __name__ == '__main__':
+    min_libs, min_counts = sys.argv[1:3]
+    min_libs = int(min_libs)
+    min_counts = int(min_counts)
+
     all_tallies = []
     libs = []
-    for arg in sys.argv[1:]:
+    for arg in sys.argv[3:]:
         lib, path = arg.strip().split(':')
         all_tallies.append(parse_tallies(path, lib))
         libs.append(lib)
     # Print header.
     print('', *libs, sep='\t')
     for kmer, by_lib in rows(merge(*all_tallies)):
-        # Print index (kmer).
-        print(kmer, end='')
+        if len(by_lib) < min_libs:
+            continue
+        out = []
         for l in libs:
-            # Print elements (tallies).
             if l in by_lib:
-                print('\t{}'.format(by_lib[l]), end='')
+                out.append(by_lib[l])
             else:
-                print('\t0', end='')
-        # Finish the line.
-        print()
-
+                out.append(0)
+        if sum(out) < min_counts:
+            continue
+        # Print row.
+        print(kmer, *out, sep='\t')
