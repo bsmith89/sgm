@@ -72,3 +72,12 @@ rule merge_counts:
         """
         {input.script} {params.min_libs} {params.min_counts} {params.lib_list} > {output}
         """
+
+rule simulate_reads:
+    output: "sim/test.fq.gz"
+    input: "meta/camisim.config.ini"
+    conda: "camisim"
+    shell:
+        '''
+        metagenomesimulation.py {input}
+        '''
