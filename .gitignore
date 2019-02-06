@@ -5,3 +5,4 @@ raw/
 .venv/
 .snakemake/
 __pycache__
+activate_local
