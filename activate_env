@@ -3,7 +3,7 @@
 if [ -f activate_local ]
 then
     source activate_local
-done
+fi
 
 alias smake="snakemake --profile profiles/default"
 

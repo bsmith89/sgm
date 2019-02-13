@@ -1,0 +1,28 @@
+import pandas as pd
+from lib.snake import alias_recipe, alias_fmt, curl_recipe, curl_unzip_recipe
+
+# Configure the pipeline
+config_file = 'config.yaml'
+configfile: config_file
+# Metadata specific configurations
+_library = pd.read_table(config['_meta_library'], index_col='library_id')
+_asmbl_group = pd.read_table(config['_meta_asmbl_group'])
+config['library'] = {}
+for library_id, row in _library.iterrows():
+    config['library'][library_id] = {}
+    config['library'][library_id]['r1'] = row['file_r1']
+    config['library'][library_id]['r2'] = row['file_r2']
+config['asmbl_group'] = {}
+for group, d in _asmbl_group.groupby('asmbl_group'):
+    config['asmbl_group'][group] = list(d['library_id'])
+
+
+rule alias_raw_read_r1:
+    output: 'data/{library}.m.r1.fq.gz',
+    input: lambda wildcards: 'raw/mgen/{}'.format(config['library'][wildcards.library]['r1'])
+    shell: alias_recipe
+
+rule alias_raw_read_r2:
+    output: 'data/{library}.m.r2.fq.gz',
+    input: lambda wildcards: 'raw/mgen/{}'.format(config['library'][wildcards.library]['r2'])
+    shell: alias_recipe

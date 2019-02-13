@@ -1,0 +1,120 @@
+import pandas as pd
+from lib.snake import alias_recipe, alias_fmt, curl_recipe, curl_unzip_recipe
+
+wildcard_constraints:
+    sample='[^.]*',
+    nreads='[0-9.]+[kKmMgG]'
+
+# _refseq_genome = pd.read_table(config['_refseq_genome'], index_col='genome_id')
+# config['refseq_genome'] = _refseq_genome.refseq_id.to_dict()
+_sim_sample = pd.read_table(config['_sim_sample'])
+config['sim_sample'] = {}
+for sample_id, d in _sim_sample.groupby('sample_id'):
+    config['sim_sample'][sample_id] = d.set_index('refseq_id').frac.to_dict()
+
+rule download_refseq_genome:
+    output: 'raw/ref/{accession}.fn'
+    shell:
+        '''
+        url=$(ncbi-acc-download --format fasta --url {wildcards.accession})
+        echo "Downloading {wildcards.accession} from $url"
+        curl -o {output} "$url"
+        grep --quiet '^>' {output} || (echo "No FASTA records found in {output}" && false)
+        '''
+
+rule link_reference_genome:
+    output: 'ref/genome/{accession}.fn'
+    input: 'raw/ref/{accession}.fn'
+    shell: alias_recipe
+
+
+rule simulate_community:
+    output: 'data/sim/{sample}.abund.tsv'
+    input: 'meta/sim/sample_genome_abunds.tsv'
+    shell:
+        r'''
+        grep '^{wildcards.sample}\>' {input} | cut -f2,3 > {output}
+        '''
+
+rule generate_simulated_mgen:
+    output:
+        r1='data/sim/{sample}.{nreads}.r1.fq.gz',
+        r2='data/sim/{sample}.{nreads}.r2.fq.gz'
+    input:
+        abund='data/sim/{sample}.abund.tsv',
+        genomes=lambda w: [f'ref/genome/{accession}.fn' for accession in config['sim_sample'][w.sample]]
+    threads: 6
+    shell:
+        '''
+        tmpdir=$(mktemp -d)
+        echo "Writing simulation results for sample {wildcards.sample} to $tmpdir"
+        iss generate --genome {input.genomes} --abundance_file {input.abund} --model HiSeq -n {wildcards.nreads} --seed 1 --cpus {threads} --output $tmpdir/
+        gzip -c $tmpdir/_R1.fastq > {output.r1} & pid1=$!
+        gzip -c $tmpdir/_R2.fastq > {output.r2} & pid2=$!
+        for pid in $pid1 $pid2
+        do
+            wait $pid || [ "$?" -eq 127 ]
+        done
+        '''
+
+rule quality_trim_reads:
+    output:
+        r1='data/sim/{sample}.{nreads}.qtrim.r1.fq.gz',
+        r2='data/sim/{sample}.{nreads}.qtrim.r2.fq.gz',
+        r3='data/sim/{sample}.{nreads}.qtrim.r3.fq.gz'
+    input:
+        r1='data/sim/{sample}.{nreads}.r1.fq.gz',
+        r2='data/sim/{sample}.{nreads}.r2.fq.gz'
+    params:
+        qual_type='sanger',
+        qual_thresh=20
+    shell:
+        '''
+        sickle pe -t {params.qual_type} -q {params.qual_thresh} --gzip-output \
+            --pe-file1 {input.r1} --pe-file2 {input.r2} \
+            --output-pe1 {output.r1} --output-pe2 {output.r2} \
+            --output-single {output.r3}
+        '''
+
+rule assemble_mgen:
+    output:
+        fasta='data/sim/{sample}.{nreads}.asmbl.fn',
+        fastg='data/sim/{sample}.{nreads}.asmbl.fg'
+    input:
+        r1='data/sim/{sample}.{nreads}.qtrim.r1.fq.gz',
+        r2='data/sim/{sample}.{nreads}.qtrim.r2.fq.gz'
+    params:
+        kmin=21,
+        kmax=101,
+        kstep=20,
+        outdir=lambda w: f'data/sim/{w.sample}.{w.nreads}.asmbl.d'
+    threads: MAX_THREADS
+    log: 'log/{sample}.{nreads}.asmbl.log'
+    shell:
+        '''
+        tmpdir=$(mktemp -du)
+        echo "Running MEGAHIT with outdir $tmpdir"
+        megahit \
+            -1 {input.r1} \
+            -2 {input.r2} \
+            --k-min {params.kmin} --k-max {params.kmax} --k-step {params.kstep} \
+            --out-dir $tmpdir \
+            --num-cpu-threads {threads} \
+            --verbose \
+            | tee 2>&1 > {log}
+        cp $tmpdir/final.contigs.fa {output.fasta}
+        megahit_toolkit contig2fastg {params.kmax} $tmpdir/intermediate_contigs/k{params.kmax}.contigs.fa > {output.fastg}
+        '''
+
+rule quality_asses_assembly_with_ref:
+    output: directory('data/sim/{sample}.{nreads}.asmbl.quast.d')
+    input:
+        contigs='data/sim/{sample}.{nreads}.asmbl.fn',
+        genomes=lambda w: [f'ref/genome/{accession}.fn' for accession in config['sim_sample'][w.sample]]
+    params:
+        genomes_list=lambda w: ','.join([f'ref/genome/{accession}.fn' for accession in config['sim_sample'][w.sample]])
+    threads: 4
+    shell:
+        '''
+        metaquast.py --threads {threads} -r {params.genomes_list} --output-dir {output} {input.contigs}
+        '''
