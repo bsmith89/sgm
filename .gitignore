@@ -6,3 +6,4 @@ raw/
 .snakemake/
 __pycache__
 activate_local
+*.swp

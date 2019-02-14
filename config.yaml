@@ -1,4 +1,4 @@
 _meta_library: 'meta/library.tsv'
 _meta_asmbl_group: 'meta/asmbl_group.tsv'
-_refseq_genome: 'meta/sim/refseq_genome.tsv'
-_sim_sample: 'meta/sim/sample_genome_abunds.tsv'
+_genome_to_refseq: 'meta/sim/refseq_genome.tsv'
+# _sim_sample: 'meta/sim/sample_genome_abunds.tsv'
