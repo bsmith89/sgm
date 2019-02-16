@@ -107,3 +107,24 @@ could be improved if we included co-abundance information.
 [See][db-strains]: A de Bruijn Graph Approach to the Quantification
 of Closely-Related Genomes in a Microbial Community
 [db-strain]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3375647/pdf/cmb.2012.0058.pdf
+
+## Benchmarking
+
+I'm going to use InSilicoSeq as part of a tool-chain to simulate a gut
+microbiome metagenomics data set.
+This will include background DNA from ~100 human species, spiked with
+a known focal genome along with other genomes intended to make it more challenging.
+Where do I get this background metagenome?
+Is it a simulation?  If so, is it based on known abundances and known bacterial
+genomes form the human gut?
+I think I should ignore this question for a moment and focus instead on
+what I'm spiking with.
+
+I went to <https://www.ncbi.nlm.nih.gov/genome/browse>, selected "Prokaryotes",
+selected "Filter", chose "Bacteria" (Kingdom), "Complete" (Assembly level),
+"human" (Host), and both "reference" and "representative" (RefSeq category).
+I then chose "all columns", and downloaded the table as a CSV file:
+`meta/ncbi_genomes.csv`.
+
+The result is a table of 245 complete genome assemblies that I can use
+as a base set for a community simulation.
