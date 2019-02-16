@@ -1,8 +1,0 @@
-module load boost/1.61.0 gsl/2.1 python-anaconda2/latest samtools/0.1.19 bedtools2/2.20.1
-module load bwa/0.7.15 fastqc/0.10.1 ncbi-blast/2.2.29 python-anaconda3/201704
-module load quast/4.5
-module load intel/17.0.1 bowtie2/2.3.3 hmmer/3.1b2
-source .venv/bin/activate
-`snakemake --bash-completion`
-alias smake="snakemake --profile profiles/flux"
-alias smake-qsub="snakemake --profile profiles/flux-qsub"
