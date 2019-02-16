@@ -1,7 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 import pandas as pd
+import sys
 
 rename_map = { 'Organism Name': 'taxon_name'
                     , 'Organism Groups': 'taxonomy_string'
@@ -70,8 +71,9 @@ def flatten_replicons(x):
     for r in replicon:
         yield tuple([genome_id]) + r
 
+
 if __name__ == "__main__":
-    data = pd.read_csv('meta/ncbi_genomes.csv').rename(columns={'#Organism Name': 'Organism Name'})
+    data = pd.read_csv(sys.argv[1]).rename(columns={'#Organism Name': 'Organism Name'})
     data = data.rename(columns=rename_map)
 
     data['genome_id'] = data.taxon_name.map(taxon_name_to_id)
@@ -108,7 +110,7 @@ if __name__ == "__main__":
     # Output tables.
     genome[['genome_id', 'taxon_name',
             'taxonomy_string', 'strain_name',
-            'refseq_ftp_url']].to_csv('data/genome.tsv', sep='\t', index=False)
+            'refseq_ftp_url']].to_csv(sys.argv[2], sep='\t', index=False)
     replicon[['replicon_id', 'genome_id',
             'replicon_name', 'replicon_type',
-            'refseq_id', 'genbank_id']].to_csv('data/replicon.tsv', sep='\t', index=False)
+            'refseq_id', 'genbank_id']].to_csv(sys.argv[3], sep='\t', index=False)

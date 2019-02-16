@@ -22,3 +22,7 @@ rule initialize_project:
 rule start_jupyter:
     shell: 'jupyter notebook --config=nb/jupyter_notebook_config.py --notebook-dir=nb/'
 
+rule parse_ncbi_genomes_table:
+    output: genome='data/genome.tsv', replicon='data/replicon.tsv'
+    input: script='scripts/parse_ncbi_genome_tables.py', ncbi='meta/ncbi_genomes.csv'
+    shell: '{input.script} {input.ncbi} {output.genome} {output.replicon}'
