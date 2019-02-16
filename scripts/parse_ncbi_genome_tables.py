@@ -1,14 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
-
-
-# In[27]:
-
 
 rename_map = { 'Organism Name': 'taxon_name'
                     , 'Organism Groups': 'taxonomy_string'
@@ -27,12 +20,6 @@ rename_map = { 'Organism Name': 'taxon_name'
 #                    , 'Modify Date': 'modify_date'
                     }
 
-
-# In[29]:
-
-
-data = pd.read_csv('meta/ncbi_genomes.csv').rename(columns={'#Organism Name': 'Organism Name'})
-data = data.rename(columns=rename_map)
 
 def taxon_name_to_id(name):
     'Transform name from NCBI into a normalized genome_id'
@@ -60,14 +47,6 @@ def taxon_name_to_id(name):
 
     return out
 
-data['genome_id'] = data.taxon_name.map(taxon_name_to_id)
-assert data.genome_id.is_unique
-
-data.head()
-
-
-# In[62]:
-
 
 def parse_replicon(r):
     r = r.strip()
@@ -83,54 +62,53 @@ def parse_replicon(r):
         refseq_id = ''
     return name, replicon_type, refseq_id, genbank_id
 
+
 def flatten_replicons(x):
     # replicons string is "<chromosome name>" or "plasmid" followed by ":<refseq>/<genbank>"
     genome_id = x.genome_id
     replicon = [parse_replicon(r) for r in x.replicons_string.split(';')]
     for r in replicon:
         yield tuple([genome_id]) + r
-        
-replicon = []
-for _, g in data.iterrows():
-    for r in flatten_replicons(g):
-        replicon.append(r)
-        
-replicon = pd.DataFrame(replicon, columns=['genome_id', 'replicon_name', 'replicon_type', 'refseq_id', 'genbank_id'])
 
-# Deal with some special cleanup cases.
-# Two plasmids have the same name.
-replicon.loc[replicon.genbank_id == 'CP018754.1', 'replicon_name'] += '_1'
-replicon.loc[replicon.genbank_id == 'CP018755.1', 'replicon_name'] += '_2'
-# Two chromoses have the same genbank_id, but one, despite having a different refseq_id, doesn't really exist.
-replicon = replicon.drop(replicon[replicon.refseq_id == 'NZ_CP015586.1'].index)
+if __name__ == "__main__":
+    data = pd.read_csv('meta/ncbi_genomes.csv').rename(columns={'#Organism Name': 'Organism Name'})
+    data = data.rename(columns=rename_map)
 
-# Produce unique replicon_ids.
-replicon['replicon_id'] = replicon.groupby('genome_id').genome_id.apply(lambda x: x + ['_' + str(i) for i in range(len(x))])
+    data['genome_id'] = data.taxon_name.map(taxon_name_to_id)
+    assert data.genome_id.is_unique
 
+    replicon = []
+    for _, g in data.iterrows():
+        for r in flatten_replicons(g):
+            replicon.append(r)
 
-# Check no duplicates for three different unique 'columns'.
-for ser in [replicon.replicon_id,
-            (replicon.genome_id + replicon.replicon_name),
-            replicon.refseq_id,
-            replicon.genbank_id]:
-    assert replicon[ser.duplicated(False)].empty
+    replicon = pd.DataFrame(replicon, columns=['genome_id', 'replicon_name', 'replicon_type', 'refseq_id', 'genbank_id'])
 
+    # Deal with some special cleanup cases.
+    # Two plasmids have the same name.
+    replicon.loc[replicon.genbank_id == 'CP018754.1', 'replicon_name'] += '_1'
+    replicon.loc[replicon.genbank_id == 'CP018755.1', 'replicon_name'] += '_2'
+    # Two chromoses have the same genbank_id, but one, despite having a different refseq_id, doesn't really exist.
+    replicon = replicon.drop(replicon[replicon.refseq_id == 'NZ_CP015586.1'].index)
 
-# In[63]:
+    # Produce unique replicon_ids.
+    replicon['replicon_id'] = replicon.groupby('genome_id').genome_id.apply(lambda x: x + ['_' + str(i) for i in range(len(x))])
 
+    # Check no duplicates for three different unique 'columns'.
+    for ser in [replicon.replicon_id,
+                (replicon.genome_id + replicon.replicon_name),
+                replicon.refseq_id,
+                replicon.genbank_id]:
+        assert replicon[ser.duplicated(False)].empty
 
-genome = data[['genome_id', 'taxon_name', 'taxonomy_string', 'strain_name', 'refseq_ftp_url']]
-for col in ['genome_id', 'taxon_name', 'refseq_ftp_url']:
-    assert genome[col].is_unique
+    genome = data[['genome_id', 'taxon_name', 'taxonomy_string', 'strain_name', 'refseq_ftp_url']]
+    for col in ['genome_id', 'taxon_name', 'refseq_ftp_url']:
+        assert genome[col].is_unique
 
-
-# In[ ]:
-
-
-genome[['genome_id', 'taxon_name',
-        'taxonomy_string', 'strain_name',
-        'refseq_ftp_url']].to_csv('data/genome.tsv', sep='\t', index=False)
-replicon[['replicon_id', 'genome_id',
-          'replicon_name', 'replicon_type',
-          'refseq_id', 'genbank_id']].to_csv('data/replicon.tsv', sep='\t', index=False)
-
+    # Output tables.
+    genome[['genome_id', 'taxon_name',
+            'taxonomy_string', 'strain_name',
+            'refseq_ftp_url']].to_csv('data/genome.tsv', sep='\t', index=False)
+    replicon[['replicon_id', 'genome_id',
+            'replicon_name', 'replicon_type',
+            'refseq_id', 'genbank_id']].to_csv('data/replicon.tsv', sep='\t', index=False)
