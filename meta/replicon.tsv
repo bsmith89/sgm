@@ -1,0 +1,491 @@
+replicon_id	genome_id	replicon_name	replicon_type	refseq_id	genbank_id
+C_muridarum_Nigg_0	C_muridarum_Nigg	chromosome	chromosome	NC_002620.2	AE002160.2
+C_muridarum_Nigg_1	C_muridarum_Nigg	plasmid pMoPn	plasmid	NC_002182.1	AE002162.1
+V_cholerae_O1_El_Tor_N16961_0	V_cholerae_O1_El_Tor_N16961	chromosome I	chromosome	NC_002505.1	AE003852.1
+V_cholerae_O1_El_Tor_N16961_1	V_cholerae_O1_El_Tor_N16961	chromosome II	chromosome	NC_002506.1	AE003853.1
+P_aeruginosa_PAO1_0	P_aeruginosa_PAO1	chromosome	chromosome	NC_002516.2	AE004091.2
+N_gonorrhoeae_FA_1090_0	N_gonorrhoeae_FA_1090	chromosome	chromosome	NC_002946.2	AE004969.1
+R_conorii_Malish_7_0	R_conorii_Malish_7	chromosome	chromosome	NC_003103.1	AE006914.1
+S_pneumoniae_R6_0	S_pneumoniae_R6	chromosome	chromosome	NC_003098.1	AE007317.1
+B_melitensis_1_16M_0	B_melitensis_1_16M	chromosome I	chromosome	NC_003317.1	AE008917.1
+B_melitensis_1_16M_1	B_melitensis_1_16M	chromosome II	chromosome	NC_003318.1	AE008918.1
+F_nucleatum_nucleatum_ATCC_25586_0	F_nucleatum_nucleatum_ATCC_25586	chromosome	chromosome	NC_003454.1	AE009951.2
+S_agalactiae_2603V_R_0	S_agalactiae_2603V_R	chromosome	chromosome	NC_004116.1	AE009948.1
+T_whipplei_Twist_0	T_whipplei_Twist	chromosome	chromosome	NC_004572.3	AE014184.1
+C_caviae_GPIC_0	C_caviae_GPIC	chromosome	chromosome	NC_003361.3	AE015925.1
+C_caviae_GPIC_1	C_caviae_GPIC	plasmid pCpGP1	plasmid	NC_004720.1	AE015926.1
+C_tetani_E88_0	C_tetani_E88	chromosome	chromosome	NC_004557.1	AE015927.1
+C_tetani_E88_1	C_tetani_E88	plasmid pE88	plasmid	NC_004565.1	AF528097.1
+S_epidermidis_ATCC_12228_0	S_epidermidis_ATCC_12228	chromosome	chromosome	NC_004461.1	AE015929.1
+S_epidermidis_ATCC_12228_1	S_epidermidis_ATCC_12228	plasmid pSE-12228-01	plasmid	NC_005008.1	AE015930.1
+S_epidermidis_ATCC_12228_2	S_epidermidis_ATCC_12228	plasmid pSE-12228-02	plasmid	NC_005007.1	AE015931.1
+S_epidermidis_ATCC_12228_3	S_epidermidis_ATCC_12228	plasmid pSE-12228-03	plasmid	NC_005006.1	AE015932.1
+S_epidermidis_ATCC_12228_4	S_epidermidis_ATCC_12228	plasmid pSE-12228-04	plasmid	NC_005005.1	AE015933.1
+S_epidermidis_ATCC_12228_5	S_epidermidis_ATCC_12228	plasmid pSE-12228-05	plasmid	NC_005004.1	AE015934.1
+S_epidermidis_ATCC_12228_6	S_epidermidis_ATCC_12228	plasmid pSE-12228-06	plasmid	NC_005003.1	AE015935.1
+C_violaceum_ATCC_12472_0	C_violaceum_ATCC_12472	chromosome	chromosome	NC_005085.1	AE016825.1
+E_faecalis_V583_0	E_faecalis_V583	chromosome	chromosome	NC_004668.1	AE016830.1
+E_faecalis_V583_1	E_faecalis_V583	plasmid pTEF1	plasmid	NC_004669.1	AE016833.1
+E_faecalis_V583_2	E_faecalis_V583	plasmid pTEF2	plasmid	NC_004671.1	AE016831.1
+E_faecalis_V583_3	E_faecalis_V583	plasmid pTEF3	plasmid	NC_004670.1	AE016832.1
+B_cereus_ATCC_14579_0	B_cereus_ATCC_14579	chromosome	chromosome	NC_004722.1	AE016877.1
+B_cereus_ATCC_14579_1	B_cereus_ATCC_14579	plasmid pBClin15	plasmid	NC_004721.2	AE016878.2
+B_anthracis_Ames_0	B_anthracis_Ames	chromosome	chromosome	NC_003997.3	AE016879.1
+M_avium_paratuberculosis_K_10_0	M_avium_paratuberculosis_K_10	chromosome	chromosome	NC_002944.2	AE016958.1
+H_hepaticus_ATCC_51449_0	H_hepaticus_ATCC_51449	chromosome	chromosome	NC_004917.1	AE017125.1
+H_ducreyi_35000HP_0	H_ducreyi_35000HP	chromosome	chromosome	NC_002940.2	AE017143.1
+R_typhi_Wilmington_0	R_typhi_Wilmington	chromosome	chromosome	NC_006142.1	AE017197.1
+T_denticola_ATCC_35405_0	T_denticola_ATCC_35405	chromosome	chromosome	NC_002967.9	AE017226.1
+C_acnes_KPA171202_0	C_acnes_KPA171202	chromosome	chromosome	NC_006085.1	AE017283.1
+L_pneumophila_pneumophila_Philadelphia_1_0	L_pneumophila_pneumophila_Philadelphia_1	chromosome	chromosome	NC_002942.5	AE017354.1
+H_pylori_26695_0	H_pylori_26695	chromosome	chromosome	NC_000915.1	AE000511.1
+C_trachomatis_D_UW_3_CX_0	C_trachomatis_D_UW_3_CX	chromosome	chromosome	NC_000117.1	AE001273.1
+C_pneumoniae_CWL029_0	C_pneumoniae_CWL029	chromosome	chromosome	NC_000922.1	AE001363.1
+N_meningitidis_MC58_0	N_meningitidis_MC58	chromosome	chromosome	NC_003112.2	AE002098.2
+Y_pestis_CO92_0	Y_pestis_CO92	chromosome	chromosome	NC_003143.1	AL590842.1
+Y_pestis_CO92_1	Y_pestis_CO92	plasmid pCD1	plasmid	NC_003131.1	AL117189.1
+Y_pestis_CO92_2	Y_pestis_CO92	plasmid pMT1	plasmid	NC_003134.1	AL117211.1
+Y_pestis_CO92_3	Y_pestis_CO92	plasmid pPCP1	plasmid	NC_003132.1	AL109969.1
+C_jejuni_jejuni_NCTC_11168_0	C_jejuni_jejuni_NCTC_11168	chromosome	chromosome	NC_002163.1	AL111168.1
+F_tularensis_tularensis_SCHU_S4_0	F_tularensis_tularensis_SCHU_S4	chromosome	chromosome	NC_006570.2	AJ749949.2
+Y_enterocolitica_enterocolitica_8081_0	Y_enterocolitica_enterocolitica_8081	chromosome	chromosome	NC_008800.1	AM286415.1
+Y_enterocolitica_enterocolitica_8081_1	Y_enterocolitica_enterocolitica_8081	plasmid pYVe8081	plasmid	NC_008791.1	AM286416.1
+B_fragilis_YCH46_0	B_fragilis_YCH46	chromosome	chromosome	NC_006347.1	AP006841.1
+B_fragilis_YCH46_1	B_fragilis_YCH46	plasmid pBFY46	plasmid	NC_006297.1	AP006842.1
+C_felis_Fe_C_56_0	C_felis_Fe_C_56	chromosome	chromosome	NC_007899.1	AP006861.1
+C_felis_Fe_C_56_1	C_felis_Fe_C_56	plasmid pCfe1	plasmid	NC_007900.1	AP006862.1
+S_haemolyticus_JCSC1435_0	S_haemolyticus_JCSC1435	chromosome	chromosome	NC_007168.1	AP006716.1
+S_haemolyticus_JCSC1435_1	S_haemolyticus_JCSC1435	plasmid pSHaeA	plasmid	NC_007169.1	AP006717.1
+S_haemolyticus_JCSC1435_2	S_haemolyticus_JCSC1435	plasmid pSHaeB	plasmid	NC_007170.1	AP006718.1
+S_haemolyticus_JCSC1435_3	S_haemolyticus_JCSC1435	plasmid pSHaeC	plasmid	NC_007171.1	AP006719.1
+S_saprophyticus_saprophyticus_ATCC_15305_0	S_saprophyticus_saprophyticus_ATCC_15305	chromosome	chromosome	NC_007350.1	AP008934.1
+S_saprophyticus_saprophyticus_ATCC_15305_1	S_saprophyticus_saprophyticus_ATCC_15305	plasmid pSSP1	plasmid	NC_007351.1	AP008935.1
+S_saprophyticus_saprophyticus_ATCC_15305_2	S_saprophyticus_saprophyticus_ATCC_15305	plasmid pSSP2	plasmid	NC_007352.1	AP008936.1
+F_magna_ATCC_29328_0	F_magna_ATCC_29328	chromosome	chromosome	NC_010376.1	AP008971.1
+F_magna_ATCC_29328_1	F_magna_ATCC_29328	plasmid pFMC	plasmid	NC_010371.1	AP008972.1
+P_gingivalis_ATCC_33277_0	P_gingivalis_ATCC_33277	chromosome	chromosome	NC_010729.1	AP009380.1
+M_penetrans_HF_2_0	M_penetrans_HF_2	chromosome	chromosome	NC_004432.1	BA000026.2
+B_pseudomallei_K96243_0	B_pseudomallei_K96243	chromosome 1	chromosome	NC_006350.1	BX571965.1
+B_pseudomallei_K96243_1	B_pseudomallei_K96243	chromosome 2	chromosome	NC_006351.1	BX571966.1
+B_mallei_ATCC_23344_0	B_mallei_ATCC_23344	chromosome 1	chromosome	NC_006348.1	CP000010.1
+B_mallei_ATCC_23344_1	B_mallei_ATCC_23344	chromosome 2	chromosome	NC_006349.2	CP000011.2
+S_dysenteriae_Sd197_0	S_dysenteriae_Sd197	chromosome	chromosome	NC_007606.1	CP000034.1
+S_dysenteriae_Sd197_1	S_dysenteriae_Sd197	plasmid pSD197_spA	plasmid	NC_009344.1	CP000640.1
+S_dysenteriae_Sd197_2	S_dysenteriae_Sd197	plasmid pSD1_197	plasmid	NC_007607.1	CP000035.1
+R_bellii_RML369_C_0	R_bellii_RML369_C	chromosome	chromosome	NC_007940.1	CP000087.1
+R_felis_URRWXCal2_0	R_felis_URRWXCal2	chromosome	chromosome	NC_007109.1	CP000053.1
+R_felis_URRWXCal2_1	R_felis_URRWXCal2	plasmid pRF	plasmid	NC_007110.1	CP000054.1
+R_felis_URRWXCal2_2	R_felis_URRWXCal2	plasmid pRFdelta	plasmid	NC_007111.1	CP000055.1
+B_vulgatus_ATCC_8482_0	B_vulgatus_ATCC_8482	chromosome	chromosome	NC_009614.1	CP000139.1
+P_distasonis_ATCC_8503_0	P_distasonis_ATCC_8503	chromosome	chromosome	NC_009615.1	CP000140.1
+A_phagocytophilum_HZ_0	A_phagocytophilum_HZ	chromosome	chromosome	NC_007797.1	CP000235.1
+E_chaffeensis_Arkansas_0	E_chaffeensis_Arkansas	chromosome	chromosome	NC_007799.1	CP000236.1
+N_sennetsu_Miyayama_0	N_sennetsu_Miyayama	chromosome	chromosome	NC_007798.1	CP000237.1
+S_aureus_aureus_NCTC_8325_0	S_aureus_aureus_NCTC_8325	chromosome	chromosome	NC_007795.1	CP000253.1
+C_perfringens_ATCC_13124_0	C_perfringens_ATCC_13124	chromosome	chromosome	NC_008261.1	CP000246.1
+P_xenovorans_LB400_0	P_xenovorans_LB400	chromosome 1	chromosome	NC_007951.1	CP000270.1
+P_xenovorans_LB400_1	P_xenovorans_LB400	chromosome 2	chromosome	NC_007952.1	CP000271.1
+P_xenovorans_LB400_2	P_xenovorans_LB400	chromosome 3	chromosome	NC_007953.1	CP000272.1
+L_borgpetersenii_serovar_Hardjo_bovis_L550_0	L_borgpetersenii_serovar_Hardjo_bovis_L550	chromosome 1	chromosome	NC_008508.1	CP000348.1
+L_borgpetersenii_serovar_Hardjo_bovis_L550_1	L_borgpetersenii_serovar_Hardjo_bovis_L550	chromosome 2	chromosome	NC_008509.1	CP000349.1
+A_butzleri_RM4018_0	A_butzleri_RM4018	chromosome	chromosome	NC_009850.1	CP000361.1
+C_novyi_NT_0	C_novyi_NT	chromosome	chromosome	NC_008593.1	CP000382.1
+S_sanguinis_SK36_0	S_sanguinis_SK36	chromosome	chromosome	NC_009009.1	CP000387.1
+R_canadensis_McKiel_0	R_canadensis_McKiel	chromosome	chromosome	NC_009879.1	CP000409.1
+A_hydrophila_hydrophila_ATCC_7966_0	A_hydrophila_hydrophila_ATCC_7966	chromosome	chromosome	NC_008570.1	CP000462.1
+M_smegmatis_MC2_155_0	M_smegmatis_MC2_155	chromosome	chromosome	NC_008596.1	CP000480.1
+B_bacilliformis_KC583_0	B_bacilliformis_KC583	chromosome	chromosome	NC_008783.1	CP000524.1
+C_botulinum_A_Hall_0	C_botulinum_A_Hall	chromosome	chromosome	NC_009698.1	CP000727.1
+O_anthropi_ATCC_49188_0	O_anthropi_ATCC_49188	chromosome 1	chromosome	NC_009667.1	CP000758.1
+O_anthropi_ATCC_49188_1	O_anthropi_ATCC_49188	chromosome 2	chromosome	NC_009668.1	CP000759.1
+O_anthropi_ATCC_49188_2	O_anthropi_ATCC_49188	plasmid pOANT01	plasmid	NC_009669.1	CP000760.1
+O_anthropi_ATCC_49188_3	O_anthropi_ATCC_49188	plasmid pOANT02	plasmid	NC_009670.1	CP000761.1
+O_anthropi_ATCC_49188_4	O_anthropi_ATCC_49188	plasmid pOANT03	plasmid	NC_009671.1	CP000762.1
+O_anthropi_ATCC_49188_5	O_anthropi_ATCC_49188	plasmid pOANT04	plasmid	NC_009672.1	CP000763.1
+B_cytotoxicus_NVH_391_98_0	B_cytotoxicus_NVH_391_98	chromosome	chromosome	NC_009674.1	CP000764.1
+B_cytotoxicus_NVH_391_98_1	B_cytotoxicus_NVH_391_98	plasmid pBC9801	plasmid	NC_009673.1	CP000765.1
+L_biflexa_serovar_Patoc_strain_Patoc_1_Paris_0	L_biflexa_serovar_Patoc_strain_Patoc_1_Paris	chromosome I	chromosome	NC_010602.1	CP000786.1
+L_biflexa_serovar_Patoc_strain_Patoc_1_Paris_1	L_biflexa_serovar_Patoc_strain_Patoc_1_Paris	chromosome II	chromosome	NC_010843.1	CP000787.1
+L_biflexa_serovar_Patoc_strain_Patoc_1_Paris_2	L_biflexa_serovar_Patoc_strain_Patoc_1_Paris	plasmid p74	plasmid	NC_010844.1	CP000788.1
+R_akari_Hartford_0	R_akari_Hartford	chromosome	chromosome	NC_009881.1	CP000847.1
+D_acidovorans_SPH_1_0	D_acidovorans_SPH_1	chromosome	chromosome	NC_010002.1	CP000884.1
+C_lari_RM2100_0	C_lari_RM2100	chromosome	chromosome	NC_012039.1	CP000932.1
+C_lari_RM2100_1	C_lari_RM2100	plasmid megaplasmid pCL2100	plasmid	NC_012040.1	CP000933.1
+F_philomiragia_philomiragia_ATCC_25017_0	F_philomiragia_philomiragia_ATCC_25017	chromosome	chromosome	NC_010336.1	CP000937.1
+F_philomiragia_philomiragia_ATCC_25017_1	F_philomiragia_philomiragia_ATCC_25017	plasmid pFPHI01	plasmid	NC_010331.1	CP000938.1
+U_parvum_serovar_3_ATCC_27815_0	U_parvum_serovar_3_ATCC_27815	chromosome	chromosome	NC_010503.1	CP000942.1
+H_somni_2336_0	H_somni_2336	chromosome	chromosome	NC_010519.1	CP000947.1
+B_duttonii_Ly_0	B_duttonii_Ly	chromosome	chromosome	NC_011229.1	CP000976.1
+B_duttonii_Ly_1	B_duttonii_Ly	plasmid pl11	plasmid	NC_011224.1	CP000977.1
+B_duttonii_Ly_2	B_duttonii_Ly	plasmid pl15	plasmid	NC_011226.1	CP000978.1
+B_duttonii_Ly_3	B_duttonii_Ly	plasmid pl165	plasmid	NC_011247.1	CP000979.1
+B_duttonii_Ly_4	B_duttonii_Ly	plasmid pl23	plasmid	NC_011257.1	CP000980.1
+B_duttonii_Ly_5	B_duttonii_Ly	plasmid pl23b	plasmid	NC_011259.1	CP000981.1
+B_duttonii_Ly_6	B_duttonii_Ly	plasmid pl26	plasmid	NC_011261.1	CP000982.1
+B_duttonii_Ly_7	B_duttonii_Ly	plasmid pl27	plasmid	NC_011265.1	CP000983.1
+B_duttonii_Ly_8	B_duttonii_Ly	plasmid pl28	plasmid	NC_011245.1	CP000984.1
+B_duttonii_Ly_9	B_duttonii_Ly	plasmid pl31	plasmid	NC_011262.1	CP000991.1
+B_duttonii_Ly_10	B_duttonii_Ly	plasmid pl32	plasmid	NC_011264.1	CP000992.1
+B_duttonii_Ly_11	B_duttonii_Ly	plasmid pl35	plasmid	NC_011248.1	CP000985.1
+B_duttonii_Ly_12	B_duttonii_Ly	plasmid pl36	plasmid	NC_011249.1	CP000986.1
+B_duttonii_Ly_13	B_duttonii_Ly	plasmid pl40	plasmid	NC_011250.1	CP000987.1
+B_duttonii_Ly_14	B_duttonii_Ly	plasmid pl41	plasmid	NC_011251.1	CP000988.1
+B_duttonii_Ly_15	B_duttonii_Ly	plasmid pl42	plasmid	NC_011254.1	CP000989.1
+B_duttonii_Ly_16	B_duttonii_Ly	plasmid pl70	plasmid	NC_011256.1	CP000990.1
+R_pickettii_12J_0	R_pickettii_12J	chromosome 1	chromosome	NC_010682.1	CP001068.1
+R_pickettii_12J_1	R_pickettii_12J	chromosome 2	chromosome	NC_010678.1	CP001069.1
+R_pickettii_12J_2	R_pickettii_12J	plasmid pRPIC01	plasmid	NC_010683.1	CP001070.1
+L_hongkongensis_HLHK9_0	L_hongkongensis_HLHK9	chromosome	chromosome	NC_012559.1	CP001154.1
+N_risticii_Illinois_0	N_risticii_Illinois	chromosome	chromosome	NC_013009.1	CP001431.1
+C_aurimucosum_ATCC_700975_0	C_aurimucosum_ATCC_700975	chromosome	chromosome	NC_012590.1	CP001601.1
+C_aurimucosum_ATCC_700975_1	C_aurimucosum_ATCC_700975	plasmid pET44827	plasmid	NC_010813.1	FM164414.1
+C_ochracea_DSM_7271_0	C_ochracea_DSM_7271	chromosome	chromosome	NC_013162.1	CP001632.1
+C_curtum_DSM_15641_0	C_curtum_DSM_15641	chromosome	chromosome	NC_013170.1	CP001682.1
+L_buccalis_C_1013_b_0	L_buccalis_C_1013_b	chromosome	chromosome	NC_013192.1	CP001685.1
+A_prevotii_DSM_20548_0	A_prevotii_DSM_20548	chromosome	chromosome	NC_013171.1	CP001708.1
+A_prevotii_DSM_20548_1	A_prevotii_DSM_20548	plasmid pAPRE01	plasmid	NC_013164.1	CP001709.1
+E_lenta_DSM_2243_0	E_lenta_DSM_2243	chromosome	chromosome	NC_013204.1	CP001726.1
+E_coli_IAI39_0	E_coli_IAI39	chromosome	chromosome	NC_011750.1	CU928164.2
+S_equi_zooepidemicus_0	S_equi_zooepidemicus	chromosome	chromosome	NC_012470.1	FM204884.1
+M_pneumoniae_M129_0	M_pneumoniae_M129	chromosome	chromosome	NC_000912.1	U00089.2
+S_suis_BM407_0	S_suis_BM407	chromosome	chromosome	NC_012926.1	FM252032.1
+S_suis_BM407_1	S_suis_BM407	plasmid pBM407	plasmid	NC_012923.1	FM252033.1
+M_morganii_morganii_KT_0	M_morganii_morganii_KT	chromosome	chromosome	NC_020418.1	CP004345.1
+H_influenzae_Rd_KW20_0	H_influenzae_Rd_KW20	chromosome	chromosome	NC_000907.1	L42023.1
+M_genitalium_G37_0	M_genitalium_G37	chromosome	chromosome	NC_000908.2	L43967.2
+S_intermedius_B196_0	S_intermedius_B196	chromosome	chromosome	NC_022246.1	CP003857.1
+B_quintana_Toulouse_0	B_quintana_Toulouse	chromosome	chromosome	NC_005955.1	BX897700.1
+B_henselae_Houston_1_0	B_henselae_Houston_1	chromosome	chromosome	NC_005956.1	BX897699.1
+M_kansasii_ATCC_12478_0	M_kansasii_ATCC_12478	chromosome	chromosome	NC_022663.1	CP006835.1
+M_kansasii_ATCC_12478_1	M_kansasii_ATCC_12478	plasmid pMK12478	plasmid	NC_022654.1	CP006836.1
+O_tsutsugamushi_Boryong_0	O_tsutsugamushi_Boryong	chromosome	chromosome	NC_009488.1	AM494475.1
+E_muris_AS145_0	E_muris_AS145	chromosome	chromosome	NC_023063.1	CP006917.1
+M_abscessus_ATCC_19977_0	M_abscessus_ATCC_19977	chromosome Chromosome	chromosome	NC_010397.1	CU458896.1
+M_abscessus_ATCC_19977_1	M_abscessus_ATCC_19977	plasmid pMAB23	plasmid	NC_010394.1	CU458745.1
+C_urealyticum_DSM_7109_0	C_urealyticum_DSM_7109	chromosome	chromosome	NC_010545.1	AM942444.1
+P_mirabilis_HI4320_0	P_mirabilis_HI4320	chromosome	chromosome	NC_010554.1	AM942759.1
+P_mirabilis_HI4320_1	P_mirabilis_HI4320	plasmid pHI4320	plasmid	NC_010555.1	AM942760.1
+S_marcescens_marcescens_Db11_0	S_marcescens_marcescens_Db11	chromosome I	chromosome	NZ_HG326223.1	HG326223.1
+S_maltophilia_K279a_0	S_maltophilia_K279a	chromosome	chromosome	NC_010943.1	AM743169.1
+G_bronchialis_DSM_43247_0	G_bronchialis_DSM_43247	chromosome	chromosome	NC_013441.1	CP001802.1
+G_bronchialis_DSM_43247_1	G_bronchialis_DSM_43247	plasmid pGBRO01	plasmid	NC_013442.1	CP001803.1
+M_hominis_ATCC_23114_0	M_hominis_ATCC_23114	chromosome	chromosome	NC_013511.1	FP236530.1
+S_moniliformis_DSM_12112_0	S_moniliformis_DSM_12112	chromosome	chromosome	NC_013515.1	CP001779.1
+S_moniliformis_DSM_12112_1	S_moniliformis_DSM_12112	plasmid pSMON01	plasmid	NC_013516.1	CP001780.1
+G_vaginalis_409_05_0	G_vaginalis_409_05	chromosome	chromosome	NC_013721.1	CP001849.1
+A_fermentans_DSM_20731_0	A_fermentans_DSM_20731	chromosome	chromosome	NC_013740.1	CP001859.1
+S_mitis_B6_0	S_mitis_B6	chromosome	chromosome	NC_013853.1	FN568063.1
+S_lugdunensis_HKU09_01_0	S_lugdunensis_HKU09_01	chromosome	chromosome	NC_013893.1	CP001837.1
+L_interrogans_serovar_Lai_56601_0	L_interrogans_serovar_Lai_56601	chromosome I	chromosome	NC_004342.2	AE010300.2
+L_interrogans_serovar_Lai_56601_1	L_interrogans_serovar_Lai_56601	chromosome II	chromosome	NC_004343.2	AE010301.2
+T_pallidum_pallidum_Sea_81_4_0	T_pallidum_pallidum_Sea_81_4	chromosome	chromosome	NZ_CP003679.1	CP003679.1
+B_holmesii_ATCC_51541_0	B_holmesii_ATCC_51541	chromosome	chromosome	NZ_CP007494.1	CP007494.1
+S_pyogenes_M1_GAS_0	S_pyogenes_M1_GAS	chromosome	chromosome	NC_002737.2	AE004092.2
+C_freundii_CFNIH1_0	C_freundii_CFNIH1	chromosome	chromosome	NZ_CP007557.1	CP007557.1
+C_freundii_CFNIH1_1	C_freundii_CFNIH1	plasmid pKEC-a3c	plasmid	NZ_CP007558.1	CP007558.1
+E_cloacae_cloacae_ATCC_13047_0	E_cloacae_cloacae_ATCC_13047	chromosome	chromosome	NC_014121.1	CP001918.1
+E_cloacae_cloacae_ATCC_13047_1	E_cloacae_cloacae_ATCC_13047	plasmid pECL_A	plasmid	NC_014107.1	CP001919.1
+E_cloacae_cloacae_ATCC_13047_2	E_cloacae_cloacae_ATCC_13047	plasmid pECL_B	plasmid	NC_014108.1	CP001920.1
+M_catarrhalis_BBH18_0	M_catarrhalis_BBH18	chromosome	chromosome	NC_014147.1	CP002005.1
+N_dassonvillei_dassonvillei_DSM_43111_0	N_dassonvillei_dassonvillei_DSM_43111	chromosome 1	chromosome	NC_014210.1	CP002040.1
+N_dassonvillei_dassonvillei_DSM_43111_1	N_dassonvillei_dassonvillei_DSM_43111	chromosome 2	chromosome	NC_014211.1	CP002041.1
+A_haemolyticum_DSM_20595_0	A_haemolyticum_DSM_20595	chromosome	chromosome	NC_014218.1	CP002045.1
+W_chondrophila_WSU_86_1044_0	W_chondrophila_WSU_86_1044	chromosome	chromosome	NC_014225.1	CP001928.1
+W_chondrophila_WSU_86_1044_1	W_chondrophila_WSU_86_1044	plasmid pWc	plasmid	NC_014226.1	CP001929.1
+A_schaalii_0	A_schaalii	chromosome	chromosome	NZ_CP008802.1	CP008802.1
+B_valaisiana_Tom4006_0	B_valaisiana_Tom4006	chromosome	chromosome	NZ_CP009117.1	CP009117.1
+B_valaisiana_Tom4006_1	B_valaisiana_Tom4006	plasmid cp26	plasmid	NZ_CP009118.1	CP009118.1
+B_valaisiana_Tom4006_2	B_valaisiana_Tom4006	plasmid lp54	plasmid	NZ_CP009119.1	CP009119.1
+E_anophelis_NUHP1_0	E_anophelis_NUHP1	chromosome	chromosome	NZ_CP007547.1	CP007547.1
+A_baumannii_0	A_baumannii	chromosome	chromosome	NZ_CP009257.1	CP009257.1
+P_multocida_0	P_multocida	chromosome	chromosome	NZ_CP008918.1	CP008918.1
+P_gergoviae_0	P_gergoviae	chromosome	chromosome	NZ_CP009450.1	CP009450.1
+C_neteri_0	C_neteri	chromosome	chromosome	NZ_CP009451.1	CP009451.1
+S_salivarius_0	S_salivarius	chromosome	chromosome	NZ_CP009913.1	CP009913.1
+P_micra_0	P_micra	chromosome	chromosome	NZ_CP009761.1	CP009761.1
+S_iniae_0	S_iniae	chromosome	chromosome	NZ_CP010783.1	CP010783.1
+P_denticola_F0289_0	P_denticola_F0289	chromosome	chromosome	NC_015311.1	CP002589.1
+S_pseudintermedius_HKU10_03_0	S_pseudintermedius_HKU10_03	chromosome	chromosome	NC_014925.1	CP002439.1
+B_pertussis_Tohama_I_0	B_pertussis_Tohama_I	chromosome	chromosome	NC_002929.2	BX470248.1
+R_prowazekii_Madrid_E_0	R_prowazekii_Madrid_E	chromosome	chromosome	NC_000963.1	AJ235269.1
+M_leprae_TN_0	M_leprae_TN	chromosome	chromosome	NC_002677.1	AL450380.1
+S_enterica_enterica_serovar_Typhi_CT18_0	S_enterica_enterica_serovar_Typhi_CT18	chromosome	chromosome	NC_003198.1	AL513382.1
+S_enterica_enterica_serovar_Typhi_CT18_1	S_enterica_enterica_serovar_Typhi_CT18	plasmid pHCM1	plasmid	NC_003384.1	AL513383.1
+S_enterica_enterica_serovar_Typhi_CT18_2	S_enterica_enterica_serovar_Typhi_CT18	plasmid pHCM2	plasmid	NC_003385.1	AL513384.1
+C_metallidurans_CH34_0	C_metallidurans_CH34	chromosome	chromosome	NC_007973.1	CP000352.1
+C_metallidurans_CH34_1	C_metallidurans_CH34	plasmid megaplasmid	plasmid	NC_007974.2	CP000353.2
+C_metallidurans_CH34_2	C_metallidurans_CH34	plasmid pMOL28	plasmid	NC_007972.2	CP000355.2
+C_metallidurans_CH34_3	C_metallidurans_CH34	plasmid pMOL30	plasmid	NC_007971.2	CP000354.2
+L_monocytogenes_EGD_e_0	L_monocytogenes_EGD_e	chromosome	chromosome	NC_003210.1	AL591824.1
+V_parahaemolyticus_RIMD_2210633_0	V_parahaemolyticus_RIMD_2210633	chromosome 1	chromosome	NC_004603.1	BA000031.2
+V_parahaemolyticus_RIMD_2210633_1	V_parahaemolyticus_RIMD_2210633	chromosome 2	chromosome	NC_004605.1	BA000032.2
+L_longbeachae_NSW150_0	L_longbeachae_NSW150	chromosome	chromosome	NC_013861.1	FN650140.1
+L_longbeachae_NSW150_1	L_longbeachae_NSW150	plasmid pLLO	plasmid	NC_014544.1	FN650141.1
+M_fermentans_M64_0	M_fermentans_M64	chromosome	chromosome	NC_014921.1	CP002458.1
+O_splanchnicus_DSM_20712_0	O_splanchnicus_DSM_20712	chromosome	chromosome	NC_015160.1	CP002544.1
+P_asaccharolytica_DSM_20707_0	P_asaccharolytica_DSM_20707	chromosome	chromosome	NC_015501.1	CP002689.1
+C_resistens_DSM_45100_0	C_resistens_DSM_45100	chromosome	chromosome	NC_015673.1	CP002857.1
+K_aerogenes_KCTC_2190_0	K_aerogenes_KCTC_2190	chromosome	chromosome	NC_015663.1	CP002824.1
+H_felis_ATCC_49179_0	H_felis_ATCC_49179	chromosome	chromosome	NC_014810.2	FQ670179.2
+B_bissettii_DN127_0	B_bissettii_DN127	chromosome	chromosome	NC_015921.1	CP002746.1
+B_bissettii_DN127_1	B_bissettii_DN127	plasmid cp26	plasmid	NC_015907.1	CP002747.1
+B_bissettii_DN127_2	B_bissettii_DN127	plasmid cp32-11	plasmid	NC_015903.1	CP002748.1
+B_bissettii_DN127_3	B_bissettii_DN127	plasmid cp32-3	plasmid	NC_015908.1	CP002749.1
+B_bissettii_DN127_4	B_bissettii_DN127	plasmid cp32-4	plasmid	NC_015904.1	CP002750.1
+B_bissettii_DN127_5	B_bissettii_DN127	plasmid cp32-5	plasmid	NC_015909.1	CP002751.1
+B_bissettii_DN127_6	B_bissettii_DN127	plasmid cp32-6	plasmid	NC_015905.1	CP002752.1
+B_bissettii_DN127_7	B_bissettii_DN127	plasmid cp32-7	plasmid	NC_015910.1	CP002753.1
+B_bissettii_DN127_8	B_bissettii_DN127	plasmid cp32-quad	plasmid	NC_015906.1	CP002754.1
+B_bissettii_DN127_9	B_bissettii_DN127	plasmid cp9	plasmid	NC_015911.1	CP002755.1
+B_bissettii_DN127_10	B_bissettii_DN127	plasmid lp17	plasmid	NC_015915.1	CP002756.1
+B_bissettii_DN127_11	B_bissettii_DN127	plasmid lp25	plasmid	NC_015922.1	CP002757.1
+B_bissettii_DN127_12	B_bissettii_DN127	plasmid lp28-3	plasmid	NC_015916.1	CP002758.1
+B_bissettii_DN127_13	B_bissettii_DN127	plasmid lp28-4	plasmid	NC_015917.1	CP002759.1
+B_bissettii_DN127_14	B_bissettii_DN127	plasmid lp28-7	plasmid	NC_015918.1	CP002760.1
+B_bissettii_DN127_15	B_bissettii_DN127	plasmid lp54	plasmid	NC_015919.1	CP002761.1
+B_bissettii_DN127_16	B_bissettii_DN127	plasmid lp56	plasmid	NC_015920.1	CP002762.1
+A_intestini_RyC_MR95_0	A_intestini_RyC_MR95	chromosome	chromosome	NC_016077.1	CP003058.1
+S_flexneri_2a_301_0	S_flexneri_2a_301	chromosome	chromosome	NC_004337.2	AE005674.2
+S_flexneri_2a_301_1	S_flexneri_2a_301	plasmid pCP301	plasmid	NC_004851.1	AF386526.1
+S_mutans_UA159_0	S_mutans_UA159	chromosome	chromosome	NC_004350.2	AE014133.2
+C_sakazakii_0	C_sakazakii	chromosome	chromosome	NZ_CP011047.1	CP011047.1
+C_sakazakii_1	C_sakazakii	plasmid CSK29544_1p	plasmid	NZ_CP011048.1	CP011048.1
+C_sakazakii_2	C_sakazakii	plasmid CSK29544_2p	plasmid	NZ_CP011049.1	CP011049.1
+C_sakazakii_3	C_sakazakii	plasmid CSK29544_3p	plasmid	NZ_CP011050.1	CP011050.1
+K_oxytoca_0	K_oxytoca	chromosome	chromosome	NZ_CP011636.1	CP011636.1
+K_oxytoca_1	K_oxytoca	plasmid pCAV1374-14	plasmid	NZ_CP011627.1	CP011627.1
+K_oxytoca_2	K_oxytoca	plasmid pCAV1374-150	plasmid	NZ_CP011633.1	CP011633.1
+K_oxytoca_3	K_oxytoca	plasmid pCAV1374-16	plasmid	NZ_CP011628.1	CP011628.1
+K_oxytoca_4	K_oxytoca	plasmid pCAV1374-1919	plasmid	NZ_CP011625.1	CP011625.1
+K_oxytoca_5	K_oxytoca	plasmid pCAV1374-228	plasmid	NZ_CP011634.1	CP011634.1
+K_oxytoca_6	K_oxytoca	plasmid pCAV1374-34	plasmid	NZ_CP011629.1	CP011629.1
+K_oxytoca_7	K_oxytoca	plasmid pCAV1374-49	plasmid	NZ_CP011630.1	CP011630.1
+K_oxytoca_8	K_oxytoca	plasmid pCAV1374-54	plasmid	NZ_CP011631.1	CP011631.1
+K_oxytoca_9	K_oxytoca	plasmid pCAV1374-6538	plasmid	NZ_CP011626.1	CP011626.1
+K_oxytoca_10	K_oxytoca	plasmid pCAV1374-84	plasmid	NZ_CP011632.1	CP011632.1
+K_oxytoca_11	K_oxytoca	plasmid pKPC_CAV1374	plasmid	NZ_CP011635.1	CP011635.1
+S_capitis_capitis_0	S_capitis_capitis	chromosome	chromosome	NZ_CP007601.1	CP007601.1
+S_capitis_capitis_1	S_capitis_capitis	plasmid pAYP1020	plasmid	NZ_CP007602.1	CP007602.1
+A_pittii_PHEA_2_0	A_pittii_PHEA_2	chromosome	chromosome	NC_016603.1	CP002177.1
+T_forsythia_92A2_0	T_forsythia_92A2	chromosome	chromosome	NC_016610.1	CP003191.1
+K_pneumoniae_pneumoniae_HS11286_0	K_pneumoniae_pneumoniae_HS11286	chromosome	chromosome	NC_016845.1	CP003200.1
+K_pneumoniae_pneumoniae_HS11286_1	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS1	plasmid	NC_016838.1	CP003223.1
+K_pneumoniae_pneumoniae_HS11286_2	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS2	plasmid	NC_016846.1	CP003224.1
+K_pneumoniae_pneumoniae_HS11286_3	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS3	plasmid	NC_016839.1	CP003225.1
+K_pneumoniae_pneumoniae_HS11286_4	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS4	plasmid	NC_016840.1	CP003226.1
+K_pneumoniae_pneumoniae_HS11286_5	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS5	plasmid	NC_016847.1	CP003227.1
+K_pneumoniae_pneumoniae_HS11286_6	K_pneumoniae_pneumoniae_HS11286	plasmid pKPHS6	plasmid	NC_016841.1	CP003228.1
+C_psittaci_6BC_0	C_psittaci_6BC	chromosome	chromosome	NC_017287.1	CP002586.1
+C_psittaci_6BC_1	C_psittaci_6BC	plasmid pCps6BC	plasmid	NC_017288.1	CP002587.1
+C_pseudotuberculosis_C231_0	C_pseudotuberculosis_C231	chromosome	chromosome	NC_017301.1	CP001829.1
+L_santarosai_serovar_Shermani_LT_821_0	L_santarosai_serovar_Shermani_LT_821	chromosome I	chromosome	NZ_CP006694.1	CP006694.1
+L_santarosai_serovar_Shermani_LT_821_1	L_santarosai_serovar_Shermani_LT_821	chromosome II	chromosome	NZ_CP006695.1	CP006695.1
+B_hinzii_0	B_hinzii	chromosome	chromosome	NZ_CP012076.1	CP012076.1
+E_faecium_DO_0	E_faecium_DO	chromosome	chromosome	NC_017960.1	CP003583.1
+E_faecium_DO_1	E_faecium_DO	plasmid 1	plasmid	NC_017961.1	CP003584.1
+E_faecium_DO_2	E_faecium_DO	plasmid 2	plasmid	NC_017962.1	CP003585.1
+E_faecium_DO_3	E_faecium_DO	plasmid 3	plasmid	NC_017963.1	CP003586.1
+E_rhusiopathiae_Fujisawa_0	E_rhusiopathiae_Fujisawa	chromosome	chromosome	NC_015601.1	AP012027.1
+M_intracellulare_ATCC_13950_0	M_intracellulare_ATCC_13950	chromosome	chromosome	NC_016946.1	CP003322.1
+P_propionicum_F0230a_0	P_propionicum_F0230a	chromosome	chromosome	NC_018142.1	CP002734.1
+R_japonica_YH_0	R_japonica_YH	chromosome	chromosome	NC_016050.1	AP011533.1
+N_cyriacigeorgica_GUH_2_0	N_cyriacigeorgica_GUH_2	chromosome	chromosome	NC_016887.1	FO082843.1
+R_rhipicephali_3_7_female6_CWPP_0	R_rhipicephali_3_7_female6_CWPP	chromosome	chromosome	NC_017042.1	CP003342.1
+R_rhipicephali_3_7_female6_CWPP_1	R_rhipicephali_3_7_female6_CWPP	plasmid pMCC_1	plasmid	NC_017055.1	CP003343.1
+R_australis_Cutlack_0	R_australis_Cutlack	chromosome	chromosome	NC_017058.1	CP003338.1
+R_australis_Cutlack_1	R_australis_Cutlack	plasmid pMC5_1	plasmid	NC_017041.1	CP003339.1
+N_alba_ATCC_BAA_2165_0	N_alba_ATCC_BAA_2165	chromosome	chromosome	NC_018524.1	CP003788.1
+C_ureolyticus_RIGS_9880_0	C_ureolyticus_RIGS_9880	chromosome	chromosome	NZ_CP012195.1	CP012195.1
+B_clarridgeiae_73_0	B_clarridgeiae_73	chromosome	chromosome	NC_014932.1	FN645454.1
+R_dentocariosa_ATCC_17931_0	R_dentocariosa_ATCC_17931	chromosome	chromosome	NC_014643.1	CP002280.1
+S_negevensis_Z_0	S_negevensis_Z	chromosome gsn.131	chromosome	NC_015713.1	FR872582.1
+S_negevensis_Z_1	S_negevensis_Z	plasmid pSn	plasmid	NC_015710.1	FR872581.1
+P_acanthamoebae_UV_7_0	P_acanthamoebae_UV_7	chromosome	chromosome	NC_015702.1	FR872580.1
+B_burgdorferi_B31_0	B_burgdorferi_B31	chromosome	chromosome	NC_001318.1	AE000783.1
+B_burgdorferi_B31_1	B_burgdorferi_B31	plasmid cp26	plasmid	NC_001903.1	AE000792.1
+B_burgdorferi_B31_2	B_burgdorferi_B31	plasmid cp32-1	plasmid	NC_000948.1	AE001575.1
+B_burgdorferi_B31_3	B_burgdorferi_B31	plasmid cp32-3	plasmid	NC_000949.1	AE001576.1
+B_burgdorferi_B31_4	B_burgdorferi_B31	plasmid cp32-4	plasmid	NC_000950.1	AE001577.1
+B_burgdorferi_B31_5	B_burgdorferi_B31	plasmid cp32-6	plasmid	NC_000951.1	AE001578.1
+B_burgdorferi_B31_6	B_burgdorferi_B31	plasmid cp32-7	plasmid	NC_000952.1	AE001579.1
+B_burgdorferi_B31_7	B_burgdorferi_B31	plasmid cp32-8	plasmid	NC_000953.1	AE001580.1
+B_burgdorferi_B31_8	B_burgdorferi_B31	plasmid cp32-9	plasmid	NC_000954.1	AE001581.1
+B_burgdorferi_B31_9	B_burgdorferi_B31	plasmid cp9	plasmid	NC_001904.1	AE000791.1
+B_burgdorferi_B31_10	B_burgdorferi_B31	plasmid lp17	plasmid	NC_001849.2	AE000793.2
+B_burgdorferi_B31_11	B_burgdorferi_B31	plasmid lp21	plasmid	NC_000955.2	AE001582.2
+B_burgdorferi_B31_12	B_burgdorferi_B31	plasmid lp25	plasmid	NC_001850.1	AE000785.1
+B_burgdorferi_B31_13	B_burgdorferi_B31	plasmid lp28-1	plasmid	NC_001851.2	AE000794.2
+B_burgdorferi_B31_14	B_burgdorferi_B31	plasmid lp28-2	plasmid	NC_001852.1	AE000786.1
+B_burgdorferi_B31_15	B_burgdorferi_B31	plasmid lp28-3	plasmid	NC_001853.1	AE000784.1
+B_burgdorferi_B31_16	B_burgdorferi_B31	plasmid lp28-4	plasmid	NC_001854.1	AE000789.1
+B_burgdorferi_B31_17	B_burgdorferi_B31	plasmid lp36	plasmid	NC_001855.1	AE000788.1
+B_burgdorferi_B31_18	B_burgdorferi_B31	plasmid lp38	plasmid	NC_001856.1	AE000787.1
+B_burgdorferi_B31_19	B_burgdorferi_B31	plasmid lp5	plasmid	NC_000957.1	AE001583.1
+B_burgdorferi_B31_20	B_burgdorferi_B31	plasmid lp54	plasmid	NC_001857.2	AE000790.2
+B_burgdorferi_B31_21	B_burgdorferi_B31	plasmid lp56	plasmid	NC_000956.1	AE001584.1
+M_chubuense_NBB4_0	M_chubuense_NBB4	chromosome	chromosome	NC_018027.1	CP003053.1
+M_chubuense_NBB4_1	M_chubuense_NBB4	plasmid pMYCCH.01	plasmid	NC_018022.1	CP003054.1
+M_chubuense_NBB4_2	M_chubuense_NBB4	plasmid pMYCCH.02	plasmid	NC_018023.1	CP003055.1
+B_afzelii_HLJ01_0	B_afzelii_HLJ01	chromosome	chromosome	NC_018887.1	CP003882.1
+N_brasiliensis_ATCC_700358_0	N_brasiliensis_ATCC_700358	chromosome	chromosome	NC_018681.1	CP003876.1
+E_hirae_ATCC_9790_0	E_hirae_ATCC_9790	chromosome	chromosome	NC_018081.1	CP003504.1
+E_hirae_ATCC_9790_1	E_hirae_ATCC_9790	plasmid pTG9790	plasmid	NC_015845.1	HQ724512.1
+M_marinum_E11_0	M_marinum_E11	chromosome 1	chromosome	NZ_HG917972.2	HG917972.2
+M_marinum_E11_1	M_marinum_E11	plasmid II	plasmid	NZ_HG917973.1	HG917973.1
+R_amblyommatis_0	R_amblyommatis	chromosome	chromosome	NZ_CP012420.1	CP012420.1
+R_amblyommatis_1	R_amblyommatis	plasmid pRAMAC18	plasmid	NZ_CP012421.1	CP012421.1
+R_amblyommatis_2	R_amblyommatis	plasmid pRAMAC23	plasmid	NZ_CP012422.1	CP012422.1
+C_concisus_0	C_concisus	chromosome	chromosome	NZ_CP012541.1	CP012541.1
+M_elsdenii_14_14_0	M_elsdenii_14_14	chromosome	chromosome	NZ_CP009240.1	CP009240.1
+M_fortuitum_0	M_fortuitum	chromosome	chromosome	NZ_CP011269.1	CP011269.1
+B_ovatus_0	B_ovatus	chromosome	chromosome	NZ_CP012938.1	CP012938.1
+S_dysgalactiae_equisimilis_AC_2713_0	S_dysgalactiae_equisimilis_AC_2713	chromosome	chromosome	NC_019042.1	HE858529.1
+B_parapertussis_Bpp5_0	B_parapertussis_Bpp5	chromosome	chromosome	NC_018828.1	HE965803.1
+B_parapertussis_Bpp5_1	B_parapertussis_Bpp5	plasmid BPP5P1	plasmid	NC_018830.1	HE965804.1
+B_bronchiseptica_253_0	B_bronchiseptica_253	chromosome	chromosome	NC_019382.1	HE965806.1
+M_tuberculosis_H37Rv_0	M_tuberculosis_H37Rv	chromosome	chromosome	NC_000962.3	AL123456.3
+B_australis_Aust_NH1_0	B_australis_Aust_NH1	chromosome	chromosome	NC_020300.1	CP003123.1
+B_vinsonii_berkhoffii_Winnie_0	B_vinsonii_berkhoffii_Winnie	chromosome	chromosome	NC_020301.1	CP003124.1
+S_warneri_SG1_0	S_warneri_SG1	chromosome	chromosome	NC_020164.1	CP003668.1
+S_warneri_SG1_1	S_warneri_SG1	plasmid pSZ4	plasmid	NC_020165.1	CP003669.1
+S_warneri_SG1_2	S_warneri_SG1	plasmid unnamed	plasmid	NC_020274.1	CP003670.1
+S_warneri_SG1_3	S_warneri_SG1	plasmid unnamed2	plasmid	NC_020264.1	CP003671.1
+S_warneri_SG1_4	S_warneri_SG1	plasmid unnamed3	plasmid	NC_020265.1	CP003672.1
+S_warneri_SG1_5	S_warneri_SG1	plasmid unnamed4	plasmid	NC_020266.1	CP003673.1
+S_warneri_SG1_6	S_warneri_SG1	plasmid unnamed5	plasmid	NC_020267.1	CP003674.1
+S_warneri_SG1_7	S_warneri_SG1	plasmid unnamed6	plasmid	NC_020268.1	CP003675.1
+S_warneri_SG1_8	S_warneri_SG1	plasmid unnamed7	plasmid	NC_020269.1	CP003676.1
+B_cepacia_ATCC_25416_0	B_cepacia_ATCC_25416	chromosome 1	chromosome	NZ_CP012981.1	CP012981.1
+B_cepacia_ATCC_25416_1	B_cepacia_ATCC_25416	chromosome 2	chromosome	NZ_CP012982.1	CP012982.1
+B_cepacia_ATCC_25416_2	B_cepacia_ATCC_25416	chromosome 3	chromosome	NZ_CP012983.1	CP012983.1
+B_cepacia_ATCC_25416_3	B_cepacia_ATCC_25416	plasmid pBC25416	plasmid	NZ_CP012984.1	CP012984.1
+H_cinaedi_CCUG_18818_0	H_cinaedi_CCUG_18818	chromosome 1	chromosome	NC_020555.1	AP012492.1
+B_miyamotoi_LB_2001_0	B_miyamotoi_LB_2001	chromosome	chromosome	NC_022079.2	CP006647.2
+B_miyamotoi_LB_2001_1	B_miyamotoi_LB_2001	plasmid lpB	plasmid	NZ_CP010328.2	CP010328.2
+M_haemophilum_DSM_44634_0	M_haemophilum_DSM_44634	chromosome	chromosome	NZ_CP011883.2	CP011883.2
+C_diphtheriae_0	C_diphtheriae	chromosome 1	chromosome	NZ_LN831026.1	LN831026.1
+A_xylosoxidans_0	A_xylosoxidans	chromosome 1	chromosome	NZ_LN831029.1	LN831029.1
+N_farcinica_0	N_farcinica	chromosome 1	chromosome	NZ_LN868938.1	LN868938.1
+N_farcinica_1	N_farcinica	plasmid 2	plasmid	NZ_LN868939.1	LN868939.1
+N_farcinica_2	N_farcinica	plasmid 3	plasmid	NZ_LN868940.1	LN868940.1
+N_farcinica_3	N_farcinica	plasmid 4	plasmid	NZ_LN868941.1	LN868941.1
+N_farcinica_4	N_farcinica	plasmid 5	plasmid	NZ_LN868942.1	LN868942.1
+C_avidum_44067_0	C_avidum_44067	chromosome	chromosome	NC_021064.1	CP005287.1
+E_casseliflavus_EC20_0	E_casseliflavus_EC20	chromosome	chromosome	NC_020995.1	CP004856.1
+M_haemolytica_M42548_0	M_haemolytica_M42548	chromosome	chromosome	NC_021082.1	CP005383.1
+A_urinae_0	A_urinae	chromosome	chromosome	NZ_CP014161.1	CP014161.1
+A_oris_0	A_oris	chromosome	chromosome	NZ_CP014232.1	CP014232.1
+S_cristatus_AS_1_3089_0	S_cristatus_AS_1_3089	chromosome	chromosome	NC_021175.1	CP004409.1
+M_phlei_0	M_phlei	chromosome	chromosome	NZ_CP014475.1	CP014475.1
+A_actinomycetemcomitans_0	A_actinomycetemcomitans	chromosome	chromosome	NZ_CP012959.1	CP012959.1
+P_alcaligenes_0	P_alcaligenes	chromosome	chromosome	NZ_CP014784.1	CP014784.1
+N_weaveri_0	N_weaveri	chromosome 1	chromosome	NZ_LT571436.1	LT571436.1
+B_hermsii_HS1_0	B_hermsii_HS1	chromosome	chromosome	NZ_CP014349.1	CP014349.1
+B_hermsii_HS1_1	B_hermsii_HS1	plasmid cp28	plasmid	NZ_CP014351.1	CP014351.1
+B_hermsii_HS1_2	B_hermsii_HS1	plasmid cp6.5	plasmid	NZ_CP015335.1	CP015335.1
+B_hermsii_HS1_3	B_hermsii_HS1	plasmid lpB58	plasmid	NZ_CP014792.1	CP014792.1
+B_hermsii_HS1_4	B_hermsii_HS1	plasmid lpE27	plasmid	NZ_CP014871.1	CP014871.1
+B_hermsii_HS1_5	B_hermsii_HS1	plasmid lpF27	plasmid	NZ_CP015336.1	CP015336.1
+B_hermsii_HS1_6	B_hermsii_HS1	plasmid lpG27	plasmid	NZ_CP015334.1	CP015334.1
+B_hermsii_HS1_7	B_hermsii_HS1	plasmid lpN31	plasmid	NZ_CP015331.1	CP015331.1
+B_hermsii_HS1_8	B_hermsii_HS1	plasmid lpT28	plasmid	NZ_CP015332.1	CP015332.1
+B_hermsii_HS1_9	B_hermsii_HS1	plasmid lpV47	plasmid	NZ_CP015333.1	CP015333.1
+B_hermsii_HS1_10	B_hermsii_HS1	plasmid megaplasmid	plasmid	NZ_CP014350.1	CP014350.1
+P_shigelloides_0	P_shigelloides	chromosome 1	chromosome	NZ_LT575468.1	LT575468.1
+P_agglomerans_0	P_agglomerans	chromosome	chromosome	NZ_CP016889.1	CP016889.1
+P_agglomerans_1	P_agglomerans	plasmid unnamed1	plasmid	NZ_CP016890.1	CP016890.1
+P_agglomerans_2	P_agglomerans	plasmid unnamed2	plasmid	NZ_CP016891.1	CP016891.1
+P_agglomerans_3	P_agglomerans	plasmid unnamed3	plasmid	NZ_CP016892.1	CP016892.1
+P_pnomenusa_0	P_pnomenusa	chromosome	chromosome	NZ_CP009553.3	CP009553.3
+E_hormaechei_steigerwaltii_0	E_hormaechei_steigerwaltii	chromosome	chromosome	NZ_CP017179.1	CP017179.1
+C_curvus_525_92_0	C_curvus_525_92	chromosome	chromosome	NC_009715.2	CP000767.2
+C_burnetii_RSA_493_0	C_burnetii_RSA_493	chromosome	chromosome	NC_002971.4	AE016828.3
+C_burnetii_RSA_493_1	C_burnetii_RSA_493	plasmid pQpH1	plasmid	NC_004704.2	AE016829.2
+B_garinii_0	B_garinii	chromosome	chromosome	NZ_CP018744.1	CP018744.1
+B_garinii_1	B_garinii	plasmid cp26	plasmid	NZ_CP018750.1	CP018750.1
+B_garinii_2	B_garinii	plasmid cp32_1	plasmid	NZ_CP018754.1	CP018754.1
+B_garinii_3	B_garinii	plasmid cp32_2	plasmid	NZ_CP018755.1	CP018755.1
+B_garinii_4	B_garinii	plasmid lp28-7	plasmid	NZ_CP018749.1	CP018749.1
+B_garinii_5	B_garinii	plasmid p_lp54_linear	plasmid	NZ_CP018745.1	CP018745.1
+B_garinii_6	B_garinii	plasmid unnamed1	plasmid	NZ_CP018746.1	CP018746.1
+B_garinii_7	B_garinii	plasmid unnamed2	plasmid	NZ_CP018747.1	CP018747.1
+B_garinii_8	B_garinii	plasmid unnamed3	plasmid	NZ_CP018748.1	CP018748.1
+B_garinii_9	B_garinii	plasmid unnamed4	plasmid	NZ_CP018751.1	CP018751.1
+B_garinii_10	B_garinii	plasmid unnamed5	plasmid	NZ_CP018752.1	CP018752.1
+B_garinii_11	B_garinii	plasmid unnamed6	plasmid	NZ_CP018753.1	CP018753.1
+B_anserina_Es_0	B_anserina_Es	chromosome	chromosome	NZ_CP013704.1	CP013704.1
+B_anserina_Es_1	B_anserina_Es	plasmid cp5	plasmid	NZ_CP014521.1	CP014521.1
+B_anserina_Es_2	B_anserina_Es	plasmid fragment_4	plasmid	NZ_CP018882.1	CP018882.1
+B_anserina_Es_3	B_anserina_Es	plasmid lpA89	plasmid	NZ_CP014325.1	CP014325.1
+B_anserina_Es_4	B_anserina_Es	plasmid lpJ	plasmid	NZ_CP014605.1	CP014605.1
+B_anserina_Es_5	B_anserina_Es	plasmid pB25	plasmid	NZ_CP014520.1	CP014520.1
+R_gilardii_0	R_gilardii	chromosome 1	chromosome	NZ_CP015583.1	CP015585.1
+R_gilardii_1	R_gilardii	chromosome 2	chromosome	NZ_CP015584.1	CP015584.1
+R_gilardii_2	R_gilardii	plasmid 1	plasmid	NZ_CP015585.1	CP015583.1
+R_gilardii_3	R_gilardii	plasmid 3	plasmid	NZ_CP015587.1	CP015587.1
+A_junii_0	A_junii	chromosome	chromosome	NZ_CP019041.1	CP019041.1
+A_soli_0	A_soli	chromosome	chromosome	NZ_CP016896.1	CP016896.1
+A_soli_1	A_soli	plasmid pGFJ1	plasmid	NZ_CP016897.1	CP016897.1
+A_soli_2	A_soli	plasmid pGFJ2	plasmid	NZ_CP016898.1	CP016898.1
+A_soli_3	A_soli	plasmid pGFJ3	plasmid	NZ_CP016899.1	CP016899.1
+A_soli_4	A_soli	plasmid pGFJ4	plasmid	NZ_CP016900.1	CP016900.1
+A_soli_5	A_soli	plasmid pGFJ5	plasmid	NZ_CP016901.1	CP016901.1
+A_soli_6	A_soli	plasmid pGFJ6	plasmid	NZ_CP016902.1	CP016902.1
+A_soli_7	A_soli	plasmid pGFJ7	plasmid	NZ_CP016903.1	CP016903.1
+P_intermedia_ATCC_25611_0	P_intermedia_ATCC_25611	chromosome I	chromosome	NZ_CP019300.1	CP019300.1
+P_intermedia_ATCC_25611_1	P_intermedia_ATCC_25611	chromosome II	chromosome	NZ_CP019301.1	CP019301.1
+S_gallolyticus_gallolyticus_DSM_16831_0	S_gallolyticus_gallolyticus_DSM_16831	chromosome	chromosome	NZ_CP018822.1	CP018822.1
+C_coli_0	C_coli	chromosome	chromosome	NZ_CP019977.1	CP019977.1
+M_colombiense_CECT_3035_0	M_colombiense_CECT_3035	chromosome	chromosome	NZ_CP020821.1	CP020821.1
+B_turicatae_91E135_0	B_turicatae_91E135	chromosome	chromosome	NC_008710.1	CP000049.1
+B_turicatae_91E135_1	B_turicatae_91E135	plasmid cp31	plasmid	NZ_CP019362.1	CP019362.1
+B_turicatae_91E135_2	B_turicatae_91E135	plasmid cpD	plasmid	NZ_CP019363.1	CP019363.1
+B_turicatae_91E135_3	B_turicatae_91E135	plasmid lpB34	plasmid	NZ_CP019364.1	CP019364.1
+B_turicatae_91E135_4	B_turicatae_91E135	plasmid lpE43	plasmid	NZ_CP019365.1	CP019365.1
+B_turicatae_91E135_5	B_turicatae_91E135	plasmid lpF33.5	plasmid	NZ_CP019366.1	CP019366.1
+B_turicatae_91E135_6	B_turicatae_91E135	plasmid lpG29	plasmid	NZ_CP019367.1	CP019367.1
+B_turicatae_91E135_7	B_turicatae_91E135	plasmid lpT39	plasmid	NZ_CP019368.1	CP019368.1
+B_turicatae_91E135_8	B_turicatae_91E135	plasmid lpU43	plasmid	NZ_CP019369.1	CP019369.1
+V_vulnificus_0	V_vulnificus	chromosome I	chromosome	NZ_CP014636.1	CP014636.1
+V_vulnificus_1	V_vulnificus	chromosome II	chromosome	NZ_CP014637.1	CP014637.1
+V_vulnificus_2	V_vulnificus	plasmid pR99	plasmid	NZ_CP014638.1	CP014638.1
+C_sputorum_faecalis_CCUG_20703_0	C_sputorum_faecalis_CCUG_20703	chromosome	chromosome	NZ_CP019683.1	CP019683.1
+B_caccae_0	B_caccae	chromosome	chromosome	NZ_CP022412.2	CP022412.2
+G_bethesdensis_CGDNIH1_0	G_bethesdensis_CGDNIH1	chromosome	chromosome	NC_008343.2	CP000394.2
+C_difficile_630_0	C_difficile_630	chromosome	chromosome	NC_009089.1	AM180355.1
+C_difficile_630_1	C_difficile_630	plasmid pCD630	plasmid	NC_008226.2	AM180356.2
+V_fluvialis_0	V_fluvialis	chromosome 1	chromosome	NZ_CP014034.2	CP014034.2
+V_fluvialis_1	V_fluvialis	chromosome 2	chromosome	NZ_CP014035.2	CP014035.2
+S_pettenkoferi_0	S_pettenkoferi	chromosome	chromosome	NZ_CP022096.2	CP022096.2
+S_sciuri_0	S_sciuri	chromosome	chromosome	NZ_CP022046.2	CP022046.2
+S_sciuri_1	S_sciuri	plasmid unnamed1	plasmid	NZ_CP022047.2	CP022047.2
+M_tuberculosis_variant_bovis_AF2122_97_0	M_tuberculosis_variant_bovis_AF2122_97	chromosome Mycobacterium_bovis_AF2122/97	chromosome	NC_002945.4	LT708304.1
+P_putida_KT2440_0	P_putida_KT2440	chromosome	chromosome	NC_002947.4	AE015451.2
+S_enterica_enterica_serovar_Typhimurium_LT2_0	S_enterica_enterica_serovar_Typhimurium_LT2	chromosome	chromosome	NC_003197.2	AE006468.2
+S_enterica_enterica_serovar_Typhimurium_LT2_1	S_enterica_enterica_serovar_Typhimurium_LT2	plasmid pSLT	plasmid	NC_003277.2	AE006471.2
+G_vaginalis_ATCC_14019_0	G_vaginalis_ATCC_14019	chromosome	chromosome	NC_014644.1	CP002104.1
+F_nucleatum_animalis_7_1_0	F_nucleatum_animalis_7_1	chromosome	chromosome	NZ_CP007062.1	CP007062.1
+F_nucleatum_animalis_7_1_1	F_nucleatum_animalis_7_1	plasmid unnamed	plasmid	NZ_CP007063.1	CP007063.1
+C_trachomatis_434_Bu_0	C_trachomatis_434_Bu	chromosome	chromosome	NC_010287.1	AM884176.1
+E_coli_K_12_MG1655_0	E_coli_K_12_MG1655	chromosome	chromosome	NC_000913.3	U00096.3
+C_botulinum_B_Eklund_17B_NRP_0	C_botulinum_B_Eklund_17B_NRP	chromosome	chromosome	NC_010674.1	CP001056.1
+C_botulinum_B_Eklund_17B_NRP_1	C_botulinum_B_Eklund_17B_NRP	plasmid pCLL	plasmid	NC_010680.1	CP001057.1
+B_anthracis_Sterne_0	B_anthracis_Sterne	chromosome	chromosome	NC_005945.1	AE017225.1
+C_botulinum_A_ATCC_3502_0	C_botulinum_A_ATCC_3502	chromosome	chromosome	NC_009495.1	AM412317.1
+C_botulinum_A_ATCC_3502_1	C_botulinum_A_ATCC_3502	plasmid pBOT3502	plasmid	NC_009496.1	AM412318.1
+E_coli_O83_H1_NRG_857C_0	E_coli_O83_H1_NRG_857C	chromosome	chromosome	NC_017634.1	CP001855.1
+E_coli_O83_H1_NRG_857C_1	E_coli_O83_H1_NRG_857C	plasmid pO83_CORR	plasmid	NC_017659.1	CP001856.1
+E_coli_O104_H4_2011C_3493_0	E_coli_O104_H4_2011C_3493	chromosome	chromosome	NC_018658.1	CP003289.1
+E_coli_O104_H4_2011C_3493_1	E_coli_O104_H4_2011C_3493	plasmid pAA-EA11	plasmid	NC_018666.1	CP003291.1
+E_coli_O104_H4_2011C_3493_2	E_coli_O104_H4_2011C_3493	plasmid pESBL-EA11	plasmid	NC_018659.1	CP003290.1
+E_coli_O104_H4_2011C_3493_3	E_coli_O104_H4_2011C_3493	plasmid pG-EA11	plasmid	NC_018660.1	CP003292.1
+C_botulinum_BKT015925_0	C_botulinum_BKT015925	chromosome	chromosome	NC_015425.1	CP002410.1
+C_botulinum_BKT015925_1	C_botulinum_BKT015925	plasmid p1BKT015925	plasmid	NC_015417.1	CP002411.1
+C_botulinum_BKT015925_2	C_botulinum_BKT015925	plasmid p2BKT015925	plasmid	NC_015426.1	CP002412.1
+C_botulinum_BKT015925_3	C_botulinum_BKT015925	plasmid p3BKT015925	plasmid	NC_015418.1	CP002413.1
+C_botulinum_BKT015925_4	C_botulinum_BKT015925	plasmid p4BKT015925	plasmid	NC_015427.1	CP002414.1
+C_botulinum_BKT015925_5	C_botulinum_BKT015925	plasmid p5BKT015925	plasmid	NC_015419.1	CP002415.1
+E_coli_O157_H7_Sakai_0	E_coli_O157_H7_Sakai	chromosome	chromosome	NC_002695.2	BA000007.3
+E_coli_O157_H7_Sakai_1	E_coli_O157_H7_Sakai	plasmid pO157	plasmid	NC_002128.1	AB011549.2
+E_coli_O157_H7_Sakai_2	E_coli_O157_H7_Sakai	plasmid pOSAK1	plasmid	NC_002127.1	AB011548.2
+C_fetus_testudinum_03_427_0	C_fetus_testudinum_03_427	chromosome	chromosome		CP006833.1

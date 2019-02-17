@@ -1,0 +1,245 @@
+genome_id	taxon_name	taxonomy_string	strain_name	refseq_ftp_url
+C_muridarum_Nigg	Chlamydia muridarum str. Nigg	Bacteria;PVC group;Chlamydiae	Nigg	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/685/GCF_000006685.1_ASM668v1
+V_cholerae_O1_El_Tor_N16961	Vibrio cholerae O1 biovar El Tor str. N16961	Bacteria;Proteobacteria;Gammaproteobacteria	N16961	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/745/GCF_000006745.1_ASM674v1
+P_aeruginosa_PAO1	Pseudomonas aeruginosa PAO1	Bacteria;Proteobacteria;Gammaproteobacteria	PAO1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/765/GCF_000006765.1_ASM676v1
+N_gonorrhoeae_FA_1090	Neisseria gonorrhoeae FA 1090	Bacteria;Proteobacteria;Betaproteobacteria	FA 1090	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/845/GCF_000006845.1_ASM684v1
+R_conorii_Malish_7	Rickettsia conorii str. Malish 7	Bacteria;Proteobacteria;Alphaproteobacteria	Malish 7	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/025/GCF_000007025.1_ASM702v1
+S_pneumoniae_R6	Streptococcus pneumoniae R6	Bacteria;Terrabacteria group;Firmicutes	R6	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/045/GCF_000007045.1_ASM704v1
+B_melitensis_1_16M	Brucella melitensis bv. 1 str. 16M	Bacteria;Proteobacteria;Alphaproteobacteria	16M	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/125/GCF_000007125.1_ASM712v1
+F_nucleatum_nucleatum_ATCC_25586	Fusobacterium nucleatum subsp. nucleatum ATCC 25586	Bacteria;Fusobacteria;Fusobacteriia	ATCC 25586	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/325/GCF_000007325.1_ASM732v1
+S_agalactiae_2603V_R	Streptococcus agalactiae 2603V/R	Bacteria;Terrabacteria group;Firmicutes	2603V/R	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/265/GCF_000007265.1_ASM726v1
+T_whipplei_Twist	Tropheryma whipplei str. Twist	Bacteria;Terrabacteria group;Actinobacteria	Twist	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/485/GCF_000007485.1_ASM748v1
+C_caviae_GPIC	Chlamydia caviae GPIC	Bacteria;PVC group;Chlamydiae	GPIC	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/605/GCF_000007605.1_ASM760v1
+C_tetani_E88	Clostridium tetani E88	Bacteria;Terrabacteria group;Firmicutes	Massachusetts substr. E88	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/625/GCF_000007625.1_ASM762v1
+S_epidermidis_ATCC_12228	Staphylococcus epidermidis ATCC 12228	Bacteria;Terrabacteria group;Firmicutes	ATCC 12228	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/645/GCF_000007645.1_ASM764v1
+C_violaceum_ATCC_12472	Chromobacterium violaceum ATCC 12472	Bacteria;Proteobacteria;Betaproteobacteria	ATCC 12472	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/705/GCF_000007705.1_ASM770v1
+E_faecalis_V583	Enterococcus faecalis V583	Bacteria;Terrabacteria group;Firmicutes	V583	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/785/GCF_000007785.1_ASM778v1
+B_cereus_ATCC_14579	Bacillus cereus ATCC 14579	Bacteria;Terrabacteria group;Firmicutes	ATCC 14579	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/825/GCF_000007825.1_ASM782v1
+B_anthracis_Ames	Bacillus anthracis str. Ames	Bacteria;Terrabacteria group;Firmicutes	Ames	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/845/GCF_000007845.1_ASM784v1
+M_avium_paratuberculosis_K_10	Mycobacterium avium subsp. paratuberculosis K-10	Bacteria;Terrabacteria group;Actinobacteria	K-10	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/865/GCF_000007865.1_ASM786v1
+H_hepaticus_ATCC_51449	Helicobacter hepaticus ATCC 51449	Bacteria;Proteobacteria;delta/epsilon subdivisions	ATCC 51449	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/905/GCF_000007905.1_ASM790v1
+H_ducreyi_35000HP	[Haemophilus] ducreyi 35000HP	Bacteria;Proteobacteria;Gammaproteobacteria	35000HP	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/945/GCF_000007945.1_ASM794v1
+R_typhi_Wilmington	Rickettsia typhi str. Wilmington	Bacteria;Proteobacteria;Alphaproteobacteria	Wilmington	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/045/GCF_000008045.1_ASM804v1
+T_denticola_ATCC_35405	Treponema denticola ATCC 35405	Bacteria;Spirochaetes;Spirochaetia	ATCC 35405	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/185/GCF_000008185.1_ASM818v1
+C_acnes_KPA171202	Cutibacterium acnes KPA171202	Bacteria;Terrabacteria group;Actinobacteria	KPA171202	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/345/GCF_000008345.1_ASM834v1
+L_pneumophila_pneumophila_Philadelphia_1	Legionella pneumophila subsp. pneumophila str. Philadelphia 1	Bacteria;Proteobacteria;Gammaproteobacteria	Philadelphia 1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/485/GCF_000008485.1_ASM848v1
+H_pylori_26695	Helicobacter pylori 26695	Bacteria;Proteobacteria;delta/epsilon subdivisions	26695	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/525/GCF_000008525.1_ASM852v1
+C_trachomatis_D_UW_3_CX	Chlamydia trachomatis D/UW-3/CX	Bacteria;PVC group;Chlamydiae	D/UW-3/CX	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/725/GCF_000008725.1_ASM872v1
+C_pneumoniae_CWL029	Chlamydia pneumoniae CWL029	Bacteria;PVC group;Chlamydiae	CWL029	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/745/GCF_000008745.1_ASM874v1
+N_meningitidis_MC58	Neisseria meningitidis MC58	Bacteria;Proteobacteria;Betaproteobacteria	MC58	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/805/GCF_000008805.1_ASM880v1
+Y_pestis_CO92	Yersinia pestis CO92	Bacteria;Proteobacteria;Gammaproteobacteria	CO92	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/065/GCF_000009065.1_ASM906v1
+C_jejuni_jejuni_NCTC_11168	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819	Bacteria;Proteobacteria;delta/epsilon subdivisions	NCTC 11168	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/085/GCF_000009085.1_ASM908v1
+F_tularensis_tularensis_SCHU_S4	Francisella tularensis subsp. tularensis SCHU S4	Bacteria;Proteobacteria;Gammaproteobacteria	SCHU S4	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/985/GCF_000008985.1_ASM898v1
+Y_enterocolitica_enterocolitica_8081	Yersinia enterocolitica subsp. enterocolitica 8081	Bacteria;Proteobacteria;Gammaproteobacteria	8081	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/345/GCF_000009345.1_ASM934v1
+B_fragilis_YCH46	Bacteroides fragilis YCH46	Bacteria;FCB group;Bacteroidetes/Chlorobi group	YCH46	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/925/GCF_000009925.1_ASM992v1
+C_felis_Fe_C_56	Chlamydia felis Fe/C-56	Bacteria;PVC group;Chlamydiae	Fe/C-56	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/945/GCF_000009945.1_ASM994v1
+S_haemolyticus_JCSC1435	Staphylococcus haemolyticus JCSC1435	Bacteria;Terrabacteria group;Firmicutes	JCSC1435	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/865/GCF_000009865.1_ASM986v1
+S_saprophyticus_saprophyticus_ATCC_15305	Staphylococcus saprophyticus subsp. saprophyticus ATCC 15305	Bacteria;Terrabacteria group;Firmicutes	ATCC 15305	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/010/125/GCF_000010125.1_ASM1012v1
+F_magna_ATCC_29328	Finegoldia magna ATCC 29328	Bacteria;Terrabacteria group;Firmicutes	ATCC 29328	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/010/185/GCF_000010185.1_ASM1018v1
+P_gingivalis_ATCC_33277	Porphyromonas gingivalis ATCC 33277	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 33277	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/010/505/GCF_000010505.1_ASM1050v1
+M_penetrans_HF_2	Mycoplasma penetrans HF-2	Bacteria;Terrabacteria group;Tenericutes	HF-2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/011/225/GCF_000011225.1_ASM1122v1
+B_pseudomallei_K96243	Burkholderia pseudomallei K96243	Bacteria;Proteobacteria;Betaproteobacteria	K96243	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/011/545/GCF_000011545.1_ASM1154v1
+B_mallei_ATCC_23344	Burkholderia mallei ATCC 23344	Bacteria;Proteobacteria;Betaproteobacteria	ATCC 23344	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/011/705/GCF_000011705.1_ASM1170v1
+S_dysenteriae_Sd197	Shigella dysenteriae Sd197	Bacteria;Proteobacteria;Gammaproteobacteria	Sd197	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/005/GCF_000012005.1_ASM1200v1
+R_bellii_RML369_C	Rickettsia bellii RML369-C	Bacteria;Proteobacteria;Alphaproteobacteria	RML369-C	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/385/GCF_000012385.1_ASM1238v1
+R_felis_URRWXCal2	Rickettsia felis URRWXCal2	Bacteria;Proteobacteria;Alphaproteobacteria	URRWXCal2; California 2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/145/GCF_000012145.1_ASM1214v1
+B_vulgatus_ATCC_8482	Bacteroides vulgatus ATCC 8482	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 8482	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/825/GCF_000012825.1_ASM1282v1
+P_distasonis_ATCC_8503	Parabacteroides distasonis ATCC 8503	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 8503	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/845/GCF_000012845.1_ASM1284v1
+A_phagocytophilum_HZ	Anaplasma phagocytophilum str. HZ	Bacteria;Proteobacteria;Alphaproteobacteria	HZ	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/125/GCF_000013125.1_ASM1312v1
+E_chaffeensis_Arkansas	Ehrlichia chaffeensis str. Arkansas	Bacteria;Proteobacteria;Alphaproteobacteria	Arkansas	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/145/GCF_000013145.1_ASM1314v1
+N_sennetsu_Miyayama	Neorickettsia sennetsu str. Miyayama	Bacteria;Proteobacteria;Alphaproteobacteria	Miyayama	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/165/GCF_000013165.1_ASM1316v1
+S_aureus_aureus_NCTC_8325	Staphylococcus aureus subsp. aureus NCTC 8325	Bacteria;Terrabacteria group;Firmicutes	NCTC 8325	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/425/GCF_000013425.1_ASM1342v1
+C_perfringens_ATCC_13124	Clostridium perfringens ATCC 13124	Bacteria;Terrabacteria group;Firmicutes	ATCC 13124	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/285/GCF_000013285.1_ASM1328v1
+P_xenovorans_LB400	Paraburkholderia xenovorans LB400	Bacteria;Proteobacteria;Betaproteobacteria	LB400	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/645/GCF_000013645.1_ASM1364v1
+L_borgpetersenii_serovar_Hardjo_bovis_L550	Leptospira borgpetersenii serovar Hardjo-bovis str. L550	Bacteria;Spirochaetes;Spirochaetia	L550	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/945/GCF_000013945.1_ASM1394v1
+A_butzleri_RM4018	Arcobacter butzleri RM4018	Bacteria;Proteobacteria;delta/epsilon subdivisions	RM4018	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/025/GCF_000014025.1_ASM1402v1
+C_novyi_NT	Clostridium novyi NT	Bacteria;Terrabacteria group;Firmicutes	NT	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/125/GCF_000014125.1_ASM1412v1
+S_sanguinis_SK36	Streptococcus sanguinis SK36	Bacteria;Terrabacteria group;Firmicutes	SK36	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/205/GCF_000014205.1_ASM1420v1
+R_canadensis_McKiel	Rickettsia canadensis str. McKiel	Bacteria;Proteobacteria;Alphaproteobacteria	McKiel	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/345/GCF_000014345.1_ASM1434v1
+A_hydrophila_hydrophila_ATCC_7966	Aeromonas hydrophila subsp. hydrophila ATCC 7966	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 7966	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/805/GCF_000014805.1_ASM1480v1
+M_smegmatis_MC2_155	Mycolicibacterium smegmatis MC2 155	Bacteria;Terrabacteria group;Actinobacteria	MC2 155	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/015/005/GCF_000015005.1_ASM1500v1
+B_bacilliformis_KC583	Bartonella bacilliformis KC583	Bacteria;Proteobacteria;Alphaproteobacteria	KC583; ATCC 35685	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/015/445/GCF_000015445.1_ASM1544v1
+C_botulinum_A_Hall	Clostridium botulinum A str. Hall	Bacteria;Terrabacteria group;Firmicutes	Hall	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/017/045/GCF_000017045.1_ASM1704v1
+O_anthropi_ATCC_49188	Ochrobactrum anthropi ATCC 49188	Bacteria;Proteobacteria;Alphaproteobacteria	ATCC 49188	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/017/405/GCF_000017405.1_ASM1740v1
+B_cytotoxicus_NVH_391_98	Bacillus cytotoxicus NVH 391-98	Bacteria;Terrabacteria group;Firmicutes	NVH 391-98	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/017/425/GCF_000017425.1_ASM1742v1
+L_biflexa_serovar_Patoc_strain_Patoc_1_Paris	Leptospira biflexa serovar Patoc strain 'Patoc 1 (Paris)'	Bacteria;Spirochaetes;Spirochaetia	Patoc 1 (Paris)	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/017/685/GCF_000017685.1_ASM1768v1
+R_akari_Hartford	Rickettsia akari str. Hartford	Bacteria;Proteobacteria;Alphaproteobacteria	Hartford	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/018/205/GCF_000018205.1_ASM1820v1
+D_acidovorans_SPH_1	Delftia acidovorans SPH-1	Bacteria;Proteobacteria;Betaproteobacteria	SPH-1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/018/665/GCF_000018665.1_ASM1866v1
+C_lari_RM2100	Campylobacter lari RM2100	Bacteria;Proteobacteria;delta/epsilon subdivisions	RM2100; ATCC BAA-1060D	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/019/205/GCF_000019205.1_ASM1920v1
+F_philomiragia_philomiragia_ATCC_25017	Francisella philomiragia subsp. philomiragia ATCC 25017	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 25017	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/019/285/GCF_000019285.1_ASM1928v1
+U_parvum_serovar_3_ATCC_27815	Ureaplasma parvum serovar 3 str. ATCC 27815	Bacteria;Terrabacteria group;Tenericutes	ATCC 27815	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/019/345/GCF_000019345.1_ASM1934v1
+H_somni_2336	Histophilus somni 2336	Bacteria;Proteobacteria;Gammaproteobacteria	2336	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/019/405/GCF_000019405.1_ASM1940v1
+B_duttonii_Ly	Borrelia duttonii Ly	Bacteria;Spirochaetes;Spirochaetia	Ly	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/019/685/GCF_000019685.1_ASM1968v1
+R_pickettii_12J	Ralstonia pickettii 12J	Bacteria;Proteobacteria;Betaproteobacteria	12J	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/020/205/GCF_000020205.1_ASM2020v1
+L_hongkongensis_HLHK9	Laribacter hongkongensis HLHK9	Bacteria;Proteobacteria;Betaproteobacteria	HLHK9	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/021/025/GCF_000021025.1_ASM2102v1
+N_risticii_Illinois	Neorickettsia risticii str. Illinois	Bacteria;Proteobacteria;Alphaproteobacteria	Illinois	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/022/525/GCF_000022525.1_ASM2252v1
+C_aurimucosum_ATCC_700975	Corynebacterium aurimucosum ATCC 700975	Bacteria;Terrabacteria group;Actinobacteria	DSM 44827; ATCC 700975	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/022/905/GCF_000022905.1_ASM2290v1
+C_ochracea_DSM_7271	Capnocytophaga ochracea DSM 7271	Bacteria;FCB group;Bacteroidetes/Chlorobi group	DSM 7271	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/023/285/GCF_000023285.1_ASM2328v1
+C_curtum_DSM_15641	Cryptobacterium curtum DSM 15641	Bacteria;Terrabacteria group;Actinobacteria	DSM 15641	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/023/845/GCF_000023845.1_ASM2384v1
+L_buccalis_C_1013_b	Leptotrichia buccalis C-1013-b	Bacteria;Fusobacteria;Fusobacteriia	DSM 1135	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/023/905/GCF_000023905.1_ASM2390v1
+A_prevotii_DSM_20548	Anaerococcus prevotii DSM 20548	Bacteria;Terrabacteria group;Firmicutes	DSM 20548	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/024/105/GCF_000024105.1_ASM2410v1
+E_lenta_DSM_2243	Eggerthella lenta DSM 2243	Bacteria;Terrabacteria group;Actinobacteria	DSM 2243	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/024/265/GCF_000024265.1_ASM2426v1
+E_coli_IAI39	Escherichia coli IAI39	Bacteria;Proteobacteria;Gammaproteobacteria	IAI39	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/345/GCF_000026345.1_ASM2634v1
+S_equi_zooepidemicus	Streptococcus equi subsp. zooepidemicus	Bacteria;Terrabacteria group;Firmicutes	H70	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/605/GCF_000026605.1_ASM2660v1
+M_pneumoniae_M129	Mycoplasma pneumoniae M129	Bacteria;Terrabacteria group;Tenericutes	M129; ATCC 29342	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/345/GCF_000027345.1_ASM2734v1
+S_suis_BM407	Streptococcus suis BM407	Bacteria;Terrabacteria group;Firmicutes	BM407	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/026/745/GCF_000026745.1_ASM2674v1
+M_morganii_morganii_KT	Morganella morganii subsp. morganii KT	Bacteria;Proteobacteria;Gammaproteobacteria	KT	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/286/435/GCF_000286435.2_ASM28643v2
+H_influenzae_Rd_KW20	Haemophilus influenzae Rd KW20	Bacteria;Proteobacteria;Gammaproteobacteria		ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/305/GCF_000027305.1_ASM2730v1
+M_genitalium_G37	Mycoplasma genitalium G37	Bacteria;Terrabacteria group;Tenericutes	G-37	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1
+S_intermedius_B196	Streptococcus intermedius B196	Bacteria;Terrabacteria group;Firmicutes	B196	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/463/355/GCF_000463355.1_ASM46335v1
+B_quintana_Toulouse	Bartonella quintana str. Toulouse	Bacteria;Proteobacteria;Alphaproteobacteria	Toulouse	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/046/685/GCF_000046685.1_ASM4668v1
+B_henselae_Houston_1	Bartonella henselae str. Houston-1	Bacteria;Proteobacteria;Alphaproteobacteria	Houston-1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/046/705/GCF_000046705.1_ASM4670v1
+M_kansasii_ATCC_12478	Mycobacterium kansasii ATCC 12478	Bacteria;Terrabacteria group;Actinobacteria	ATCC 12478	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/157/895/GCF_000157895.3_ASM15789v2
+O_tsutsugamushi_Boryong	Orientia tsutsugamushi str. Boryong	Bacteria;Proteobacteria;Alphaproteobacteria	Boryong	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/063/545/GCF_000063545.1_ASM6354v1
+E_muris_AS145	Ehrlichia muris AS145	Bacteria;Proteobacteria;Alphaproteobacteria	AS145	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/508/225/GCF_000508225.1_ASM50822v1
+M_abscessus_ATCC_19977	Mycobacteroides abscessus ATCC 19977	Bacteria;Terrabacteria group;Actinobacteria		ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/069/185/GCF_000069185.1_ASM6918v1
+C_urealyticum_DSM_7109	Corynebacterium urealyticum DSM 7109	Bacteria;Terrabacteria group;Actinobacteria	DSM 7109	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/069/945/GCF_000069945.1_ASM6994v1
+P_mirabilis_HI4320	Proteus mirabilis HI4320	Bacteria;Proteobacteria;Gammaproteobacteria	HI4320	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/069/965/GCF_000069965.1_ASM6996v1
+S_marcescens_marcescens_Db11	Serratia marcescens subsp. marcescens Db11	Bacteria;Proteobacteria;Gammaproteobacteria	Db11	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/513/215/GCF_000513215.1_DB11
+S_maltophilia_K279a	Stenotrophomonas maltophilia K279a	Bacteria;Proteobacteria;Gammaproteobacteria	K279a	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/072/485/GCF_000072485.1_ASM7248v1
+G_bronchialis_DSM_43247	Gordonia bronchialis DSM 43247	Bacteria;Terrabacteria group;Actinobacteria	DSM 43247	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/024/785/GCF_000024785.1_ASM2478v1
+M_hominis_ATCC_23114	Mycoplasma hominis ATCC 23114	Bacteria;Terrabacteria group;Tenericutes	ATCC 23114	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/085/865/GCF_000085865.1_ASM8586v1
+S_moniliformis_DSM_12112	Streptobacillus moniliformis DSM 12112	Bacteria;Fusobacteria;Fusobacteriia	DSM 12112	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/024/565/GCF_000024565.1_ASM2456v1
+G_vaginalis_409_05	Gardnerella vaginalis 409-05	Bacteria;Terrabacteria group;Actinobacteria	409-05	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/205/GCF_000025205.1_ASM2520v1
+A_fermentans_DSM_20731	Acidaminococcus fermentans DSM 20731	Bacteria;Terrabacteria group;Firmicutes	DSM 20731	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/305/GCF_000025305.1_ASM2530v1
+S_mitis_B6	Streptococcus mitis B6	Bacteria;Terrabacteria group;Firmicutes	B6	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/165/GCF_000027165.1_ASM2716v1
+S_lugdunensis_HKU09_01	Staphylococcus lugdunensis HKU09-01	Bacteria;Terrabacteria group;Firmicutes	HKU09-01	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/085/GCF_000025085.1_ASM2508v1
+L_interrogans_serovar_Lai_56601	Leptospira interrogans serovar Lai str. 56601	Bacteria;Spirochaetes;Spirochaetia	56601	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/092/565/GCF_000092565.1_ASM9256v1
+T_pallidum_pallidum_Sea_81_4	Treponema pallidum subsp. pallidum str. Sea 81-4	Bacteria;Spirochaetes;Spirochaetia	Sea 81-4	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/604/125/GCF_000604125.1_ASM60412v1
+B_holmesii_ATCC_51541	Bordetella holmesii ATCC 51541	Bacteria;Proteobacteria;Betaproteobacteria	ATCC 51541	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/612/485/GCF_000612485.1_ASM61248v1
+S_pyogenes_M1_GAS	Streptococcus pyogenes M1 GAS	Bacteria;Terrabacteria group;Firmicutes	SF370	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/785/GCF_000006785.2_ASM678v2
+C_freundii_CFNIH1	Citrobacter freundii CFNIH1	Bacteria;Proteobacteria;Gammaproteobacteria	CFNIH1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/648/515/GCF_000648515.1_ASM64851v1
+E_cloacae_cloacae_ATCC_13047	Enterobacter cloacae subsp. cloacae ATCC 13047	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 13047	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/565/GCF_000025565.1_ASM2556v1
+M_catarrhalis_BBH18	Moraxella catarrhalis BBH18	Bacteria;Proteobacteria;Gammaproteobacteria	BBH18	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/092/265/GCF_000092265.1_ASM9226v1
+N_dassonvillei_dassonvillei_DSM_43111	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Bacteria;Terrabacteria group;Actinobacteria	DSM 43111	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/092/985/GCF_000092985.1_ASM9298v1
+A_haemolyticum_DSM_20595	Arcanobacterium haemolyticum DSM 20595	Bacteria;Terrabacteria group;Actinobacteria	DSM 20595	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/092/365/GCF_000092365.1_ASM9236v1
+W_chondrophila_WSU_86_1044	Waddlia chondrophila WSU 86-1044	Bacteria;PVC group;Chlamydiae	WSU 86-1044	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/092/785/GCF_000092785.1_ASM9278v1
+A_schaalii	Actinotignum schaalii	Bacteria;Terrabacteria group;Actinobacteria	CCUG 27420	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/724/605/GCF_000724605.1_ASM72460v1
+B_valaisiana_Tom4006	Borreliella valaisiana Tom4006	Bacteria;Spirochaetes;Spirochaetia	Tom4006	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/739/475/GCF_000739475.1_ASM73947v1
+E_anophelis_NUHP1	Elizabethkingia anophelis NUHP1	Bacteria;FCB group;Bacteroidetes/Chlorobi group	NUHP1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/495/935/GCF_000495935.2_ASM49593v2
+A_baumannii	Acinetobacter baumannii	Bacteria;Proteobacteria;Gammaproteobacteria	AB030	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/746/645/GCF_000746645.1_ASM74664v1
+P_multocida	Pasteurella multocida	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 43137	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/754/275/GCF_000754275.1_ASM75427v1
+P_gergoviae	Pluralibacter gergoviae	Bacteria;Proteobacteria;Gammaproteobacteria	FB2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/757/785/GCF_000757785.1_ASM75778v1
+C_neteri	Cedecea neteri	Bacteria;Proteobacteria;Gammaproteobacteria	SSMD04	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/757/825/GCF_000757825.1_ASM75782v1
+S_salivarius	Streptococcus salivarius	Bacteria;Terrabacteria group;Firmicutes	NCTC 8618	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/785/515/GCF_000785515.1_ASM78551v1
+P_micra	Parvimonas micra	Bacteria;Terrabacteria group;Firmicutes	KCOM 1535; ChDC B708	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/800/295/GCF_000800295.1_ASM80029v1
+S_iniae	Streptococcus iniae	Bacteria;Terrabacteria group;Firmicutes	YSFST01-82	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/831/485/GCF_000831485.1_ASM83148v1
+P_denticola_F0289	Prevotella denticola F0289	Bacteria;FCB group;Bacteroidetes/Chlorobi group	F0289	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/193/395/GCF_000193395.1_ASM19339v1
+S_pseudintermedius_HKU10_03	Staphylococcus pseudintermedius HKU10-03	Bacteria;Terrabacteria group;Firmicutes	HKU10-03	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/185/885/GCF_000185885.1_ASM18588v1
+B_pertussis_Tohama_I	Bordetella pertussis Tohama I	Bacteria;Proteobacteria;Betaproteobacteria	Tohama I	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/715/GCF_000195715.1_ASM19571v1
+R_prowazekii_Madrid_E	Rickettsia prowazekii str. Madrid E	Bacteria;Proteobacteria;Alphaproteobacteria	Madrid E	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/735/GCF_000195735.1_ASM19573v1
+M_leprae_TN	Mycobacterium leprae TN	Bacteria;Terrabacteria group;Actinobacteria	TN	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/855/GCF_000195855.1_ASM19585v1
+S_enterica_enterica_serovar_Typhi_CT18	Salmonella enterica subsp. enterica serovar Typhi str. CT18	Bacteria;Proteobacteria;Gammaproteobacteria	CT18	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/995/GCF_000195995.1_ASM19599v1
+C_metallidurans_CH34	Cupriavidus metallidurans CH34	Bacteria;Proteobacteria;Betaproteobacteria	CH34	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/015/GCF_000196015.1_ASM19601v1
+L_monocytogenes_EGD_e	Listeria monocytogenes EGD-e	Bacteria;Terrabacteria group;Firmicutes	EGD-e	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/035/GCF_000196035.1_ASM19603v1
+V_parahaemolyticus_RIMD_2210633	Vibrio parahaemolyticus RIMD 2210633	Bacteria;Proteobacteria;Gammaproteobacteria	O3:K6 substr. RIMD 2210633	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/095/GCF_000196095.1_ASM19609v1
+L_longbeachae_NSW150	Legionella longbeachae NSW150	Bacteria;Proteobacteria;Gammaproteobacteria	NSW150	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/091/785/GCF_000091785.1_ASM9178v1
+M_fermentans_M64	Mycoplasma fermentans M64	Bacteria;Terrabacteria group;Tenericutes	M64	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/186/005/GCF_000186005.1_ASM18600v1
+O_splanchnicus_DSM_20712	Odoribacter splanchnicus DSM 20712	Bacteria;FCB group;Bacteroidetes/Chlorobi group	DSM 220712	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/190/535/GCF_000190535.1_ASM19053v1
+P_asaccharolytica_DSM_20707	Porphyromonas asaccharolytica DSM 20707	Bacteria;FCB group;Bacteroidetes/Chlorobi group	DSM 20707	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/212/375/GCF_000212375.1_ASM21237v1
+C_resistens_DSM_45100	Corynebacterium resistens DSM 45100	Bacteria;Terrabacteria group;Actinobacteria	DSM 45100	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/177/535/GCF_000177535.2_ASM17753v2
+K_aerogenes_KCTC_2190	Klebsiella aerogenes KCTC 2190	Bacteria;Proteobacteria;Gammaproteobacteria	KCTC 2190	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/215/745/GCF_000215745.1_ASM21574v1
+H_felis_ATCC_49179	Helicobacter felis ATCC 49179	Bacteria;Proteobacteria;delta/epsilon subdivisions	ATCC 49179	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/200/595/GCF_000200595.1_ASM20059v1
+B_bissettii_DN127	Borreliella bissettii DN127	Bacteria;Spirochaetes;Spirochaetia	DN127	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/222/305/GCF_000222305.1_ASM22230v1
+A_intestini_RyC_MR95	Acidaminococcus intestini RyC-MR95	Bacteria;Terrabacteria group;Firmicutes	RyC-MR95	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/230/275/GCF_000230275.1_ASM23027v1
+S_flexneri_2a_301	Shigella flexneri 2a str. 301	Bacteria;Proteobacteria;Gammaproteobacteria	301	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/925/GCF_000006925.2_ASM692v2
+S_mutans_UA159	Streptococcus mutans UA159	Bacteria;Terrabacteria group;Firmicutes	UA159	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/465/GCF_000007465.2_ASM746v2
+C_sakazakii	Cronobacter sakazakii	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 29544	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/982/825/GCF_000982825.1_ASM98282v1
+K_oxytoca	Klebsiella oxytoca	Bacteria;Proteobacteria;Gammaproteobacteria	CAV1374	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/022/195/GCF_001022195.1_ASM102219v1
+S_capitis_capitis	Staphylococcus capitis subsp. capitis	Bacteria;Terrabacteria group;Firmicutes	AYP1020	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/028/645/GCF_001028645.1_ASM102864v1
+A_pittii_PHEA_2	Acinetobacter pittii PHEA-2	Bacteria;Proteobacteria;Gammaproteobacteria	PHEA-2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/191/145/GCF_000191145.1_ASM19114v1
+T_forsythia_92A2	Tannerella forsythia 92A2	Bacteria;FCB group;Bacteroidetes/Chlorobi group	92A2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/238/215/GCF_000238215.1_ASM23821v1
+K_pneumoniae_pneumoniae_HS11286	Klebsiella pneumoniae subsp. pneumoniae HS11286	Bacteria;Proteobacteria;Gammaproteobacteria	HS11286	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/240/185/GCF_000240185.1_ASM24018v2
+C_psittaci_6BC	Chlamydia psittaci 6BC	Bacteria;PVC group;Chlamydiae	6BC	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/204/255/GCF_000204255.1_ASM20425v1
+C_pseudotuberculosis_C231	Corynebacterium pseudotuberculosis C231	Bacteria;Terrabacteria group;Actinobacteria	C231	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/144/675/GCF_000144675.1_ASM14467v1
+L_santarosai_serovar_Shermani_LT_821	Leptospira santarosai serovar Shermani str. LT 821	Bacteria;Spirochaetes;Spirochaetia		ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/313/175/GCF_000313175.2_ASM31317v2
+B_hinzii	Bordetella hinzii	Bacteria;Proteobacteria;Betaproteobacteria	F582	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/078/275/GCF_001078275.1_ASM107827v1
+E_faecium_DO	Enterococcus faecium DO	Bacteria;Terrabacteria group;Firmicutes	DO	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/174/395/GCF_000174395.2_ASM17439v2
+E_rhusiopathiae_Fujisawa	Erysipelothrix rhusiopathiae str. Fujisawa	Bacteria;Terrabacteria group;Firmicutes	Fujisawa	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/270/085/GCF_000270085.1_ASM27008v1
+M_intracellulare_ATCC_13950	Mycobacterium intracellulare ATCC 13950	Bacteria;Terrabacteria group;Actinobacteria	ATCC 13950	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/277/125/GCF_000277125.1_ASM27712v1
+P_propionicum_F0230a	Pseudopropionibacterium propionicum F0230a	Bacteria;Terrabacteria group;Actinobacteria	F0230a	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/277/715/GCF_000277715.1_ASM27771v1
+R_japonica_YH	Rickettsia japonica YH	Bacteria;Proteobacteria;Alphaproteobacteria	YH	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/283/595/GCF_000283595.1_ASM28359v1
+N_cyriacigeorgica_GUH_2	Nocardia cyriacigeorgica GUH-2	Bacteria;Terrabacteria group;Actinobacteria	GUH-2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/284/035/GCF_000284035.1_ASM28403v1
+R_rhipicephali_3_7_female6_CWPP	Rickettsia rhipicephali str. 3-7-female6-CWPP	Bacteria;Proteobacteria;Alphaproteobacteria	3-7-female6-CWPP	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/284/075/GCF_000284075.1_ASM28407v1
+R_australis_Cutlack	Rickettsia australis str. Cutlack	Bacteria;Proteobacteria;Alphaproteobacteria	Cutlack	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/284/155/GCF_000284155.1_ASM28415v1
+N_alba_ATCC_BAA_2165	Nocardiopsis alba ATCC BAA-2165	Bacteria;Terrabacteria group;Actinobacteria	ATCC BAA-2165	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/294/515/GCF_000294515.1_ASM29451v1
+C_ureolyticus_RIGS_9880	Campylobacter ureolyticus RIGS 9880	Bacteria;Proteobacteria;delta/epsilon subdivisions	RIGS 9880	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/190/755/GCF_001190755.1_ASM119075v1
+B_clarridgeiae_73	Bartonella clarridgeiae 73	Bacteria;Proteobacteria;Alphaproteobacteria	73	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/253/015/GCF_000253015.1_ASM25301v1
+R_dentocariosa_ATCC_17931	Rothia dentocariosa ATCC 17931	Bacteria;Terrabacteria group;Actinobacteria	ATCC 17931	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/164/695/GCF_000164695.2_ASM16469v2
+S_negevensis_Z	Simkania negevensis Z	Bacteria;PVC group;Chlamydiae	Z	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/237/205/GCF_000237205.1_ASM23720v1
+P_acanthamoebae_UV_7	Parachlamydia acanthamoebae UV-7	Bacteria;PVC group;Chlamydiae	UV-7	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/253/035/GCF_000253035.1_ASM25303v1
+B_burgdorferi_B31	Borreliella burgdorferi B31	Bacteria;Spirochaetes;Spirochaetia	B31	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/685/GCF_000008685.2_ASM868v2
+M_chubuense_NBB4	Mycolicibacterium chubuense NBB4	Bacteria;Terrabacteria group;Actinobacteria	NBB4	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/266/905/GCF_000266905.1_ASM26690v1
+B_afzelii_HLJ01	Borreliella afzelii HLJ01	Bacteria;Spirochaetes;Spirochaetia	HLJ01	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/304/735/GCF_000304735.1_ASM30473v1
+N_brasiliensis_ATCC_700358	Nocardia brasiliensis ATCC 700358	Bacteria;Terrabacteria group;Actinobacteria	HUJEG-1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/250/675/GCF_000250675.2_ASM25067v3
+E_hirae_ATCC_9790	Enterococcus hirae ATCC 9790	Bacteria;Terrabacteria group;Firmicutes	ATCC 9790	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/271/405/GCF_000271405.2_ASM27140v2
+M_marinum_E11	Mycobacterium marinum E11	Bacteria;Terrabacteria group;Actinobacteria	E11	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/723/425/GCF_000723425.2_E11
+R_amblyommatis	Rickettsia amblyommatis	Bacteria;Proteobacteria;Alphaproteobacteria	Ac37	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/273/795/GCF_001273795.1_ASM127379v1
+C_concisus	Campylobacter concisus	Bacteria;Proteobacteria;delta/epsilon subdivisions	ATCC 33237	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/298/465/GCF_001298465.1_ASM129846v1
+M_elsdenii_14_14	Megasphaera elsdenii 14-14	Bacteria;Terrabacteria group;Firmicutes	14-14	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/304/715/GCF_001304715.1_ASM130471v1
+M_fortuitum	Mycolicibacterium fortuitum	Bacteria;Terrabacteria group;Actinobacteria	CT6	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/307/545/GCF_001307545.1_ASM130754v1
+B_ovatus	Bacteroides ovatus	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 8483	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/314/995/GCF_001314995.1_ASM131499v1
+S_dysgalactiae_equisimilis_AC_2713	Streptococcus dysgalactiae subsp. equisimilis AC-2713	Bacteria;Terrabacteria group;Firmicutes	AC-2713	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/317/855/GCF_000317855.1_ASM31785v1
+B_parapertussis_Bpp5	Bordetella parapertussis Bpp5	Bacteria;Proteobacteria;Betaproteobacteria	Bpp5	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/317/935/GCF_000317935.1_ASM31793v1
+B_bronchiseptica_253	Bordetella bronchiseptica 253	Bacteria;Proteobacteria;Betaproteobacteria	253	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/318/015/GCF_000318015.1_ASM31801v1
+M_tuberculosis_H37Rv	Mycobacterium tuberculosis H37Rv	Bacteria;Terrabacteria group;Actinobacteria	H37Rv	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2
+B_australis_Aust_NH1	Bartonella australis Aust/NH1	Bacteria;Proteobacteria;Alphaproteobacteria	Aust/NH1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/341/355/GCF_000341355.1_ASM34135v1
+B_vinsonii_berkhoffii_Winnie	Bartonella vinsonii subsp. berkhoffii str. Winnie	Bacteria;Proteobacteria;Alphaproteobacteria	Winnie	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/341/385/GCF_000341385.1_ASM34138v1
+S_warneri_SG1	Staphylococcus warneri SG1	Bacteria;Terrabacteria group;Firmicutes	SG1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/332/735/GCF_000332735.1_ASM33273v1
+B_cepacia_ATCC_25416	Burkholderia cepacia ATCC 25416	Bacteria;Proteobacteria;Betaproteobacteria	UCB 717	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/411/495/GCF_001411495.1_ASM141149v1
+H_cinaedi_CCUG_18818	Helicobacter cinaedi CCUG 18818 = ATCC BAA-847	Bacteria;Proteobacteria;delta/epsilon subdivisions	ATCC BAA-847	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/349/975/GCF_000349975.1_ASM34997v1
+B_miyamotoi_LB_2001	Borrelia miyamotoi LB-2001	Bacteria;Spirochaetes;Spirochaetia	LB-2001	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/445/425/GCF_000445425.4_ASM44542v4
+M_haemophilum_DSM_44634	Mycobacterium haemophilum DSM 44634	Bacteria;Terrabacteria group;Actinobacteria	ATCC 29548	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/340/435/GCF_000340435.2_ASM34043v3
+C_diphtheriae	Corynebacterium diphtheriae	Bacteria;Terrabacteria group;Actinobacteria	NCTC11397	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/457/455/GCF_001457455.1_NCTC11397
+A_xylosoxidans	Achromobacter xylosoxidans	Bacteria;Proteobacteria;Betaproteobacteria	NCTC10807	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/457/475/GCF_001457475.1_NCTC10807
+N_farcinica	Nocardia farcinica	Bacteria;Terrabacteria group;Actinobacteria	NCTC11134	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/182/745/GCF_001182745.1_NCTC11134
+C_avidum_44067	Cutibacterium avidum 44067	Bacteria;Terrabacteria group;Actinobacteria	44067	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/367/205/GCF_000367205.1_ASM36720v1
+E_casseliflavus_EC20	Enterococcus casseliflavus EC20	Bacteria;Terrabacteria group;Firmicutes	EC20	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/157/355/GCF_000157355.2_ASM15735v2
+M_haemolytica_M42548	Mannheimia haemolytica M42548	Bacteria;Proteobacteria;Gammaproteobacteria	M42548	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/376/645/GCF_000376645.1_ASM37664v1
+A_urinae	Aerococcus urinae	Bacteria;Terrabacteria group;Firmicutes	CCUG36881	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/543/175/GCF_001543175.1_ASM154317v1
+A_oris	Actinomyces oris	Bacteria;Terrabacteria group;Actinobacteria	T14V	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/553/935/GCF_001553935.1_ASM155393v1
+S_cristatus_AS_1_3089	Streptococcus cristatus AS 1.3089	Bacteria;Terrabacteria group;Firmicutes	AS 1.3089	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/385/925/GCF_000385925.1_ASM38592v1
+M_phlei	Mycolicibacterium phlei	Bacteria;Terrabacteria group;Actinobacteria	CCUG 21000	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/583/415/GCF_001583415.1_ASM158341v1
+A_actinomycetemcomitans	Aggregatibacter actinomycetemcomitans	Bacteria;Proteobacteria;Gammaproteobacteria	624	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/594/265/GCF_001594265.1_ASM159426v1
+P_alcaligenes	Pseudomonas alcaligenes	Bacteria;Proteobacteria;Gammaproteobacteria	NEB 585	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/597/285/GCF_001597285.1_ASM159728v1
+N_weaveri	Neisseria weaveri	Bacteria;Proteobacteria;Betaproteobacteria	NCTC13585	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/086/555/GCF_900086555.1_34903_D01
+B_hermsii_HS1	Borrelia hermsii HS1	Bacteria;Spirochaetes;Spirochaetia	HS1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/660/005/GCF_001660005.1_ASM166000v1
+P_shigelloides	Plesiomonas shigelloides	Bacteria;Proteobacteria;Gammaproteobacteria	NCTC10360	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/900/087/055/GCF_900087055.1_31289_E01
+P_agglomerans	Pantoea agglomerans	Bacteria;Proteobacteria;Gammaproteobacteria	C410P1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/709/315/GCF_001709315.1_ASM170931v1
+P_pnomenusa	Pandoraea pnomenusa	Bacteria;Proteobacteria;Betaproteobacteria	DSM 16536	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/767/615/GCF_000767615.3_ASM76761v3
+E_hormaechei_steigerwaltii	Enterobacter hormaechei subsp. steigerwaltii	Bacteria;Proteobacteria;Gammaproteobacteria	DSM 16691	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/729/725/GCF_001729725.1_ASM172972v1
+C_curvus_525_92	Campylobacter curvus 525.92	Bacteria;Proteobacteria;delta/epsilon subdivisions	525.92	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/017/465/GCF_000017465.2_ASM1746v2
+C_burnetii_RSA_493	Coxiella burnetii RSA 493	Bacteria;Proteobacteria;Gammaproteobacteria	RSA 493	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/765/GCF_000007765.2_ASM776v2
+B_garinii	Borreliella garinii	Bacteria;Spirochaetes;Spirochaetia	CIP 103362	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/922/545/GCF_001922545.1_ASM192254v1
+B_anserina_Es	Borrelia anserina Es	Bacteria;Spirochaetes;Spirochaetia	Es	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/936/255/GCF_001936255.1_ASM193625v1
+R_gilardii	Roseomonas gilardii	Bacteria;Proteobacteria;Alphaproteobacteria	U14-5	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/941/945/GCF_001941945.1_ASM194194v1
+A_junii	Acinetobacter junii	Bacteria;Proteobacteria;Gammaproteobacteria	65	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/941/805/GCF_001941805.1_ASM194180v1
+A_soli	Acinetobacter soli	Bacteria;Proteobacteria;Gammaproteobacteria	GFJ2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/953/195/GCF_001953195.1_ASM195319v1
+P_intermedia_ATCC_25611	Prevotella intermedia ATCC 25611 = DSM 20706	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 25611	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/953/955/GCF_001953955.1_ASM195395v1
+S_gallolyticus_gallolyticus_DSM_16831	Streptococcus gallolyticus subsp. gallolyticus DSM 16831	Bacteria;Terrabacteria group;Firmicutes	DSM 16831	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/000/985/GCF_002000985.1_ASM200098v1
+C_coli	Campylobacter coli	Bacteria;Proteobacteria;delta/epsilon subdivisions	aerotolerant OR12	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/024/185/GCF_002024185.1_ASM202418v1
+M_colombiense_CECT_3035	Mycobacterium colombiense CECT 3035	Bacteria;Terrabacteria group;Actinobacteria	CECT 3035	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/105/755/GCF_002105755.1_ASM210575v1
+B_turicatae_91E135	Borrelia turicatae 91E135	Bacteria;Spirochaetes;Spirochaetia	91E135	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/012/085/GCF_000012085.2_ASM1208v2
+V_vulnificus	Vibrio vulnificus	Bacteria;Proteobacteria;Gammaproteobacteria	CECT 4999	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/215/135/GCF_002215135.1_ASM221513v1
+C_sputorum_faecalis_CCUG_20703	Campylobacter sputorum bv. faecalis CCUG 20703	Bacteria;Proteobacteria;delta/epsilon subdivisions	CCUG 20703	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/220/735/GCF_002220735.1_ASM222073v1
+B_caccae	Bacteroides caccae	Bacteria;FCB group;Bacteroidetes/Chlorobi group	ATCC 43185	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/222/615/GCF_002222615.2_ASM222261v2
+G_bethesdensis_CGDNIH1	Granulibacter bethesdensis CGDNIH1	Bacteria;Proteobacteria;Alphaproteobacteria	CGDNIH1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/014/285/GCF_000014285.2_ASM1428v2
+C_difficile_630	Clostridioides difficile 630	Bacteria;Terrabacteria group;Firmicutes	630	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/205/GCF_000009205.2_ASM920v2
+V_fluvialis	Vibrio fluvialis	Bacteria;Proteobacteria;Gammaproteobacteria	ATCC 33809	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/558/415/GCF_001558415.2_ASM155841v2
+S_pettenkoferi	Staphylococcus pettenkoferi	Bacteria;Terrabacteria group;Firmicutes	FDAARGOS_288	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/208/805/GCF_002208805.2_ASM220880v2
+S_sciuri	Staphylococcus sciuri	Bacteria;Terrabacteria group;Firmicutes	FDAARGOS_285	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/209/165/GCF_002209165.2_ASM220916v2
+M_tuberculosis_variant_bovis_AF2122_97	Mycobacterium tuberculosis variant bovis AF2122/97	Bacteria;Terrabacteria group;Actinobacteria	AF2122/97	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/835/GCF_000195835.2_ASM19583v2
+P_putida_KT2440	Pseudomonas putida KT2440	Bacteria;Proteobacteria;Gammaproteobacteria	KT2440	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/007/565/GCF_000007565.2_ASM756v2
+S_enterica_enterica_serovar_Typhimurium_LT2	Salmonella enterica subsp. enterica serovar Typhimurium str. LT2	Bacteria;Proteobacteria;Gammaproteobacteria	LT2	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/945/GCF_000006945.2_ASM694v2
+G_vaginalis_ATCC_14019	Gardnerella vaginalis ATCC 14019	Bacteria;Terrabacteria group;Actinobacteria	ATCC 14019	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/159/155/GCF_000159155.2_ASM15915v2
+F_nucleatum_animalis_7_1	Fusobacterium nucleatum subsp. animalis 7_1	Bacteria;Fusobacteria;Fusobacteriia	7_1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/158/275/GCF_000158275.2_ASM15827v2
+C_trachomatis_434_Bu	Chlamydia trachomatis 434/Bu	Bacteria;PVC group;Chlamydiae	434/Bu	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/068/585/GCF_000068585.1_ASM6858v1
+E_coli_K_12_MG1655	Escherichia coli str. K-12 substr. MG1655	Bacteria;Proteobacteria;Gammaproteobacteria	K-12 substr. MG1655	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2
+C_botulinum_B_Eklund_17B_NRP	Clostridium botulinum B str. Eklund 17B (NRP)	Bacteria;Terrabacteria group;Firmicutes	Eklund 17B	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/020/165/GCF_000020165.1_ASM2016v1
+B_anthracis_Sterne	Bacillus anthracis str. Sterne	Bacteria;Terrabacteria group;Firmicutes	Sterne	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/165/GCF_000008165.1_ASM816v1
+C_botulinum_A_ATCC_3502	Clostridium botulinum A str. ATCC 3502	Bacteria;Terrabacteria group;Firmicutes	ATCC 3502	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/063/585/GCF_000063585.1_ASM6358v1
+E_coli_O83_H1_NRG_857C	Escherichia coli O83:H1 str. NRG 857C	Bacteria;Proteobacteria;Gammaproteobacteria	NRG 857C	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/183/345/GCF_000183345.1_ASM18334v1
+E_coli_O104_H4_2011C_3493	Escherichia coli O104:H4 str. 2011C-3493	Bacteria;Proteobacteria;Gammaproteobacteria	2011C-3493	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/299/455/GCF_000299455.1_ASM29945v1
+C_botulinum_BKT015925	Clostridium botulinum BKT015925	Bacteria;Terrabacteria group;Firmicutes	BKT015925	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/204/565/GCF_000204565.1_ASM20456v1
+E_coli_O157_H7_Sakai	Escherichia coli O157:H7 str. Sakai	Bacteria;Proteobacteria;Gammaproteobacteria	Sakai substr. RIMD 0509952	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/008/865/GCF_000008865.2_ASM886v2
+C_fetus_testudinum_03_427	Campylobacter fetus subsp. testudinum 03-427	Bacteria;Proteobacteria;delta/epsilon subdivisions	03-427	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/495/505/GCF_000495505.1_ASM49550v1

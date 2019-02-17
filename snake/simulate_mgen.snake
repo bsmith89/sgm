@@ -7,21 +7,21 @@ wildcard_constraints:
     nreads='[0-9.]+[kKmMgG]',
     seed='[0-9]{1,4}'
 
-_genome_to_refseq = pd.read_table(config['_genome_to_refseq'], index_col='genome_id')
-config['genome_to_refseq'] = _genome_to_refseq.refseq_id.to_dict()
+_genome = pd.read_table(config['_genome'], index_col='genome_id')
+config['genome_ftp'] = _genome.refseq_ftp_url.to_dict()
 # _sim_sample = pd.read_table(config['_sim_sample'])
 # config['sim_sample'] = {}
 # for sample_id, d in _sim_sample.groupby('sample_id'):
 #     config['sim_sample'][sample_id] = d.set_index('refseq_id').frac.to_dict()
 
-
 rule download_refseq_genome:
-    output: 'raw/ref/refseq/{accession}.fn'
+    output: 'raw/ref/refseq/{genome}.fn'
+    params:
+        url=lambda w: config['genome_ftp'][w.genome]
     shell:
         '''
-        url=$(ncbi-acc-download --format fasta --url {wildcards.accession})
-        echo "Downloading {wildcards.accession} from $url"
-        curl -o {output} "$url"
+        echo "Downloading {wildcards.genome} from {wildcards.url}"
+        curl -o {output} {wildcards.url}
         grep --quiet '^>' {output} || (echo "No FASTA records found in {output}" && false)
         '''
 
