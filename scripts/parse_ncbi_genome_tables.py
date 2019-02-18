@@ -78,6 +78,8 @@ if __name__ == "__main__":
 
     data['genome_id'] = data.taxon_name.map(taxon_name_to_id)
     assert data.genome_id.is_unique
+    data['refseq_basename_stem'] = data['refseq_ftp_url'].apply(lambda x: x.rsplit('/', 1)[-1])
+    data['refseq_ftp_url_stem'] = data.refseq_ftp_url + '/' + data.refseq_basename_stem
 
     replicon = []
     for _, g in data.iterrows():
@@ -103,14 +105,16 @@ if __name__ == "__main__":
                 replicon.genbank_id]:
         assert replicon[ser.duplicated(False)].empty
 
-    genome = data[['genome_id', 'taxon_name', 'taxonomy_string', 'strain_name', 'refseq_ftp_url']]
-    for col in ['genome_id', 'taxon_name', 'refseq_ftp_url']:
+    genome = data[['genome_id', 'taxon_name',
+                   'taxonomy_string', 'strain_name',
+                   'refseq_ftp_url_stem']]
+    for col in ['genome_id', 'taxon_name', 'refseq_ftp_url_stem']:
         assert genome[col].is_unique
 
     # Output tables.
     genome[['genome_id', 'taxon_name',
             'taxonomy_string', 'strain_name',
-            'refseq_ftp_url']].to_csv(sys.argv[2], sep='\t', index=False)
+            'refseq_ftp_url_stem']].to_csv(sys.argv[2], sep='\t', index=False)
     replicon[['replicon_id', 'genome_id',
             'replicon_name', 'replicon_type',
             'refseq_id', 'genbank_id']].to_csv(sys.argv[3], sep='\t', index=False)

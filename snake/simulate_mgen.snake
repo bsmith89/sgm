@@ -8,26 +8,22 @@ wildcard_constraints:
     seed='[0-9]{1,4}'
 
 _genome = pd.read_table(config['_genome'], index_col='genome_id')
-config['genome_ftp'] = _genome.refseq_ftp_url.to_dict()
-# _sim_sample = pd.read_table(config['_sim_sample'])
-# config['sim_sample'] = {}
-# for sample_id, d in _sim_sample.groupby('sample_id'):
-#     config['sim_sample'][sample_id] = d.set_index('refseq_id').frac.to_dict()
+config['genome_to_refseq_url_stem'] = _genome.refseq_ftp_url_stem.to_dict()
 
 rule download_refseq_genome:
-    output: 'raw/ref/refseq/{genome}.fn'
+    output: 'raw/genome/{genome}.fn'
     params:
-        url=lambda w: config['genome_ftp'][w.genome]
+        url=lambda w: config['genome_to_refseq_url_stem'][w.genome] + '_genomic.fna.gz'
     shell:
         '''
-        echo "Downloading {wildcards.genome} from {wildcards.url}"
-        curl -o {output} {wildcards.url}
+        echo "Downloading {wildcards.genome} from {params.url}"
+        curl {params.url} | zcat > {output}
         grep --quiet '^>' {output} || (echo "No FASTA records found in {output}" && false)
         '''
 
 rule link_reference_genome:
-    output: 'ref/genome/{genome_id}.fn'
-    input: lambda w: 'raw/ref/refseq/{refseq_id}.fn'.format(refseq_id=config['genome_to_refseq'][w.genome_id])
+    output: 'ref/genome/{genome}.fn'
+    input: 'raw/genome/{genome}.fn'
     shell: alias_recipe
 
 rule simulate_genome_reads:
