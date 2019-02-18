@@ -120,11 +120,8 @@ genomes form the human gut?
 I think I should ignore this question for a moment and focus instead on
 what I'm spiking with.
 
-I went to <https://www.ncbi.nlm.nih.gov/genome/browse>, selected "Prokaryotes",
-selected "Filter", chose "Bacteria" (Kingdom), "Complete" (Assembly level),
-"human" (Host), and both "reference" and "representative" (RefSeq category).
-I then chose "all columns", and downloaded the table as a CSV file:
-`meta/ncbi_genomes.csv`.
-
-The result is a table of 245 complete genome assemblies that I can use
+I downloaded the RefSeq assembly summary file:
+<ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt>
+and parsed it into `meta/genome.tsv`.
+The result is a table of 11950 complete genome assemblies that I can use
 as a base set for a community simulation.

@@ -8,12 +8,12 @@ wildcard_constraints:
     seed='[0-9]{1,4}'
 
 _genome = pd.read_table(config['_genome'], index_col='genome_id')
-config['genome_to_refseq_url_stem'] = _genome.refseq_ftp_url_stem.to_dict()
+config['ftp_stem'] = _genome.ftp_stem.to_dict()
 
 rule download_refseq_genome:
     output: 'raw/genome/{genome}.fn'
     params:
-        url=lambda w: config['genome_to_refseq_url_stem'][w.genome] + '_genomic.fna.gz'
+        url=lambda w: config['ftp_stem'][w.genome] + '_genomic.fna.gz'
     shell:
         '''
         echo "Downloading {wildcards.genome} from {params.url}"

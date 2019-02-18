@@ -1,3 +1,4 @@
+from lib.snake import curl_recipe
 
 MAX_THREADS = 24
 
@@ -22,7 +23,14 @@ rule initialize_project:
 rule start_jupyter:
     shell: 'jupyter notebook --config=nb/jupyter_notebook_config.py --notebook-dir=nb/'
 
-rule parse_ncbi_genomes_table:
-    output: genome='meta/genome.tsv', replicon='meta/replicon.tsv'
-    input: script='scripts/parse_ncbi_genome_tables.py', ncbi='meta/ncbi_genomes.csv'
-    shell: '{input.script} {input.ncbi} {output.genome} {output.replicon}'
+rule download_genbank_bac_table:
+    output: 'raw/bacterial_assemblies.tsv'
+    params:
+        url='ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt'
+    shell:
+        curl_recipe
+
+rule parse_genbank_genomes_table:
+    output: genome='data/genome.tsv'
+    input: script='scripts/parse_genbank_genome_table.py', table='raw/bacterial_assemblies.tsv'
+    shell: '{input.script} {input.table} > {output.genome}'
