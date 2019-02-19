@@ -17,7 +17,7 @@ rule initialize_project:
         git config --local diff.daff-csv.command "daff.py diff --git"
         git config --local merge.daff-csv.name "daff.py tabular merge"
         git config --local merge.daff-csv.driver "daff.py merge --output %A %O %A %B"
-        echo "Please activate your environment and then run `pip install -r requirements.txt` or analagous."
+        echo "Please activate your environment and then run `pip install -r requirements.txt` or analogous."
         '''
 
 rule start_jupyter:
