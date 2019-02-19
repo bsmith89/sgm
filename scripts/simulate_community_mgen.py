@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     print('Simulating read counts.', file=sys.stderr)
     np.random.seed(seed)
-    community['sim_abund'] = np.exp(np.random.lognormal(mean=community['mean_log_abund'], sigma=community['stdev_log_abund']))
+    community['sim_abund'] = np.random.lognormal(mean=community['mean_log_abund'], sigma=community['stdev_log_abund'])
     community['sim_abund'].to_csv(abund_path, sep='\t')
     replicon['sim_copies'] = (replicon['genome_id'].map(community['sim_abund']) *
                           replicon['replicon_type'].map({'chromosome': 1, 'plasmid': PLASMID_MULTI}).fillna(1)
