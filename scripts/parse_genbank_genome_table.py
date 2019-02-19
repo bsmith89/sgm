@@ -7,14 +7,21 @@ from tqdm import trange
 import os
 
 def construct_genome_id(x):
-    words = x.organism_name.split(' ')
-
     # Drop useless words
-    words = [w for w in words if w not in ['sp.']]
-    genus, species, *_ = words
+    useless = ['sp.', 'subsp.', 'str.',
+               'substr.', 'pv.', 'cf.',
+               'serovar', 'biovar']
+    species_words = [w
+                     for w in x.organism_name.split(' ')
+                     if w not in useless]
+    genus, species, *_ = species_words
 
     # Collect strain name
     strain = x.infraspecific_name[len('strain='):]
+    strain_words = [w
+                    for w in strain.split(' ')
+                    if w not in useless]
+    strain = '_'.join(strain_words)
 
     out = f'{genus}_{species}_{strain}'
 
@@ -57,15 +64,12 @@ def fetch_replicon_data(x, dirname):
     d['size'] = d['size'].astype(int)
     d.replicon_type = d.replicon_type.str.lower()
     # Add column with a incremental value for each replicon type
-    if len(d) > 1:
-        d['replicon_index_by_type'] = (d.sort_values('genbank_id')  # Standardize order
-                                        .groupby('replicon_type')  # Different incrementer per type
-                                        .apply(lambda x: pd.DataFrame({'iter': range(len(x))},
-                                                                      index=x.index)).iter + 1
-                                      )
-        d['replicon_anon_name'] = d['replicon_type'] + '_' + d['replicon_index_by_type'].astype('str')
-    else:
-        d['replicon_anon_name'] = d['replicon_type']
+    d['replicon_index_by_type'] = (d.sort_values('genbank_id')  # Standardize order
+                                    .groupby('replicon_type')  # Different incrementer per type
+                                    .apply(lambda x: pd.DataFrame({'iter': range(len(x))},
+                                                                  index=x.index)).iter + 1
+                                  )
+    d['replicon_anon_name'] = d['replicon_type'] + '_' + d['replicon_index_by_type'].astype('str')
     # TODO: Improve replicon names (currently a single chromosome will be named
     # "chromosome_1" despite there not being a chromosome_2.
     d['replicon_name'] = d.replicon_name.where(((d.replicon_name != 'ANONYMOUS') &
@@ -73,7 +77,8 @@ def fetch_replicon_data(x, dirname):
                                                 (~d.replicon_name.str.startswith('unnamed'))),
                                                d.replicon_anon_name)
     d['replicon_id'] = x['genome_id'] + '_' + d['replicon_name']
-    return d[['replicon_id', 'genbank_id', 'replicon_name', 'replicon_type', 'size']]
+    d['genome_id'] = x.genome_id
+    return d[['replicon_id', 'genome_id', 'genbank_id', 'replicon_name', 'replicon_type', 'size']]
 
 
 if __name__ == "__main__":
@@ -105,5 +110,5 @@ if __name__ == "__main__":
     data[['genome_id', 'organism_name',
         'infraspecific_name',
         'ftp_stem']].to_csv(sys.argv[3], sep='\t', index=False)
-    replicon[['replicon_id', 'genbank_id',
+    replicon[['replicon_id', 'genome_id', 'genbank_id',
               'replicon_type', 'size']].to_csv(sys.argv[4], sep='\t', index=False)
