@@ -10,6 +10,11 @@ wildcard_constraints:
 _genome = pd.read_table(config['_genome'], index_col='genome_id')
 config['ftp_stem'] = _genome.ftp_stem.to_dict()
 
+_community = pd.read_table('meta/sim/community.tsv')
+config['community'] = {}
+for community_id, d in _community.groupby('community_id'):
+    config['community'][community_id] = d.genome_id.tolist()
+
 rule download_refseq_genome:
     output: 'raw/genome/{genome}.fn'
     params:
@@ -25,6 +30,28 @@ rule link_reference_genome:
     output: 'ref/genome/{genome}.fn'
     input: 'raw/genome/{genome}.fn'
     shell: alias_recipe
+
+rule simulate_community_mgen:
+    output:
+        r1='data/sim/{community}.s{seed}.n{nreads}.m.r1.fq',
+        r2='data/sim/{community}.s{seed}.n{nreads}.m.r2.fq',
+        abund='data/sim/{community}.s{seed}.n{nreads}.abund.tsv'
+    input:
+        script='scripts/simulate_community_mgen.py',
+        replicon='data/replicon.tsv',
+        community='meta/sim/community.tsv',
+        genomes=lambda w: expand('ref/genome/{genome}.fn', genome=config['community'][w.community])
+    wildcard_constraints:
+        nreads='[0-9]*'
+    params:
+        genomes_dir='ref/genome/'
+    shell:
+        '''
+        {input.script} {input.community} {wildcards.community} {input.replicon} \
+                {params.genomes_dir} {wildcards.nreads} {wildcards.seed} \
+                {output.abund} {output.r1} {output.r2}
+        '''
+
 
 rule simulate_genome_reads:
     # .s. infix for "shotgun" reads (single genome)

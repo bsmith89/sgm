@@ -1,0 +1,3 @@
+community_id	genome_id	mean_log_abund	stdev_log_abund
+test1	Escherichia_coli_K_12_MG1655	1	0.1
+test1	Escherichia_coli_IAI39	1	0.1
