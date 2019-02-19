@@ -37,7 +37,7 @@ rule parse_genbank_genomes_table:
     input:
         script='scripts/parse_genbank_genome_table.py',
         table='raw/bacterial_assemblies.tsv',
-        assmbl_rprt=directory('raw/ref/genbank_genome_assembly_reports/')
+        assmbl_rprt='raw/ref/genbank_genome_assembly_reports/'
     shell:
         '''
         {input.script} {input.table} {input.assmbl_rprt} {output.genome} {output.replicon}
