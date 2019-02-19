@@ -56,25 +56,28 @@ rule simulate_community_mgen:
         '''
 
 
-rule simulate_genome_reads:
-    # .s. infix for "shotgun" reads (single genome)
+rule combine_with_background1_mgen_reads:
     output:
-        r1='data/sim/{genome_id}.s.s{seed}.n{nreads}.r1.fq.gz',
-        r2='data/sim/{genome_id}.s.s{seed}.n{nreads}.r2.fq.gz'
+        r1='data/sim/{community}.wgut1.s{seed}.n{nreads}-{mreads}.m.r1.fq.gz',
+        r2='data/sim/{community}.wgut1.s{seed}.n{nreads}-{mreads}.m.r2.fq.gz'
     input:
-        genome='ref/genome/{genome_id}.fn'
-    threads: 6
+        r1_back='data/sim/background_gut_1.s{seed}.n{mreads}.m.r1.fq',
+        r2_back='data/sim/background_gut_1.s{seed}.n{mreads}.m.r2.fq',
+        r1_std='data/sim/{community}.s{seed}.n{nreads}.m.r1.fq',
+        r2_std='data/sim/{community}.s{seed}.n{nreads}.m.r2.fq'
+    wildcard_constraints:
+        nreads='[0-9]*',
+        mreads='[0-9]*'
+    threads: 2
     shell:
         '''
-        tmpdir=$(mktemp -d)
-        echo "Writing simulation results for sample {wildcards.genome_id} to $tmpdir"
-        iss generate --genome {input.genome} --model HiSeq -n {wildcards.nreads} --seed {wildcards.seed} --cpus {threads} --output $tmpdir/
-        gzip -c $tmpdir/_R1.fastq > {output.r1} & pid1=$!
-        gzip -c $tmpdir/_R2.fastq > {output.r2} & pid2=$!
-        for pid in $pid1 $pid2
-        do
-            wait $pid || [ "$?" -eq 127 ]
-        done
+            cat {input.r1_back} {input.r1_std} | gzip -c > {output.r1} & pid1=$!
+            cat {input.r2_back} {input.r2_std} | gzip -c > {output.r2} & pid2=$!
+            for pid in $pid1 $pid2
+            do
+                wait $pid || [ "$?" -eq 127 ]
+            done
+
         '''
 
 # TODO: Make simulated communities by combining a certain number of reads from other organisms
