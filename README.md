@@ -120,8 +120,46 @@ genomes form the human gut?
 I think I should ignore this question for a moment and focus instead on
 what I'm spiking with.
 
-I downloaded the RefSeq assembly summary file:
+I downloaded the GenBank assembly summary file:
 <ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt>
 and parsed it into `meta/genome.tsv`.
 The result is a table of 11950 complete genome assemblies that I can use
 as a base set for a community simulation.
+I also want the replicon data, so I downloaded an archive with all of the
+`*_assembly_report.txt` files from GenBank bacterial genomes.
+I did this by following the instructions here <https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#downloadservice>.
+Quoting from that:
+
+> The genome download service in the Assembly resource makes it easy to
+> download data for multiple genomes without having to write scripts. To use
+> the download service, run a search in Assembly, use facets to refine the set
+> of genome assemblies of interest, open the "Download Assemblies" menu, choose
+> the source database (GenBank or RefSeq), choose the file type, then click the
+> Download button to start the download. An archive file will be saved to your
+> computer that can be expanded into a folder containing the genome data files
+> from your selections.
+>
+> For example, to download genomic FASTA sequence for all RefSeq bacterial complete genome assemblies:
+>
+> -   Start with an "all[filter]" query on Assembly
+> -   Select "Bacteria" from the "Organism group" facet in the left-hand sidebar
+> -   Select "Complete genome" from the "Assembly level" facet in the left-hand sidebar
+> -   Click on the "Download Assemblies" button to open the download menu
+> -   Leave "Source database" set to RefSeq
+> -   Select "Genomic FASTA" from the "File type" menu
+> -   Wait for the "calculating size..." message to be replaced by an estimated size
+> -   Click Download, you may get a pop-up window asking if/where you want to save the genome_assemblies.tar archive file
+> -   After the download has finished, expand the tar archive
+> -   The resulting folder named "genome_assemblies" will contain:
+>     -   a report.txt file that provides a summary of what was downloaded
+>     -   a folder named like "ncbi-genomes-YYYY-MM-DD", where YYYY-MM-DD is the date of the download, containing:
+>         -   a README.txt file
+>         -   an md5checksums.txt file
+>         -   many data files with names like `*_genomic.fna.gz`, in which the first part of
+> the name is the assembly accession followed by the assembly name Simple
+> variations on these steps can be used to obtain different file types or data
+> for different sets of genome assemblies. If "All file types (including assembly
+> structure directory)" is selected from the "File type" menu, the
+> "ncbi-genomes-YYYY-MM-DD" folder will contain a folder for each of the selected
+> genome assemblies containing all the content from the FTP directory for that
+> assembly.

@@ -31,6 +31,12 @@ rule download_genbank_bac_table:
         curl_recipe
 
 rule parse_genbank_genomes_table:
-    output: genome='data/genome.tsv'
-    input: script='scripts/parse_genbank_genome_table.py', table='raw/bacterial_assemblies.tsv'
-    shell: '{input.script} {input.table} > {output.genome}'
+    output: genome='data/genome.tsv', replicon='data/replicon.tsv'
+    input:
+        script='scripts/parse_genbank_genome_table.py',
+        table='raw/bacterial_assemblies.tsv',
+        assmbl_rprt=directory('raw/ref/genbank_genome_assembly_reports/')
+    shell:
+        '''
+        {input.script} {input.table} {input.assmbl_rprt} {output.genome} {output.replicon}
+        '''

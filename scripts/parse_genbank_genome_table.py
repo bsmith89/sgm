@@ -3,6 +3,8 @@
 
 import pandas as pd
 import sys
+from tqdm import trange
+import os
 
 def construct_genome_id(x):
     words = x.organism_name.split(' ')
@@ -36,8 +38,44 @@ def construct_genome_id(x):
         assert char.isalnum() or char == '_', f'Non-alphanumeric char found in {x.organism_name} {x.infraspecific_name} ({out})'
     return out
 
+def fetch_replicon_data(x, dirname):
+    path = os.path.join(dirname, x['ftp_basename_stem'] + '_assembly_report.txt')
+    with open(path) as handle:
+        for line in handle:
+            if line.startswith('# Sequence-Name\tSequence-Role'):
+                break
+        d = pd.read_table(handle, names=['Sequence-Name', 'Sequence-Role',
+                                       'Assigned-Molecule', 'Assigned-Molecule-Location/Type',
+                                       'GenBank-Accn', 'Relationship', 'RefSeq-Accn',
+                                       'Assembly-Unit', 'Sequence-Length', 'UCSC-style-name'],
+                          dtype=str)
+    d = d.rename(columns={'Assigned-Molecule-Location/Type': 'replicon_type',
+                          'GenBank-Accn': 'genbank_id',
+                          'Sequence-Length': 'size',
+                          'Sequence-Name': 'replicon_name'})
+    d.replicon_type = d.replicon_type.fillna('unknown')
+    d['size'] = d['size'].astype(int)
+    d.replicon_type = d.replicon_type.str.lower()
+    # Add column with a incremental value for each replicon type
+    if len(d) > 1:
+        d['replicon_index_by_type'] = (d.sort_values('genbank_id')  # Standardize order
+                                        .groupby('replicon_type')  # Different incrementer per type
+                                        .apply(lambda x: pd.DataFrame({'iter': range(len(x))},
+                                                                      index=x.index)).iter + 1
+                                      )
+        d['replicon_anon_name'] = d['replicon_type'] + '_' + d['replicon_index_by_type'].astype('str')
+    else:
+        d['replicon_anon_name'] = d['replicon_type']
+    d['replicon_name'] = d.replicon_name.where(((d.replicon_name != 'ANONYMOUS') &
+                                                (d.replicon_name.notna()) &
+                                                (~d.replicon_name.str.startswith('unnamed'))),
+                                               d.replicon_anon_name)
+    d['replicon_id'] = x['genome_id'] + '_' + d['replicon_name']
+    return d[['replicon_id', 'genbank_id', 'replicon_name', 'replicon_type', 'size']]
+
 
 if __name__ == "__main__":
+    print('Parsing genome table.', file=sys.stderr)
     data = (pd.read_table(sys.argv[1], skiprows=1)
             .rename(columns={'# assembly_accession': 'assembly_accession'})
             [lambda x: (x.assembly_level.isin(['Complete Genome'])) &
@@ -54,6 +92,16 @@ if __name__ == "__main__":
     data = data.sort_values('seq_rel_date', ascending=False).drop_duplicates(subset=['genome_id'])
     assert data.genome_id.is_unique
 
+    print(f'Parsing assembly reports.', file=sys.stderr)
+    replicon = []
+    for i in trange(len(data)):
+        rec = data.iloc[i]
+        replicon_table = fetch_replicon_data(rec, sys.argv[2])
+        replicon.append(replicon_table)
+    replicon = pd.concat(replicon)
+
     data[['genome_id', 'organism_name',
         'infraspecific_name',
-        'ftp_stem']].to_csv(sys.stdout, sep='\t', index=False)
+        'ftp_stem']].to_csv(sys.argv[3], sep='\t', index=False)
+    replicon[['replicon_id', 'genbank_id',
+              'replicon_type', 'size']].to_csv(sys.argv[4], sep='\t', index=False)
