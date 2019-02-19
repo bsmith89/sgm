@@ -66,6 +66,8 @@ def fetch_replicon_data(x, dirname):
         d['replicon_anon_name'] = d['replicon_type'] + '_' + d['replicon_index_by_type'].astype('str')
     else:
         d['replicon_anon_name'] = d['replicon_type']
+    # TODO: Improve replicon names (currently a single chromosome will be named
+    # "chromosome_1" despite there not being a chromosome_2.
     d['replicon_name'] = d.replicon_name.where(((d.replicon_name != 'ANONYMOUS') &
                                                 (d.replicon_name.notna()) &
                                                 (~d.replicon_name.str.startswith('unnamed'))),
