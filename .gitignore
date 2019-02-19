@@ -7,3 +7,7 @@ raw/
 __pycache__
 activate_local
 *.swp
+.DS_Store
+nb/.ipynb_checkpoints/
+nb/profile_default/history.sqlite
+ref/
