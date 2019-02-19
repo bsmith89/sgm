@@ -27,6 +27,8 @@ rule download_genbank_bac_table:
     output: 'raw/bacterial_assemblies.tsv'
     params:
         url='ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt'
+    resources:
+        net_requests_per_second=1
     shell:
         curl_recipe
 

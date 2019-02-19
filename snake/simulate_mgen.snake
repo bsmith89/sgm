@@ -19,8 +19,11 @@ rule download_refseq_genome:
     output: 'raw/genome/{genome}.fn'
     params:
         url=lambda w: config['ftp_stem'][w.genome] + '_genomic.fna.gz'
+    resources:
+        net_requests_per_second=1
     shell:
         '''
+        sleep 1
         echo "Downloading {wildcards.genome} from {params.url}"
         curl {params.url} | zcat > {output}
         grep --quiet '^>' {output} || (echo "No FASTA records found in {output}" && false)

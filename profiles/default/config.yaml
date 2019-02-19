@@ -1,3 +1,4 @@
 notemp: true
 printshellcmds: true
 keep-going: true
+resources: 'net_requests_per_second=3'
