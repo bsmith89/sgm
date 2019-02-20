@@ -56,18 +56,18 @@ rule simulate_community_mgen:
         '''
 
 
-rule combine_with_background1_mgen_reads:
+rule combine_with_gut_background1_mgen_reads:
     output:
-        r1='data/sim/{community}.wgut1.s{seed}.n{nreads}-{mreads}.m.r1.fq.gz',
-        r2='data/sim/{community}.wgut1.s{seed}.n{nreads}-{mreads}.m.r2.fq.gz'
+        r1='data/sim/{community1}.{community2}.s{seed}.n{nreads1}-{nreads2}.m.r1.fq.gz',
+        r2='data/sim/{community1}.{community2}.s{seed}.n{nreads1}-{nreads2}.m.r2.fq.gz'
     input:
-        r1_back='data/sim/background_gut_1.s{seed}.n{mreads}.m.r1.fq',
-        r2_back='data/sim/background_gut_1.s{seed}.n{mreads}.m.r2.fq',
-        r1_std='data/sim/{community}.s{seed}.n{nreads}.m.r1.fq',
-        r2_std='data/sim/{community}.s{seed}.n{nreads}.m.r2.fq'
+        r1_back='data/sim/{community1}.s{seed}.n{nreads1}.m.r1.fq',
+        r2_back='data/sim/{community1}.s{seed}.n{nreads1}.m.r2.fq',
+        r1_std='data/sim/{community2}.s{seed}.n{nreads2}.m.r1.fq',
+        r2_std='data/sim/{community2}.s{seed}.n{nreads2}.m.r2.fq'
     wildcard_constraints:
-        nreads='[0-9]*',
-        mreads='[0-9]*'
+        nreads1='[0-9]*',
+        nreads2='[0-9]*'
     threads: 2
     shell:
         '''
@@ -106,6 +106,36 @@ rule quality_trim_reads:
             --output-pe1 {output.r1} --output-pe2 {output.r2} \
             --output-single {output.r3}
         '''
+
+rule assemble_mgen_samples:
+    output:
+        fasta='data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.fn',
+        fastg='data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.fg'
+    input:
+        r1=lambda w: [f'data/sim/{w.community1}.{w.community2}.s{seed:04}.n{w.nreads1}-{w.nreads2}.m.qtrim.r1.fq.gz' for seed in range(int(w.nsamples))],
+        r2=lambda w: [f'data/sim/{w.community1}.{w.community2}.s{seed:04}.n{w.nreads1}-{w.nreads2}.m.qtrim.r2.fq.gz' for seed in range(int(w.nsamples))],
+    params:
+        r1_list=lambda w, input: ','.join(input.r1),
+        r2_list=lambda w, input: ','.join(input.r2),
+        k_list='21,41,61,81,101',
+        k_max=101,
+        outdir=lambda w: f'data/sim/{w.community1}.{w.community2}.z{w.nsamples}.n{w.nreads1}-{w.nreads2}.a.d'
+    shell:
+        '''
+        tmpdir=$(mktemp -du)
+        echo "Running MEGAHIT with outdir $tmpdir"
+        megahit \
+            -1 {params.r1_list} \
+            -2 {params.r2_list} \
+            --k-list {params.k_list} \
+            --out-dir $tmpdir \
+            --num-cpu-threads {threads} \
+            --verbose \
+            | tee 2>&1 > {log}
+        cp $tmpdir/final.contigs.fa {output.fasta}
+        megahit_toolkit contig2fastg {params.k_max} $tmpdir/intermediate_contigs/k{params.k_max}.contigs.fa > {output.fastg}
+        '''
+
 
 rule assemble_mgen:
     output:
