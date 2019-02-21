@@ -1,3 +1,2 @@
-_meta_library: 'meta/library.tsv'
-_meta_asmbl_group: 'meta/asmbl_group.tsv'
 _genome: 'data/genome.tsv'
+_community_dir: 'meta/sim/community/'

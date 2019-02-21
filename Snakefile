@@ -2,7 +2,10 @@ from lib.snake import curl_recipe
 
 MAX_THREADS = 24
 
-include: 'snake/real_data.snake'
+# Configure the pipeline
+config_file = 'config.yaml'
+configfile: config_file
+
 include: 'snake/kmer.snake'
 include: 'snake/simulate_mgen.snake'
 

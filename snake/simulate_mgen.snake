@@ -1,19 +1,24 @@
 import pandas as pd
 from lib.snake import alias_recipe, alias_fmt, curl_recipe, curl_unzip_recipe
+import glob
+import os.path
 
 wildcard_constraints:
     genome_id='[^.]*',
     sample_id='[^.]*',
-    nreads='[0-9.]+[kKmMgG]',
+    nreads='[0-9e]*',
     seed='[0-9]{1,4}'
 
 _genome = pd.read_table(config['_genome'], index_col='genome_id')
 config['ftp_stem'] = _genome.ftp_stem.to_dict()
 
-_community = pd.read_table('meta/sim/community.tsv')
+
 config['community'] = {}
-for community_id, d in _community.groupby('community_id'):
-    config['community'][community_id] = d.genome_id.tolist()
+_community_dir = config['_community_dir']
+for path in glob.glob(os.path.join(_community_dir, '*.tsv')):
+    basename = os.path.basename(path)[:-4]
+    _community = pd.read_table(path)
+    config['community'][basename] = _community.genome_id.tolist()
 
 rule download_refseq_genome:
     output: 'raw/genome/{genome}.fn'
@@ -36,48 +41,29 @@ rule link_reference_genome:
 
 rule simulate_community_mgen:
     output:
-        r1='data/sim/{community}.s{seed}.n{nreads}.m.r1.fq',
-        r2='data/sim/{community}.s{seed}.n{nreads}.m.r2.fq',
-        abund='data/sim/{community}.s{seed}.n{nreads}.abund.tsv'
+        r1='data/sim/{community}.n{nreads}.s{seed}.m.r1.fq.gz',
+        r2='data/sim/{community}.n{nreads}.s{seed}.m.r2.fq.gz',
+        abund='data/sim/{community}.n{nreads}.s{seed}.abund.tsv'
     input:
         script='scripts/simulate_community_mgen.py',
         replicon='data/replicon.tsv',
-        community='meta/sim/community.tsv',
+        community='meta/sim/community/{community}.tsv',
         genomes=lambda w: expand('ref/genome/{genome}.fn', genome=config['community'][w.community])
-    wildcard_constraints:
-        nreads='[0-9]*'
     params:
         genomes_dir='ref/genome/'
     shell:
         '''
+        pipe_r1=$(mktemp -u) && mkfifo $pipe_r1
+        pipe_r2=$(mktemp -u) && mkfifo $pipe_r2
+        gzip -c < $pipe_r1 > {output.r1} & pid1=$!
+        gzip -c < $pipe_r2 > {output.r2} & pid2=$!
         {input.script} {input.community} {wildcards.community} {input.replicon} \
                 {params.genomes_dir} {wildcards.nreads} {wildcards.seed} \
-                {output.abund} {output.r1} {output.r2}
-        '''
-
-
-rule combine_with_gut_background1_mgen_reads:
-    output:
-        r1='data/sim/{community1}.{community2}.s{seed}.n{nreads1}-{nreads2}.m.r1.fq.gz',
-        r2='data/sim/{community1}.{community2}.s{seed}.n{nreads1}-{nreads2}.m.r2.fq.gz'
-    input:
-        r1_back='data/sim/{community1}.s{seed}.n{nreads1}.m.r1.fq',
-        r2_back='data/sim/{community1}.s{seed}.n{nreads1}.m.r2.fq',
-        r1_std='data/sim/{community2}.s{seed}.n{nreads2}.m.r1.fq',
-        r2_std='data/sim/{community2}.s{seed}.n{nreads2}.m.r2.fq'
-    wildcard_constraints:
-        nreads1='[0-9]*',
-        nreads2='[0-9]*'
-    threads: 2
-    shell:
-        '''
-            cat {input.r1_back} {input.r1_std} | gzip -c > {output.r1} & pid1=$!
-            cat {input.r2_back} {input.r2_std} | gzip -c > {output.r2} & pid2=$!
-            for pid in $pid1 $pid2
-            do
-                wait $pid || [ "$?" -eq 127 ]
-            done
-
+                {output.abund} $pipe_r1 $pipe_r2
+        for pid in $pid1 $pid2
+        do
+            wait $pid || [ "$?" -eq 127 ]
+        done
         '''
 
 # TODO: Make simulated communities by combining a certain number of reads from other organisms
@@ -107,19 +93,30 @@ rule quality_trim_reads:
             --output-single {output.r3}
         '''
 
+# {seed} here is not the simulated mgen seed, but the seed for the simulated SET of reads.
 rule assemble_mgen_samples:
     output:
-        fasta='data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.fn',
-        fastg='data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.fg'
+        fasta='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.fn',
+        fastg='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.fg'
     input:
-        r1=lambda w: [f'data/sim/{w.community1}.{w.community2}.s{seed:04}.n{w.nreads1}-{w.nreads2}.m.qtrim.r1.fq.gz' for seed in range(int(w.nsamples))],
-        r2=lambda w: [f'data/sim/{w.community1}.{w.community2}.s{seed:04}.n{w.nreads1}-{w.nreads2}.m.qtrim.r2.fq.gz' for seed in range(int(w.nsamples))],
+        r1=lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.qtrim.r1.fq.gz'
+                      for seed
+                      in range(int(w.nsamples) * int(w.seed),
+                               int(w.nsamples) * (int(w.seed) + 1)
+                              )],
+        r2=lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.qtrim.r2.fq.gz'
+                      for seed
+                      in range(int(w.nsamples) * int(w.seed),
+                               int(w.nsamples) * (int(w.seed) + 1)
+                              )]
     params:
         r1_list=lambda w, input: ','.join(input.r1),
         r2_list=lambda w, input: ','.join(input.r2),
         k_list='21,41,61,81,101',
         k_max=101,
-        outdir=lambda w: f'data/sim/{w.community1}.{w.community2}.z{w.nsamples}.n{w.nreads1}-{w.nreads2}.a.d'
+        outdir='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.d'
+    threads: 8
+    log: 'log/{community}.n{nreads}.z{nsamples}.s{seed}.a.log'
     shell:
         '''
         tmpdir=$(mktemp -du)
@@ -137,45 +134,21 @@ rule assemble_mgen_samples:
         '''
 
 
-rule assemble_mgen:
+
+rule quality_asses_assembly:
     output:
-        fasta='data/sim/{stem}.asmbl.fn',
-        fastg='data/sim/{stem}.asmbl.fg'
+        fasta=directory('data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.quast.d')
     input:
-        r1='data/sim/{stem}.qtrim.r1.fq.gz',
-        r2='data/sim/{stem}.qtrim.r2.fq.gz'
+        contigs='data/sim/{community1}.{community2}.z{nsamples}.n{nreads1}-{nreads2}.a.fn',
+        genomes=lambda w: [f'ref/genome/{g}.fn'
+                           for g in config['community'][w.community1] +
+                                    config['community'][w.community2]
+                          ]
     params:
-        kmin=21,
-        kmax=101,
-        kstep=20,
-        outdir=lambda w: f'data/sim/{stem}.asmbl.d'
-    threads: MAX_THREADS
-    log: 'log/{stem}.asmbl.log'
+        genomes_list=lambda w, input: ','.join(input.genomes)
+    threads: 8
     shell:
         '''
-        tmpdir=$(mktemp -du)
-        echo "Running MEGAHIT with outdir $tmpdir"
-        megahit \
-            -1 {input.r1} \
-            -2 {input.r2} \
-            --k-min {params.kmin} --k-max {params.kmax} --k-step {params.kstep} \
-            --out-dir $tmpdir \
-            --num-cpu-threads {threads} \
-            --verbose \
-            | tee 2>&1 > {log}
-        cp $tmpdir/final.contigs.fa {output.fasta}
-        megahit_toolkit contig2fastg {params.kmax} $tmpdir/intermediate_contigs/k{params.kmax}.contigs.fa > {output.fastg}
+        metaquast.py --threads {threads} -r {params.genomes_list} --output-dir {output} {input.contigs}
         '''
 
-rule quality_asses_assembly_with_mg1655:
-    output: directory('data/sim/{stem}.asmbl.quast.d')
-    input:
-        contigs='data/sim/{stem}.asmbl.fn',
-        genome=lambda w: [f'ref/genome/{accession}.fn'
-                           for accession
-                           in config['sim_sample']['ecoli_k12_mg1655']]
-    threads: 4
-    shell:
-        '''
-        metaquast.py --threads {threads} -r {input.genome} --output-dir {output} {input.contigs}
-        '''

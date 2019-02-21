@@ -21,7 +21,7 @@ if __name__ == '__main__':
     community_id = sys.argv[2]
     replicon_path = sys.argv[3]
     genome_dir = sys.argv[4]
-    nreads = int(sys.argv[5])
+    nreads = int(float(sys.argv[5]))
     seed = int(sys.argv[6])
     abund_path = sys.argv[7]
     r1_path = sys.argv[8]
