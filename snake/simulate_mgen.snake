@@ -83,14 +83,6 @@ rule simulate_community_mgen:
         done
         '''
 
-# TODO: Make simulated communities by combining a certain number of reads from other organisms
-# TODO: rule combine_reads_into_mgen:
-            # .m. infix for shotgun "metagenome" reads (one or more genomes)
-#           output:
-#               r1='data/sim/{sample_id}.m.s{seed}.n{nreads}.r1.fq.gz
-#               r2='data/sim/{sample_id}.m.s{seed}.n{nreads}.r2.fq.gz
-
-
 rule quality_trim_reads:
     output:
         r1='data/sim/{stem}.qtrim.r1.fq.gz',
