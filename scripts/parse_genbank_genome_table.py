@@ -6,7 +6,27 @@ import sys
 from tqdm import trange
 import os
 
-def construct_genome_id(x):
+def normalize_name_chars(string):
+    # Replace spacing chars
+    for char in [' ', '/', '-', '.', '=']:
+        string = string.replace(char, '_')
+
+    # Replace some special cases:
+    string = string.replace('+', 'pos')
+    string = string.replace('*', 'star')
+
+    # Drop other chars
+    for char in ['(', ')', '[', ']', '#', ':', "'", ';', ',']:
+        string = string.replace(char, '')
+
+    while '__' in string:
+        string = string.replace('__', '_')
+
+    string = string.strip('_')
+    return string
+
+
+def normalize_names(x):
     # Drop useless words
     useless = ['sp.', 'subsp.', 'str.',
                'substr.', 'pv.', 'cf.',
@@ -23,27 +43,17 @@ def construct_genome_id(x):
                     if w not in useless]
     strain = '_'.join(strain_words)
 
-    out = f'{genus}_{species}_{strain}'
-
-    # Replace spacing chars
-    for char in [' ', '/', '-', '.', '=']:
-        out = out.replace(char, '_')
-
-    # Replace some special cases:
-    out = out.replace('+', 'pos')
-    out = out.replace('*', 'star')
-
-    # Drop other chars
-    for char in ['(', ')', '[', ']', '#', ':', "'", ';', ',']:
-        out = out.replace(char, '')
-
-    while '__' in out:
-        out = out.replace('__', '_')
+    genus = normalize_name_chars(genus)
+    species = normalize_name_chars(species)
+    strain = normalize_name_chars(strain)
+    # out = f'{genus}_{species}_{strain}'
 
     # Check chars
-    for char in out:
-        assert char.isalnum() or char == '_', f'Non-alphanumeric char found in {x.organism_name} {x.infraspecific_name} ({out})'
-    return out
+    for part in [genus, species, strain]:
+        for char in part:
+            assert char.isalnum() or char == '_', f'Non-alphanumeric char found in {x.organism_name} {x.infraspecific_name} ({out})'
+
+    return genus, species, strain
 
 def fetch_replicon_data(x, dirname):
     path = os.path.join(dirname, x['ftp_basename_stem'] + '_assembly_report.txt')
@@ -92,12 +102,18 @@ if __name__ == "__main__":
             ]
         )
 
-    data['genome_id'] = data.apply(construct_genome_id, axis=1)
+    names = data.apply(normalize_names, axis=1)
+    data['genus'] = names.apply(lambda x: x[0])
+    data['species'] = names.apply(lambda x: x[1])
+    data['strain'] = names.apply(lambda x: x[2])
+    data['genome_id'] = data.apply(lambda x: x.genus + '_' + x.species + '_' + x.strain, axis=1)
+
     data['ftp_basename_stem'] = data.ftp_path.apply(lambda x: x.rsplit('/', 1)[-1])
     data['ftp_stem'] = data.ftp_path + '/' + data.ftp_basename_stem
     data['seq_rel_date'] = pd.to_datetime(data.seq_rel_date)
     data = data.sort_values('seq_rel_date', ascending=False).drop_duplicates(subset=['genome_id'])
     assert data.genome_id.is_unique
+    assert data.ftp_stem.is_unique
 
     print(f'Parsing assembly reports.', file=sys.stderr)
     replicon = []
@@ -107,8 +123,10 @@ if __name__ == "__main__":
         replicon.append(replicon_table)
     replicon = pd.concat(replicon)
 
-    data[['genome_id', 'organism_name',
-        'infraspecific_name',
-        'ftp_stem']].to_csv(sys.argv[3], sep='\t', index=False)
+    data[['genome_id',
+          'organism_name', 'infraspecific_name',
+          'genus', 'species', 'strain',
+          'ftp_stem'
+          ]].to_csv(sys.argv[3], sep='\t', index=False)
     replicon[['replicon_id', 'genome_id', 'genbank_id',
               'replicon_type', 'size']].to_csv(sys.argv[4], sep='\t', index=False)

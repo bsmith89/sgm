@@ -20,6 +20,23 @@ for path in glob.glob(os.path.join(_community_dir, '*.tsv')):
     _community = pd.read_table(path)
     config['community'][basename] = _community.genome_id.tolist()
 
+rule download_ncbi_taxdump:
+    output: 'raw/ref/new_taxdump.tar.gz'
+    params:
+        url='https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.zip'
+    shell: curl_recipe
+
+rule unpack_ncbi_taxonomy:
+    output: 'ref/ncbi_taxonomy.tsv'
+    input: 'raw/ref/new_taxdump.tar.gz'
+    shell:
+        r'''
+        tmpdir=$(mktemp -d)
+        echo $tmpdir
+        tar -C $tmpdir -xzvf {input}
+        cat $tmpdir/rankedlineage.dmp | sed 's:\t|\t\?:\t:g' | awk -v FS='\t' -v OFS='\t' '{{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10}}' > {output}
+        '''
+
 rule download_refseq_genome:
     output: 'raw/genome/{genome}.fn'
     params:
