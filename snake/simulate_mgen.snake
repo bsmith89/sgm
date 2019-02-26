@@ -152,6 +152,95 @@ rule assemble_mgen_samples:
         megahit_toolkit contig2fastg {params.k_max} $tmpdir/intermediate_contigs/k{params.k_max}.contigs.fa > {output.fastg}
         '''
 
+rule bowtie_index_build:
+    output:
+        'data/{stem}.1.bt2',
+        'data/{stem}.2.bt2',
+        'data/{stem}.3.bt2',
+        'data/{stem}.4.bt2',
+        'data/{stem}.rev.1.bt2',
+        'data/{stem}.rev.2.bt2'
+    input: 'data/{stem}.fn'
+    log: 'log/{stem}.bowtie2-build.log'
+    shell:
+        """
+        bowtie2-build {input} data/{wildcards.stem} >{log} 2>&1
+        """
+
+rule map_reads_to_metagenome_assembly:
+    output: 'data/sim/{community}.n{nreads}.s{seed1}.m.z{nsamples}.s{seed2}.a.backmap.sort.bam'
+    input:
+        r1='data/sim/{community}.n{nreads}.s{seed1}.m.qtrim.r1.fq.gz',
+        r2='data/sim/{community}.n{nreads}.s{seed1}.m.qtrim.r2.fq.gz',
+        inx_1='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.1.bt2',
+        inx_2='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.1.bt2',
+        inx_3='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.1.bt2',
+        inx_4='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.1.bt2',
+        inx_rev1='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.rev.1.bt2',
+        inx_rev2='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.rev.2.bt2'
+    threads: 2
+    params:
+        index_stem=lambda w: f'data/sim/{w.community}.n{w.nreads}.z{w.nsamples}.s{w.seed2}.a',
+        library_name=lambda w: f'{w.community}.n{w.nreads}.s{w.seed1}'
+    shell:
+        r"""
+        tmp=$(mktemp)
+        echo "Writing temporary bamfile to $tmp for {output}"
+        bowtie2 --threads {threads} \
+                -x {params.index_stem} \
+                --rg-id {params.library_name} \
+                -1 {input.r1} -2 {input.r2} \
+            | samtools view -@ {threads} -b - \
+            > $tmp
+        samtools sort -@ {threads} --output-fmt=BAM -o {output} $tmp
+        rm $tmp
+        """
+
+rule count_seq_lengths_nucl:
+    output: 'data/sim/{stem}.nlength.tsv'
+    input: script='scripts/count_seq_lengths.py', seqs='data/sim/{stem}.fn'
+    shell:
+        r"""
+        {input.script} {input.seqs} > {output}
+        """
+
+rule calculate_mapping_depth:
+    output: 'data/sim/{stem}.depth.tsv'
+    input: 'data/sim/{stem}.sort.bam'
+    shell:
+        """
+        samtools depth -d 0 {input} > {output}
+        """
+
+rule estimate_contig_cvrg:
+    output: 'data/sim/{community}.n{nreads}.s{seed1}.m.z{nsamples}.s{seed2}.a.backmap.cvrg.tsv'
+    input:
+        script='scripts/estimate_contig_coverage.py',
+        depth='data/sim/{community}.n{nreads}.s{seed1}.m.z{nsamples}.s{seed2}.a.backmap.depth.tsv',
+        length='data/sim/{community}.n{nreads}.z{nsamples}.s{seed2}.a.nlength.tsv'
+    params:
+        float_fmt='%.6g'
+    shell:
+        """
+        {input.script} {input.depth} {input.length} {params.float_fmt} > {output}
+        """
+
+rule combine_cvrg:
+    output: 'data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.backmap.cvrg.tsv'
+    input:
+        script='scripts/concat_tables.py',
+        tables=lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed1:04}.m.z{{nsamples}}.s{{seed}}.a.backmap.cvrg.tsv'
+                          for seed1
+                          in range(int(w.nsamples) * int(w.seed),
+                                  int(w.nsamples) * (int(w.seed) + 1)
+                                  )],
+    shell:
+        r"""
+        for file in {input.tables}; do
+            awk -v OFS='\t' -v library_id=$(basename ${{file%%.*}}) 'FNR > 1 {{print library_id, $0}}' $file
+        done > {output}
+        """
+
 rule quality_asses_assembly:
     output:
         fasta=directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.quast.d')
