@@ -106,7 +106,8 @@ rule quality_trim_reads:
 rule assemble_mgen_samples:
     output:
         fasta='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.fn',
-        fastg='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.fg'
+        fastg='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.fg',
+        abund='data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.abund.tsv'
     input:
         r1=lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.qtrim.r1.fq.gz'
                       for seed
@@ -117,7 +118,12 @@ rule assemble_mgen_samples:
                       for seed
                       in range(int(w.nsamples) * int(w.seed),
                                int(w.nsamples) * (int(w.seed) + 1)
-                              )]
+                              )],
+        abund=lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.abund.tsv'
+                         for seed
+                         in range(int(w.nsamples) * int(w.seed),
+                                 int(w.nsamples) * (int(w.seed) + 1)
+                                 )]
     params:
         r1_list=lambda w, input: ','.join(input.r1),
         r2_list=lambda w, input: ','.join(input.r2),
@@ -128,6 +134,10 @@ rule assemble_mgen_samples:
     log: 'log/{community}.n{nreads}.z{nsamples}.s{seed}.a.log'
     shell:
         '''
+        for file in {input.abund}
+        do
+            awk -v OFS='\t' -v sample_id=$(basename --suffix .m.abund.tsv $file) '{{print sample_id,$1,$2}}' $file
+        done > {output.abund}
         tmpdir=$(mktemp -du)
         echo "Running MEGAHIT with outdir $tmpdir"
         megahit \
