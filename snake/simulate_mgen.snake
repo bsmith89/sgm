@@ -60,7 +60,7 @@ rule simulate_community_mgen:
     output:
         r1='data/sim/{community}.n{nreads}.s{seed}.m.r1.fq.gz',
         r2='data/sim/{community}.n{nreads}.s{seed}.m.r2.fq.gz',
-        abund='data/sim/{community}.n{nreads}.s{seed}.abund.tsv'
+        abund='data/sim/{community}.n{nreads}.s{seed}.m.abund.tsv'
     input:
         script='scripts/simulate_community_mgen.py',
         replicon='data/replicon.tsv',
