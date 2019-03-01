@@ -8,13 +8,12 @@ from tqdm import tqdm
 import iss
 from iss.generator import simulate_read
 from iss.error_models.kde import KDErrorModel
+from iss.util import convert_n_reads
 from Bio.SeqIO import index as seq_file_index
 from Bio.SeqIO import write as write_seq
 
-
 PLASMID_MULTI = 10
 ERR_MODEL_NAME = 'HiSeq'
-
 
 if __name__ == '__main__':
     community_path = sys.argv[1]

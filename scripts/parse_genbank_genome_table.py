@@ -86,7 +86,7 @@ def fetch_replicon_data(x, dirname):
                                                 (d.replicon_name.notna()) &
                                                 (~d.replicon_name.str.startswith('unnamed'))),
                                                d.replicon_anon_name)
-    d['replicon_id'] = x['genome_id'] + '_' + d['replicon_name']
+    d['replicon_id'] = x['genome_id'] + '_' + d['replicon_name'].apply(lambda x: x.replace(' ', '_'))
     d['genome_id'] = x.genome_id
     return d[['replicon_id', 'genome_id', 'genbank_id', 'replicon_name', 'replicon_type', 'size']]
 
