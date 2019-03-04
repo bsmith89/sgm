@@ -43,7 +43,7 @@ if __name__ == '__main__':
     cvrg_norm2 = cvrg_norm1.div(cvrg_norm1.sum(1), axis='index')
     total_cvrg = cvrg_ps.sum(axis='columns')
 
-    table = pd.concat([kmer_comp, cvrg_norm2], sort=True, axis='columns')
+    table = cvrg_norm2.join(kmer_comp)
     table['total_cvrg'] = total_cvrg
     norm_log_table = np.log(table).apply(lambda x: (x - x.mean()) / x.std())
 
@@ -54,6 +54,6 @@ if __name__ == '__main__':
     # Transform all contigs
     num_components = (pca.explained_variance_ratio_.cumsum() < EXPLAIN_THRESH).sum() + 1
     out = pd.DataFrame(pca.transform(norm_log_table)[:,:num_components],
-                       index=length.index,
+                       index=norm_log_table.index,
                        columns=['PC{}'.format(i + 1) for i in range(num_components)])
     out.to_csv(sys.stdout, sep='\t', float_format=FLOAT_FORMAT)
