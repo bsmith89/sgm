@@ -1,8 +1,8 @@
 # Source this script first before working in the project.
 
-if [ -f activate_local ]
+if [ -f env_local ]
 then
-    source activate_local
+    source env_local
 fi
 
 alias smake="snakemake --profile profiles/default"
