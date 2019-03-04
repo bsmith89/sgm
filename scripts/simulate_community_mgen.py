@@ -27,8 +27,7 @@ if __name__ == '__main__':
     r2_path = sys.argv[9]
 
     print('Loading input data.', file=sys.stderr)
-    community = (pd.read_table(community_path)
-                     [lambda x: x.community_id == community_id])
+    community = pd.read_table(community_path)
     community.set_index('genome_id', inplace=True)
     assert community.index.is_unique, \
             f'Some genomes are repeated in the community table.'
