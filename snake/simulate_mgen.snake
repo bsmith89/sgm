@@ -173,10 +173,10 @@ rule blastn_contigs_to_refs:
         blastn -num_threads {threads} -db {params.ref_name} -query {input.contigs} -perc_identity {params.perc_ident} -outfmt 6 > {output}
         '''
 
-rule assign_contig_replicon:
-    output: 'data/sim/{stem}.inferred-replicon.tsv'
+rule assign_contig_genome:
+    output: 'data/sim/{stem}.inferred-genome.tsv'
     input:
-        script='scripts/assign_replicon.sh',
+        script='scripts/assign_genome.sh',
         blastn='data/sim/{stem}.blastn-refs.tsv',
         replicon='data/replicon.tsv'
     params:
