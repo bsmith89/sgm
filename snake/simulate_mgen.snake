@@ -88,6 +88,23 @@ rule simulate_community_mgen:
         done
         '''
 
+rule combine_abund:
+    output: 'data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.abund.tsv'
+    input:
+        lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.abund.tsv'
+                   for seed
+                   in range(int(w.nsamples) * int(w.seed),
+                            int(w.nsamples) * (int(w.seed) + 1)
+                           )]
+    shell:
+        '''
+        for file in {input}
+        do
+            awk -v OFS='\t' -v sample_id=$(basename --suffix .m.abund.tsv $file) '{{print sample_id, $1, $2}}' $file
+        done > {output}
+        '''
+
+
 # {{{1 Generic Processing
 rule quality_trim_reads:
     output:
@@ -271,22 +288,6 @@ rule estimate_contig_cvrg:
         """
         {input.script} {input.depth} {input.length} {params.float_fmt} > {output}
         """
-
-rule combine_abund:
-    output: 'data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.abund.tsv'
-    input:
-        lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.abund.tsv'
-                   for seed
-                   in range(int(w.nsamples) * int(w.seed),
-                            int(w.nsamples) * (int(w.seed) + 1)
-                           )]
-    shell:
-        '''
-        for file in {input}
-        do
-            awk -v OFS='\t' -v sample_id=$(basename --suffix .m.abund.tsv $file) '{{print sample_id, $1, $2}}' $file
-        done > {output}
-        '''
 
 rule combine_cvrg:
     output: 'data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.backmap.cvrg.tsv'
