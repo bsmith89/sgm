@@ -326,10 +326,10 @@ rule cluster_contigs:
         pca='data/{stem}.a.pca.tsv',
         length='data/{stem}.a.nlength.tsv'
     params:
-        min_contig_length=1000,
-        frac=0.25,
+        min_contig_length=200,
+        frac=0.75,
         alpha=1,  # TODO: Consider this parameter (use to be 1)
-        max_clusters=1000,
+        max_clusters=100,
         seed=1
     threads: 20
     shell:
