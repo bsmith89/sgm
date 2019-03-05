@@ -366,3 +366,98 @@ rule quality_asses_assembly:
         metaquast.py --threads {threads} -r {params.genomes_list} --output-dir $tmpdir {input.contigs}
         mv $tmpdir {output}
         '''
+
+rule run_midas_species:
+    output: directory('data/{stem}.m.midas/species')
+    input:
+        r1='data/{stem}.m.qtrim.r1.fq.gz',
+        r2='data/{stem}.m.qtrim.r2.fq.gz'
+    params:
+        output_dir=lambda w: f'data/{w.stem}.m.midas'
+    shell:
+        '''
+        run_midas.py species {params.output_dir} -1 {input.r1} -2 {input.r2}
+        '''
+
+rule run_midas_genes:
+    output: directory('data/{stem}.m.midas/genes')
+    input:
+        r1='data/{stem}.m.qtrim.r1.fq.gz',
+        r2='data/{stem}.m.qtrim.r2.fq.gz',
+        species='data/{stem}.m.midas/species'
+    params:
+        output_dir=lambda w: f'data/{w.stem}.m.midas'
+    shell:
+        '''
+        run_midas.py genes {params.output_dir} -1 {input.r1} -2 {input.r2}
+        '''
+
+rule run_midas_snps:
+    output: directory('data/{stem}.m.midas/snps')
+    input:
+        r1='data/{stem}.m.qtrim.r1.fq.gz',
+        r2='data/{stem}.m.qtrim.r2.fq.gz',
+        species='data/{stem}.m.midas/species'
+    params:
+        output_dir=lambda w: f'data/{w.stem}.m.midas'
+    shell:
+        '''
+        run_midas.py snps {params.output_dir} -1 {input.r1} -2 {input.r2}
+        '''
+
+rule merge_midas_species:
+    output: directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.midas_merged/species')
+    input:
+        lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas/species'
+                   for seed
+                   in range(int(w.nsamples) * int(w.seed),
+                            int(w.nsamples) * (int(w.seed) + 1)
+                           )],
+    params:
+        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+                                      for seed
+                                      in range(int(w.nsamples) * int(w.seed),
+                                               int(w.nsamples) * (int(w.seed) + 1)
+                                              ))
+    shell:
+        '''
+        merge_midas.py species {output} -i {params.input_list} -t list
+        '''
+
+rule merge_midas_genes:
+    output: directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.midas_merged/genes')
+    input:
+        lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas/genes'
+                   for seed
+                   in range(int(w.nsamples) * int(w.seed),
+                            int(w.nsamples) * (int(w.seed) + 1)
+                           )],
+    params:
+        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+                                      for seed
+                                      in range(int(w.nsamples) * int(w.seed),
+                                               int(w.nsamples) * (int(w.seed) + 1)
+                                              ))
+    shell:
+        '''
+        merge_midas.py genes {output} -i {params.input_list} -t list
+        '''
+
+rule merge_midas_snps:
+    output: directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.midas_merged/snps')
+    input:
+        lambda w: [f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas/snps'
+                   for seed
+                   in range(int(w.nsamples) * int(w.seed),
+                            int(w.nsamples) * (int(w.seed) + 1)
+                           )],
+    params:
+        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+                                      for seed
+                                      in range(int(w.nsamples) * int(w.seed),
+                                               int(w.nsamples) * (int(w.seed) + 1)
+                                              ))
+    shell:
+        '''
+        merge_midas.py snps {output} -i {params.input_list} -t list
+        '''
