@@ -1,8 +1,10 @@
+# {{{1 Library
 import pandas as pd
 from lib.snake import alias_recipe, alias_fmt, curl_recipe, curl_unzip_recipe
 import glob
 import os.path
 
+# {{{1 Generic config
 wildcard_constraints:
     genome_id='[^.]*',
     sample_id='[^.]*',
@@ -10,6 +12,7 @@ wildcard_constraints:
     seed='[0-9]{1,4}',
     community='[^.]*'
 
+# {{{1 Project config
 _genome = pd.read_table(config['_genome'], index_col='genome_id')
 config['ftp_stem'] = _genome.ftp_stem.to_dict()
 
@@ -20,6 +23,7 @@ for path in glob.glob(os.path.join(_community_dir, '*.tsv')):
     _community = pd.read_table(path)
     config['community'][basename] = _community.genome_id.tolist()
 
+# {{{1 References
 rule download_ncbi_taxdump:
     output: 'raw/ref/new_taxdump.tar.gz'
     params:
@@ -56,6 +60,7 @@ rule link_reference_genome:
     input: 'raw/genome/{genome}.fn'
     shell: alias_recipe
 
+# {{{1 Simulation
 rule simulate_community_mgen:
     output:
         r1='data/sim/{community}.n{nreads}.s{seed}.m.r1.fq.gz',
@@ -83,6 +88,7 @@ rule simulate_community_mgen:
         done
         '''
 
+# {{{1 Generic Processing
 rule quality_trim_reads:
     output:
         r1='data/sim/{stem}.qtrim.r1.fq.gz',
@@ -102,6 +108,8 @@ rule quality_trim_reads:
             --output-single {output.r3}
         '''
 
+# {{{1 Assembly based methods
+# {{{2 General
 # {seed} here is not the simulated mgen seed, but the seed for the simulated SET of reads.
 rule assemble_mgen_samples:
     output:
@@ -142,6 +150,7 @@ rule assemble_mgen_samples:
         megahit_toolkit contig2fastg {params.k_max} $tmpdir/intermediate_contigs/k{params.k_max}.contigs.fa > {output.fastg}
         '''
 
+# {{{2 Search
 rule make_community_blastdb:
     output:
         nhr='ref/sim/{community}.fn.nhr',
@@ -188,6 +197,7 @@ rule assign_contig_genome:
         '''
 
 
+# {{{2 Mapping
 rule bowtie_index_build:
     output:
         'data/{stem}.1.bt2',
@@ -232,6 +242,7 @@ rule map_reads_to_metagenome_assembly:
         rm $tmp
         """
 
+# {{{2 Assembly statistics
 rule count_seq_lengths_nucl:
     output: 'data/sim/{stem}.nlength.tsv'
     input: script='scripts/count_seq_lengths.py', seqs='data/sim/{stem}.fn'
@@ -295,6 +306,7 @@ rule combine_cvrg:
         done > {output}
         """
 
+# {{{2 Binning
 rule count_tetramers:
     output: '{stem}.k{klen}.tsv'
     input: script='scripts/count_kmers.py', fasta='{stem}.fn'
@@ -350,6 +362,7 @@ rule cluster_contigs:
         """
 
 
+# {{{2 QA
 rule quality_asses_assembly:
     output:
         directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.a.quast.d')
@@ -367,6 +380,8 @@ rule quality_asses_assembly:
         mv $tmpdir {output}
         '''
 
+# {{{1 Assembly-free methods
+# {{{2 MIDAS
 rule run_midas_species:
     output: directory('data/{stem}.m.midas/species')
     input:
