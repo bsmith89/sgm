@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
+import pandas as pd
+import pymc3 as pm
+import matplotlib.pyplot as plt
+import numpy as np
+import theano.tensor as tt
 
 if __name__ == "__main__":
+    # TODO: Take these as input params
     cvrg_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.backmap.cvrg.tsv'  # sys.argv[1]
     nlength_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.nlength.tsv'  # sys.argv[2]
     abund_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.abund.tsv'  # sys.argv[3]
@@ -11,7 +17,7 @@ if __name__ == "__main__":
     nlength = pd.read_table(nlength_path,
                             names=['contig_id', 'nlength'], index_col=['contig_id'], squeeze=True)
     nmapping = cvrg.multiply(nlength, axis=0).round().astype(int).T
-    ntotal = nmapping.sum()
+    ntotal = nmapping.sum(1)
     abund = pd.read_table(abund_path,
                           names=['sample_id', 'genome_id', 'abundance'],
                           index_col=['sample_id', 'genome_id'], squeeze=True
@@ -29,11 +35,16 @@ if __name__ == "__main__":
     rabund_precision = 10000
     diversity_param = 1  # Regularization of numbers of latent components.
     density_param = 0.5  # What fraction of the contigs are expected to be in each genome.
+    rabund_noise_param = 1e-6  # This is used to stabilize the calculation, since the llk
+                               # is undefined if one of the measured taxa is not related to
+                               # to any underlying genome.
 
-    np.random.seed(2)
+    np.random.seed(10)
 
-    nu0 = np.random.multinomial(1, np.ones(n_taxa) / n_taxa, size=max_genomes)
-    assert not (nu0.sum(0) == 0).any(), 'The random intial value for nu fails to account for all genomes.'
+    #nu0 = np.random.multinomial(1, np.ones(n_taxa) / n_taxa, size=max_genomes)
+    nu_idx0 = np.random.choice(range(n_taxa), size=max_genomes)
+    nu0 = tt.extra_ops.to_one_hot(nu_idx0, nb_class=n_taxa).eval()
+    # assert not (nu0.sum(0) == 0).any()
     theta0 = np.random.multinomial(1, np.ones(max_genomes) / max_genomes, size=n_contigs).T
 
     with pm.Model() as model0:
@@ -46,8 +57,9 @@ if __name__ == "__main__":
         # TODO: Are all latent genomes reflected in the taxonomic measurements?
         # nu = pm.Multinomial('nu', n=0, p=np.ones((max_genomes, n_taxa)) / max_genomes,
         #                     shape=(max_genomes, n_taxa), testval=nu0)
-        nu_idx = pm.Categorical('nu', p=np.ones(max_genomes) / max_genomes, shape=n_taxa)
-        nu = tt.extra_ops.to_one_hot(nu_idx, nb_class=max_genomes).T
+        nu_idx = pm.Categorical('nu_idx', p=np.ones(n_taxa) / n_taxa, shape=max_genomes, testval=nu_idx0)
+        nu = tt.extra_ops.to_one_hot(nu_idx, nb_class=n_taxa)
+
 
         # Latent genome contig content
         # TODO: density_param hyper-prior
@@ -59,7 +71,7 @@ if __name__ == "__main__":
         # Measurement of abundances
         # TODO: Since rabund will sometimes be from 16S data, I need a copy number
         # (and sequencing bias) parameter here.
-        expect_rabund = simplex_normalize(pi.dot(nu))
+        expect_rabund = simplex_normalize(pi.dot(nu) + rabund_noise_param)
         obs_rabund = pm.Dirichlet('obs_rabund', a=expect_rabund * rabund_precision,
                                   shape=(n_samples, max_genomes), observed=rabund.values)
 
@@ -69,3 +81,6 @@ if __name__ == "__main__":
         # _too_ influential.
         obs_nmapping = pm.Multinomial('obs_nmapping', n=ntotal.values, p=expect_frac_nmapping,
                                       shape=(n_contigs, n_samples), observed=nmapping.values)
+
+    with model0:
+        trace0 = pm.sample()
