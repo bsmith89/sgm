@@ -7,6 +7,7 @@ import theano.tensor as tt
 import sys
 
 tt_simplex_normalize = lambda x: x / x.sum(1).reshape((x.shape[0], 1))
+tt_harmonic_mean = lambda x: 1 / tt.mean(1 / x)
 
 info = lambda s, *args: print(s % args, file=sys.stderr)
 
@@ -63,9 +64,9 @@ if __name__ == "__main__":
 
     with pm.Model() as model:
         # Latent strain abundances
-        alpha_raw = np.exp(-strain_reg_param * tt.arange(s_strains)/s_strains)
-        alpha = alpha_raw / alpha_raw.sum()
-        pi = pm.Dirichlet('pi', a=alpha, shape=(n_samples, s_strains))
+        pi = pm.Dirichlet('pi', a=np.ones(s_strains), shape=(n_samples, s_strains))
+        pi_reg = pm.Potential('pi_reg', -strain_reg_param * tt_harmonic_mean(pi.sum(0)))
+
 
         # Strains to taxa
         theta = pm.Dirichlet('theta',
