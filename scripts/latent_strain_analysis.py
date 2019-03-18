@@ -4,83 +4,102 @@ import pymc3 as pm
 import matplotlib.pyplot as plt
 import numpy as np
 import theano.tensor as tt
+import sys
+
+tt_simplex_normalize = lambda x: x / x.sum(1).reshape((x.shape[0], 1))
+
+info = lambda s, *args: print(s % args, file=sys.stderr)
 
 if __name__ == "__main__":
-    # TODO: Take these as input params
-    cvrg_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.backmap.cvrg.tsv'  # sys.argv[1]
-    nlength_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.nlength.tsv'  # sys.argv[2]
-    abund_path = 'data/sim/escherichia_congenic.n1e6.z16.s00.a.abund.tsv'  # sys.argv[3]
-    cvrg  = pd.read_table(cvrg_path,
-                          names=['sample_id', 'contig_id', 'coverage'],
-                          index_col=['sample_id', 'contig_id'], squeeze=True
-                         ).unstack('sample_id', fill_value=0)
-    nlength = pd.read_table(nlength_path,
+    seq_cvrg_path = sys.argv[1]
+    nlength_path = sys.argv[2]
+    tax_cvrg_path = sys.argv[3]
+    strain_reg_param = 1
+    tax_fuzz_param = 1e-6
+    seq_fuzz_param = 1e-6
+    tax_uncertainty_param = 0.01
+
+    info("Starting latent strain analysis.")
+    info("seq_cvrg_path: %s", seq_cvrg_path)
+    info("nlength_path: %s", nlength_path)
+    info("tax_cvrg_path: %s", tax_cvrg_path)
+    info("strain_reg_param: %f", strain_reg_param)
+    info("tax_fuzz_param: %f", tax_fuzz_param)
+    info("seq_fuzz_param: %f", seq_fuzz_param)
+    info("tax_uncertainty_param: %f",tax_uncertainty_param)
+
+    # Load data
+    seq_cvrg  = pd.read_table(seq_cvrg_path,
+                          names=['sample_id', 'sequence_id', 'tally'],
+                          index_col=['sample_id', 'sequence_id'], squeeze=True
+                         ).unstack('sequence_id', fill_value=0)
+    seqlen = pd.read_table(nlength_path,
                             names=['contig_id', 'nlength'], index_col=['contig_id'], squeeze=True)
-    nmapping = cvrg.multiply(nlength, axis=0).round().astype(int).T
-    ntotal = nmapping.sum(1)
-    abund = pd.read_table(abund_path,
-                          names=['sample_id', 'genome_id', 'abundance'],
-                          index_col=['sample_id', 'genome_id'], squeeze=True
-                         ).unstack('genome_id', fill_value=0)
+    seq_count = seq_cvrg.multiply(seqlen).round().astype(int)  # Scale to nucleotide counts
+    tax_count = pd.read_table(tax_cvrg_path,
+                          names=['sample_id', 'taxon_id', 'tally'],
+                          index_col=['sample_id', 'taxon_id'], squeeze=True
+                         ).unstack('taxon_id', fill_value=0)
 
-    rabund = abund.divide(abund.sum(1), axis=0)
+    # Align tables
+    seq_count = seq_count[seqlen.index]
+    tax_count = tax_count.loc[seq_count.index]
+    #
+    # assert (seq_count.index == tax_count.index).all(), "Sequence and taxon table indices must be aligned."
+    # assert (seqlen.index == seq_count.columns).all(), "Sequence and seqlen tables must be aligned."
+
+    n_samples, g_seqs = seq_count.shape
+    t_taxa = tax_count.shape[1]
+    s_strains = 2 * t_taxa
+    u_tax_counts = tax_count.sum(1).round().astype(int)
+    v_seq_counts = seq_count.sum(1).round().astype(int)
+
+    info("n_samples: %d", n_samples)
+    info("g_seqs: %d", g_seqs)
+    info("t_taxa: %d", t_taxa)
+    info("s_strains: %d", s_strains)
+    info("mean u_tax_counts: %f", u_tax_counts.mean())
+    info("mean v_seq_counts: %f", v_seq_counts.mean())
+
+    with pm.Model() as model:
+        # Latent strain abundances
+        alpha_raw = np.exp(-strain_reg_param * tt.arange(s_strains)/s_strains)
+        alpha = alpha_raw / alpha_raw.sum()
+        pi = pm.Dirichlet('pi', a=alpha, shape=(n_samples, s_strains))
+
+        # Strains to taxa
+        theta = pm.Dirichlet('theta',
+                            a=np.ones(t_taxa) * tax_uncertainty_param / t_taxa,
+                            shape=(s_strains, t_taxa))
+        expect_tax_frac_unnorm = pi.dot(theta) + tax_fuzz_param
+        obs_tax = pm.Multinomial('obs_tax',
+                                n=u_tax_counts,
+                                p=expect_tax_frac_unnorm,
+                                shape=(n_samples, t_taxa),
+                                observed=tax_count.values)
+
+        # Strains to seqs
+        phi = pm.Exponential('phi', lam=1, shape=(s_strains, g_seqs))
+        expect_seq_frac_unnorm = pi.dot(phi) * seqlen + seq_fuzz_param
 
 
-    n_taxa = len(rabund.columns)
-    n_samples = len(cvrg.columns)
-    n_contigs = len(cvrg.index)
+        obs_seq = pm.Multinomial('obs_seq',
+                                n=v_seq_counts,
+                                p=expect_seq_frac_unnorm,
+                                shape=(n_samples, g_seqs),
+                                observed=seq_count.values)
 
-    # TODO: Take these as input params
-    max_genomes = 10
-    rabund_precision = 10000
-    diversity_param = 1  # Regularization of numbers of latent components.
-    density_param = 0.5  # What fraction of the contigs are expected to be in each genome.
-    rabund_noise_param = 1e-6  # This is used to stabilize the calculation, since the llk
-                               # is undefined if one of the measured taxa is not related to
-                               # to any underlying genome.
-
-    np.random.seed(10)
-
-    #nu0 = np.random.multinomial(1, np.ones(n_taxa) / n_taxa, size=max_genomes)
-    nu_idx0 = np.random.choice(range(n_taxa), size=max_genomes)
-    nu0 = tt.extra_ops.to_one_hot(nu_idx0, nb_class=n_taxa).eval()
-    # assert not (nu0.sum(0) == 0).any()
-    theta0 = np.random.multinomial(1, np.ones(max_genomes) / max_genomes, size=n_contigs).T
-
-    with pm.Model() as model0:
-        # Latent genome relative abundances
-        # TODO: diversity_param hyper-prior
-        pi = pm.Dirichlet('pi', a=np.ones(max_genomes) * diversity_param,
-                          shape=(n_samples, max_genomes))
-
-        # Latent genome taxonomic identity
-        # TODO: Are all latent genomes reflected in the taxonomic measurements?
-        # nu = pm.Multinomial('nu', n=0, p=np.ones((max_genomes, n_taxa)) / max_genomes,
-        #                     shape=(max_genomes, n_taxa), testval=nu0)
-        nu_idx = pm.Categorical('nu_idx', p=np.ones(n_taxa) / n_taxa, shape=max_genomes, testval=nu_idx0)
-        nu = tt.extra_ops.to_one_hot(nu_idx, nb_class=n_taxa)
+        # Save intermediate values:
+        pm.Deterministic('expect_tax_frac', tt_simplex_normalize(expect_tax_frac_unnorm))
+        pm.Deterministic('expect_seq_frac', tt_simplex_normalize(expect_seq_frac_unnorm))
 
 
-        # Latent genome contig content
-        # TODO: density_param hyper-prior
-        # TODO: Consider making theta continuous (non-negative) instead of
-        # discrete.
-        theta = pm.Poisson('theta', np.ones((max_genomes, n_contigs)) * density_param,
-                           shape=(max_genomes, n_contigs), testval=theta0)
+    advi = pm.fit(int(1.5e5), model=model)
+    info("Finished fitting model with ADVI.")
+    advi_mean = advi.bij.rmap(advi.mean.eval())
 
-        # Measurement of abundances
-        # TODO: Since rabund will sometimes be from 16S data, I need a copy number
-        # (and sequencing bias) parameter here.
-        expect_rabund = simplex_normalize(pi.dot(nu) + rabund_noise_param)
-        obs_rabund = pm.Dirichlet('obs_rabund', a=expect_rabund * rabund_precision,
-                                  shape=(n_samples, max_genomes), observed=rabund.values)
+    theta_est = model.theta.eval({model.theta_stickbreaking__: advi_mean['theta_stickbreaking__']})
+    phi_est = model.phi.eval({model.phi_log__: advi_mean['phi_log__']})
+    pi_est = model.pi.eval({model.pi_stickbreaking__: advi_mean['pi_stickbreaking__']})
 
-        # Measurement of depth
-        expect_frac_nmapping = simplex_normalize(pi.dot(theta) * nlength.values)
-        # TODO: Consider using an over-dispersed multinomial so this isn't
-        # _too_ influential.
-        obs_nmapping = pm.Multinomial('obs_nmapping', n=ntotal.values, p=expect_frac_nmapping,
-                                      shape=(n_contigs, n_samples), observed=nmapping.values)
-
-    with model0:
-        trace0 = pm.sample()
+    info("DONE")
