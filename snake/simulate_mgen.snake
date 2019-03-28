@@ -435,7 +435,7 @@ rule merge_midas_species:
                             int(w.nsamples) * (int(w.seed) + 1)
                            )],
     params:
-        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+        input_list=lambda w: ','.join(f'data/sim/{w.community}.n{w.nreads}.s{seed:04}.m.midas'
                                       for seed
                                       in range(int(w.nsamples) * int(w.seed),
                                                int(w.nsamples) * (int(w.seed) + 1)
@@ -454,7 +454,7 @@ rule merge_midas_genes:
                             int(w.nsamples) * (int(w.seed) + 1)
                            )],
     params:
-        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+        input_list=lambda w: ','.join(f'data/sim/{w.community}.n{w.nreads}.s{seed:04}.m.midas'
                                       for seed
                                       in range(int(w.nsamples) * int(w.seed),
                                                int(w.nsamples) * (int(w.seed) + 1)
@@ -473,7 +473,7 @@ rule merge_midas_snps:
                             int(w.nsamples) * (int(w.seed) + 1)
                            )],
     params:
-        input_list=lambda w: ','.join(f'data/sim/{{community}}.n{{nreads}}.s{seed:04}.m.midas'
+        input_list=lambda w: ','.join(f'data/sim/{w.community}.n{w.nreads}.s{seed:04}.m.midas'
                                       for seed
                                       in range(int(w.nsamples) * int(w.seed),
                                                int(w.nsamples) * (int(w.seed) + 1)
