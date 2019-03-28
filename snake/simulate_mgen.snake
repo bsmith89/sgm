@@ -445,6 +445,16 @@ rule merge_midas_species:
         merge_midas.py species {output} -i {params.input_list} -t list
         '''
 
+rule midas_merged_species_to_tax_counts:
+    output: 'data/sim/{stem}.a.tax_counts.tsv'
+    input: script='scripts/midas_merged_species_to_tax_counts.py', midas='data/sim/{stem}.midas_merged/species'
+    params:
+        min_reads=100
+    shell:
+        """
+        {input.script} {input.midas}/count_reads.txt {params.min_reads} > {output}
+        """
+
 rule merge_midas_genes:
     output: directory('data/sim/{community}.n{nreads}.z{nsamples}.s{seed}.midas_merged/genes')
     input:
